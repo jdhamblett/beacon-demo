@@ -3771,7 +3771,8 @@ class Component extends DCLogic {
         var byName = function (a, b) { return a.name < b.name ? -1 : a.name > b.name ? 1 : 0; };
         list.sort(s.pTsort === 'az' ? byName : s.pTsort === 'za' ? function (a, b) { return byName(b, a); } : s.pTsort === 'status' ? function (a, b) { return STAT.indexOf(a.status) - STAT.indexOf(b.status) || byName(a, b); } : function (a, b) { return (risky[b.id] ? 1 : 0) - (risky[a.id] ? 1 : 0) || byName(a, b); });
         // alerts you can see on the map right now
-        var inView = shown.filter(function (a) { if (a.cw) return true; var q = px(a.lng, a.lat); return q[0] >= s.cx - w / 2 && q[0] <= s.cx + w / 2 && q[1] >= s.cy - h / 2 && q[1] <= s.cy + h / 2; });
+        var inView = shown.filter(function (a) { var q = px(a.lng, a.lat); // a country-wide alert counts when its country's main city is on screen
+           return q[0] >= s.cx - w / 2 && q[0] <= s.cx + w / 2 && q[1] >= s.cy - h / 2 && q[1] <= s.cy + h / 2; });
         var aw = (s.pAq || '').trim().toLowerCase();
         var alist = inView.filter(function (a) { return !aw || (a.title + ' ' + a.type + ' ' + a.sev + ' ' + a.country).toLowerCase().indexOf(aw) >= 0; });
         var byTitle = function (a, b) { return a.title < b.title ? -1 : a.title > b.title ? 1 : 0; };
