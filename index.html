@@ -135,6 +135,8 @@ input[type=range]{accent-color:#1F5FAD}
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Travelers</a>
       <a href="Alerts.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Alerts</a>
+      <a href="Messages.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
       <a href="Map.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></svg>Map</a>
       <a href="DailyBrief.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
@@ -261,6 +263,8 @@ input[type=range]{accent-color:#1F5FAD}
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9A23B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Travelers</a>
       <a href="Alerts.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Alerts</a>
+      <a href="Messages.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
       <a href="Map.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></svg>Map</a>
       <a href="DailyBrief.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
@@ -285,7 +289,7 @@ input[type=range]{accent-color:#1F5FAD}
     </div>
   </nav>
 
-  <main style="{{mainStyle}}">
+  <main style="{{mainStyle}}" onKeyDown="{{dlgKey}}">
 
     <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
       <div style="display: flex; align-items: center; gap: 12px; min-width: 0">
@@ -409,13 +413,13 @@ input[type=range]{accent-color:#1F5FAD}
             <div style="display: grid; grid-template-columns: minmax(150px, 1.1fr) minmax(180px, 1.4fr) minmax(110px, 0.8fr) 88px minmax(140px, 1fr) minmax(180px, 1.4fr); gap: 16px; align-items: center; padding: 16px 24px; border-bottom: 1px solid #EEF1F5">
               <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
                 <span style="display: flex; align-items: center; gap: 8px">
-                  <a href="#" style="font-size: 15px; font-weight: 700; color: #14213D; text-decoration: none">{{r.name}}</a>
+                  <a href="#" onClick="{{r.itin}}" aria-label="{{r.itinLabel}}" style="font-size: 15px; font-weight: 700; color: #1F5FAD; text-decoration: underline">{{r.name}}</a>
                   <sc-if value="{{r.vip}}" hint-placeholder-val="{{ false }}"><span style="padding: 1px 6px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 11px; font-weight: 800; letter-spacing: 0.06em">VIP</span></sc-if>
                 </span>
                 <span style="font-size: 13px; color: #556072">{{r.sub}}</span>
               </div>
               <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-                <span style="font-size: 15px; font-weight: 600">{{r.place}}</span>
+                <a href="Map.dc.html" onClick="{{r.toMap}}" aria-label="{{r.mapLabel}}" style="align-self: flex-start; font-size: 15px; font-weight: 600; color: #1F5FAD; text-decoration: underline">{{r.place}}</a>
                 <span style="font-size: 13px; color: #556072">{{r.detail}}</span>
               </div>
               <div style="display: flex; flex-direction: column; gap: 2px">
@@ -435,7 +439,7 @@ input[type=range]{accent-color:#1F5FAD}
               </div>
               <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
                 <sc-if value="{{r.hasRisk}}" hint-placeholder-val="{{ true }}">
-                  <a href="Alerts.dc.html" style="font-size: 15px; font-weight: 600; color: #1F5FAD; text-decoration: underline">{{r.riskTitle}}</a>
+                  <a href="#" onClick="{{r.alertInfo}}" aria-label="{{r.alertLabel}}" style="font-size: 15px; font-weight: 600; color: #1F5FAD; text-decoration: underline">{{r.riskTitle}}</a>
                   <span style="font-size: 13px; color: #556072">{{r.riskSub}}</span>
                 </sc-if>
               </div>
@@ -462,12 +466,54 @@ input[type=range]{accent-color:#1F5FAD}
     </section>
 
     <p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: #6B7588">PROTOTYPE · SAMPLE DATA · TODAY IS FROZEN AT TUE DEC 1, 2026, 9:30 AM</p>
+    <sc-if value="{{dlgShown}}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{dlgClose}}" style="position: absolute; z-index: 20; inset: 0; background: rgba(20, 33, 61, 0.35)"></div>
+      <div role="dialog" aria-modal="true" aria-label="{{dlg.label}}" tabindex="-1" ref="{{dlgRef}}" style="{{dlg.style}}">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 20px 24px 14px">
+          <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #556072">{{dlg.eyebrow}}</span>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+              <h2 style="margin: 0; font-size: 22px; font-weight: 800; color: #14213D">{{dlg.title}}</h2>
+              <sc-if value="{{dlg.hasChip}}" hint-placeholder-val="{{ false }}"><span style="{{dlg.chipStyle}}">{{dlg.chip}}</span></sc-if>
+            </div>
+            <span style="font-size: 14px; color: #3A4558">{{dlg.sub}}</span>
+          </div>
+          <button type="button" aria-label="Close" onClick="{{dlgClose}}" style="flex: none; width: 40px; height: 40px; margin: -8px -10px 0 0; border: 0; border-radius: 8px; background: transparent; color: #3A4558; font-size: 24px; line-height: 1; font-family: inherit; cursor: pointer">×</button>
+        </div>
+        <sc-if value="{{dlg.hasBanner}}" hint-placeholder-val="{{ false }}">
+          <div style="{{dlg.bannerStyle}}"><strong>{{dlg.bannerHead}}</strong> · {{dlg.banner}}</div>
+        </sc-if>
+        <sc-if value="{{dlg.hasText}}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 0; padding: 0 24px 6px; font-size: 15px; line-height: 1.55; color: #14213D">{{dlg.text}}</p>
+        </sc-if>
+        <dl style="margin: 0; padding: 4px 24px 6px; display: flex; flex-direction: column">
+          <sc-for list="{{dlg.rows}}" as="g" hint-placeholder-count="6">
+            <div style="display: flex; flex-direction: column; gap: 2px; padding: 10px 0; border-top: 1px solid #E1E6EE">
+              <dt style="font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #556072">{{g.k}}</dt>
+              <dd style="margin: 0; font-size: 15px; font-weight: 600; color: #14213D">{{g.v}}</dd>
+              <span style="font-size: 13px; color: #3A4558">{{g.sub}}</span>
+            </div>
+          </sc-for>
+        </dl>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 14px 24px 18px; border-top: 1px solid #E1E6EE; background: #F7F9FC; border-radius: 0 0 14px 14px">
+          <sc-if value="{{dlg.hasLink}}" hint-placeholder-val="{{ false }}">
+            <a href="#" onClick="{{dlg.link}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; background: #1F5FAD; color: #FFFFFF; font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 8px; box-sizing: border-box">{{dlg.linkLabel}}
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></a>
+          </sc-if>
+          <button type="button" onClick="{{dlgClose}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #B9C3D3; background: #FFFFFF; color: #14213D; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Close</button>
+          <sc-if value="{{dlg.hasNote}}" hint-placeholder-val="{{ false }}">
+            <span role="status" style="flex: 1 1 100%; font-size: 13px; font-weight: 600; color: #1F5FAD">In the live product this opens the full report on Riskline. The link is not connected in this prototype.</span>
+          </sc-if>
+          <span style="flex: 1 1 100%; font-size: 12px; color: #6B7588">Prototype · sample data</span>
+        </div>
+      </div>
+    </sc-if>
   </main>
 </div>
 </template>
 <template id="tpl-Alerts">
 
-<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F3F5F9; font-family: 'Open Sans', system-ui, sans-serif; color: #14213D">
+<div onClick="{{rootClick}}" style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F3F5F9; font-family: 'Open Sans', system-ui, sans-serif; color: #14213D">
 
   <nav aria-label="Main" style="{{navStyle}}">
     <div style="display: flex; align-items: center; gap: 12px; padding: 0 8px">
@@ -497,6 +543,8 @@ input[type=range]{accent-color:#1F5FAD}
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Travelers</a>
       <a href="Alerts.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; background: #26385F; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 700">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9A23B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Alerts</a>
+      <a href="Messages.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
       <a href="Map.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></svg>Map</a>
       <a href="DailyBrief.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
@@ -521,7 +569,7 @@ input[type=range]{accent-color:#1F5FAD}
     </div>
   </nav>
 
-  <main style="{{mainStyle}}">
+  <main style="{{mainStyle}}" onKeyDown="{{dlgKey}}">
 
     <sc-if value="{{listView}}" hint-placeholder-val="{{ true }}">
       <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
@@ -623,7 +671,7 @@ input[type=range]{accent-color:#1F5FAD}
                     </span>
                   </div>
                   <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-                    <span style="font-size: 15px; font-weight: 600">{{r.city}}</span>
+                    <a href="Map.dc.html" onClick="{{r.toMap}}" aria-label="{{r.mapLabel}}" style="align-self: flex-start; font-size: 15px; font-weight: 600; color: #1F5FAD; text-decoration: underline">{{r.city}}</a>
                     <span style="font-size: 13px; color: #556072">{{r.country}}</span>
                   </div>
                   <span style="font-size: 14px; color: #14213D">{{r.reported}}</span>
@@ -643,8 +691,11 @@ input[type=range]{accent-color:#1F5FAD}
                     <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #14213D">{{r.summary}}</p>
                     <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; font-size: 13px; color: #556072">
                       <span>{{r.matchText}}</span>
-                      <a href="#" style="font-size: 14px; font-weight: 700; color: #1F5FAD; min-height: 44px; display: flex; align-items: center">Full report on Riskline</a>
+                      <a href="#" onClick="{{r.risk}}" style="font-size: 14px; font-weight: 700; color: #1F5FAD; min-height: 44px; display: flex; align-items: center">Full report on Riskline</a>
                     </div>
+                    <sc-if value="{{r.riskNote}}" hint-placeholder-val="{{ false }}">
+                      <span role="status" style="font-size: 13px; font-weight: 600; color: #1F5FAD">In the live product this opens the full report on Riskline. The link is not connected in this prototype.</span>
+                    </sc-if>
                   </div>
                 </sc-if>
               </div>
@@ -689,10 +740,16 @@ input[type=range]{accent-color:#1F5FAD}
           <p style="margin: 0; font-size: 14px; color: #556072">{{dMeta}}</p>
           <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #14213D; max-width: 760px">{{dSummary}}</p>
         </div>
-        <button type="button" onClick="{{exportCsv}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: #1F5FAD; color: #FFFFFF; font-size: 14px; font-weight: 700; font-family: inherit; display: flex; align-items: center; gap: 8px; cursor: pointer">
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>
-          Export CSV
-        </button>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+          <sc-if value="{{canCheckin}}" hint-placeholder-val="{{ false }}">
+            <a href="Messages.dc.html" onClick="{{startCheckin}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; background: #14213D; color: #FFFFFF; font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 8px; box-sizing: border-box">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>{{checkinLabel}}</a>
+          </sc-if>
+          <button type="button" onClick="{{exportCsv}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: #1F5FAD; color: #FFFFFF; font-size: 14px; font-weight: 700; font-family: inherit; display: flex; align-items: center; gap: 8px; cursor: pointer">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>
+            Export CSV
+          </button>
+        </div>
       </header>
 
       <section aria-label="Travelers for this alert" style="background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; overflow: hidden">
@@ -706,6 +763,7 @@ input[type=range]{accent-color:#1F5FAD}
             <sc-for list="{{modeChips}}" as="m" hint-placeholder-count="3">
               <button type="button" aria-pressed="{{m.on}}" onClick="{{m.pick}}" style="{{m.style}}">{{m.label}}</button>
             </sc-for>
+            <label style="display: flex; align-items: center; gap: 8px; min-height: 40px; margin-left: 8px; font-size: 14px; font-weight: 600; color: #14213D; cursor: pointer"><input type="checkbox" checked="{{tvip}}" onChange="{{onTVip}}" style="width: 18px; height: 18px; color-scheme: light">VIP only</label>
           </div>
           <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; min-height: 24px">
             <span style="font-size: 14px; color: #3A4558"><strong style="color: #14213D">{{tCount}}</strong> {{tCountLabel}}</span>
@@ -726,13 +784,13 @@ input[type=range]{accent-color:#1F5FAD}
               <div style="display: grid; grid-template-columns: minmax(160px, 1.1fr) minmax(200px, 1.6fr) minmax(120px, 0.8fr) minmax(110px, 0.7fr) minmax(90px, 0.6fr); gap: 16px; align-items: center; padding: 16px 24px; border-bottom: 1px solid #EEF1F5">
                 <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
                   <span style="display: flex; align-items: center; gap: 8px">
-                    <a href="#" style="font-size: 15px; font-weight: 700; color: #14213D; text-decoration: none">{{r.name}}</a>
+                    <a href="#" onClick="{{r.itin}}" aria-label="{{r.itinLabel}}" style="font-size: 15px; font-weight: 700; color: #1F5FAD; text-decoration: underline">{{r.name}}</a>
                     <sc-if value="{{r.vip}}" hint-placeholder-val="{{ false }}"><span style="padding: 1px 6px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 11px; font-weight: 800; letter-spacing: 0.06em">VIP</span></sc-if>
                   </span>
                   <span style="font-size: 13px; color: #556072">{{r.sub}}</span>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-                  <span style="font-size: 15px; font-weight: 600">{{r.place}}</span>
+                  <a href="Map.dc.html" onClick="{{r.toMap}}" aria-label="{{r.mapLabel}}" style="align-self: flex-start; font-size: 15px; font-weight: 600; color: #1F5FAD; text-decoration: underline">{{r.place}}</a>
                   <span style="font-size: 13px; color: #556072">{{r.detail}}</span>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 2px">
@@ -761,6 +819,48 @@ input[type=range]{accent-color:#1F5FAD}
     </sc-if>
 
     <p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: #6B7588">PROTOTYPE · SAMPLE DATA · TODAY IS FROZEN AT TUE DEC 1, 2026, 9:30 AM</p>
+    <sc-if value="{{dlgShown}}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{dlgClose}}" style="position: absolute; z-index: 20; inset: 0; background: rgba(20, 33, 61, 0.35)"></div>
+      <div role="dialog" aria-modal="true" aria-label="{{dlg.label}}" tabindex="-1" ref="{{dlgRef}}" style="{{dlg.style}}">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 20px 24px 14px">
+          <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #556072">{{dlg.eyebrow}}</span>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+              <h2 style="margin: 0; font-size: 22px; font-weight: 800; color: #14213D">{{dlg.title}}</h2>
+              <sc-if value="{{dlg.hasChip}}" hint-placeholder-val="{{ false }}"><span style="{{dlg.chipStyle}}">{{dlg.chip}}</span></sc-if>
+            </div>
+            <span style="font-size: 14px; color: #3A4558">{{dlg.sub}}</span>
+          </div>
+          <button type="button" aria-label="Close" onClick="{{dlgClose}}" style="flex: none; width: 40px; height: 40px; margin: -8px -10px 0 0; border: 0; border-radius: 8px; background: transparent; color: #3A4558; font-size: 24px; line-height: 1; font-family: inherit; cursor: pointer">×</button>
+        </div>
+        <sc-if value="{{dlg.hasBanner}}" hint-placeholder-val="{{ false }}">
+          <div style="{{dlg.bannerStyle}}"><strong>{{dlg.bannerHead}}</strong> · {{dlg.banner}}</div>
+        </sc-if>
+        <sc-if value="{{dlg.hasText}}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 0; padding: 0 24px 6px; font-size: 15px; line-height: 1.55; color: #14213D">{{dlg.text}}</p>
+        </sc-if>
+        <dl style="margin: 0; padding: 4px 24px 6px; display: flex; flex-direction: column">
+          <sc-for list="{{dlg.rows}}" as="g" hint-placeholder-count="6">
+            <div style="display: flex; flex-direction: column; gap: 2px; padding: 10px 0; border-top: 1px solid #E1E6EE">
+              <dt style="font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #556072">{{g.k}}</dt>
+              <dd style="margin: 0; font-size: 15px; font-weight: 600; color: #14213D">{{g.v}}</dd>
+              <span style="font-size: 13px; color: #3A4558">{{g.sub}}</span>
+            </div>
+          </sc-for>
+        </dl>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 14px 24px 18px; border-top: 1px solid #E1E6EE; background: #F7F9FC; border-radius: 0 0 14px 14px">
+          <sc-if value="{{dlg.hasLink}}" hint-placeholder-val="{{ false }}">
+            <a href="#" onClick="{{dlg.link}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; background: #1F5FAD; color: #FFFFFF; font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 8px; box-sizing: border-box">{{dlg.linkLabel}}
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></a>
+          </sc-if>
+          <button type="button" onClick="{{dlgClose}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #B9C3D3; background: #FFFFFF; color: #14213D; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Close</button>
+          <sc-if value="{{dlg.hasNote}}" hint-placeholder-val="{{ false }}">
+            <span role="status" style="flex: 1 1 100%; font-size: 13px; font-weight: 600; color: #1F5FAD">In the live product this opens the full report on Riskline. The link is not connected in this prototype.</span>
+          </sc-if>
+          <span style="flex: 1 1 100%; font-size: 12px; color: #6B7588">Prototype · sample data</span>
+        </div>
+      </div>
+    </sc-if>
   </main>
 </div>
 </template>
@@ -796,6 +896,8 @@ input[type=range]{accent-color:#1F5FAD}
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Travelers</a>
       <a href="Alerts.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Alerts</a>
+      <a href="Messages.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
       <a href="Map.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></svg>Map</a>
       <a href="DailyBrief.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; background: #26385F; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 700">
@@ -948,6 +1050,8 @@ input[type=range]{accent-color:#1F5FAD}
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Travelers</a>
       <a href="Alerts.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Alerts</a>
+      <a href="Messages.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
       <a href="Map.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; background: #26385F; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 700">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9A23B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></svg>Map</a>
       <a href="DailyBrief.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
@@ -1402,6 +1506,8 @@ input[type=range]{accent-color:#1F5FAD}
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Travelers</a>
       <a href="Alerts.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Alerts</a>
+      <a href="Messages.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
       <a href="Map.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></svg>Map</a>
       <a href="DailyBrief.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
@@ -1670,6 +1776,8 @@ input[type=range]{accent-color:#1F5FAD}
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Travelers</a>
       <a href="Alerts.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Alerts</a>
+      <a href="Messages.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
       <a href="Map.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></svg>Map</a>
       <a href="DailyBrief.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
@@ -1791,6 +1899,8 @@ input[type=range]{accent-color:#1F5FAD}
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Travelers</a>
       <a href="Alerts.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Alerts</a>
+      <a href="Messages.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
       <a href="Map.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></svg>Map</a>
       <a href="DailyBrief.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
@@ -1926,6 +2036,239 @@ input[type=range]{accent-color:#1F5FAD}
     <p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: #6B7588">PROTOTYPE · SAMPLE DATA · NOT REAL TRAVEL ADVICE</p>
   </main>
 </div>
+</template>
+<template id="tpl-Messages">
+
+<div onClick="{{rootClick}}" style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F3F5F9; font-family: 'Open Sans', system-ui, sans-serif; color: #14213D">
+
+  <nav aria-label="Main" style="{{navStyle}}">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 0 8px">
+      <span style="width: 38px; height: 38px; border-radius: 50%; background: #2F6FC0; display: flex; align-items: center; justify-content: center; flex: none">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+      </span>
+      <div style="display: flex; flex-direction: column; line-height: 1.1">
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #E9A23B">CTCS</span>
+        <span style="font-size: 19px; font-weight: 800">Beacon</span>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px; padding: 0 8px; margin-top: -12px">
+      <span style="font-size: 15px; font-weight: 700; color: #FFFFFF">Acme Corp</span>
+      <select aria-label="Sub company" value="{{navSub}}" onChange="{{onNavSub}}" style="height: 40px; width: 100%; padding: 0 10px; border: 1px solid #5B6C94; border-radius: 8px; background: #1D2C50; color: #FFFFFF; font-size: 14px; font-weight: 600; font-family: inherit">
+        <option value="all" style="color: #14213D; background: #FFFFFF">All sub companies</option>
+        <option value="Acme-US" style="color: #14213D; background: #FFFFFF">Acme-US</option>
+        <option value="Acme-Europe" style="color: #14213D; background: #FFFFFF">Acme-Europe</option>
+        <option value="Acme-Asia Pacific" style="color: #14213D; background: #FFFFFF">Acme-Asia Pacific</option>
+        <option value="Acme-Latin America" style="color: #14213D; background: #FFFFFF">Acme-Latin America</option>
+      </select>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <a href="Home.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>Home</a>
+      <a href="Travelers.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Travelers</a>
+      <a href="Alerts.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Alerts</a>
+      <a href="Messages.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; background: #26385F; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 700">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E9A23B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
+      <a href="Map.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></svg>Map</a>
+      <a href="DailyBrief.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6M8 13h8M8 17h5"></path></svg>Daily Brief</a>
+      <a href="PreTravel.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg>Pre-Travel Brief</a>
+      <a href="Legend.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #C9D3E6; text-decoration: none; font-size: 15px; font-weight: 600">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h.01M4 12h.01M4 18h.01M9 6h11M9 12h11M9 18h11"></path></svg>Legend</a>
+    </div>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px; padding: 16px 8px 0; border-top: 1px solid #2B3D66">
+      <a href="Preferences.dc.html" aria-label="Open preferences" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 8px; margin: 0 -8px; border-radius: 8px; color: #FFFFFF; text-decoration: none">
+        <span style="width: 36px; height: 36px; border-radius: 50%; background: #E9A23B; color: #14213D; font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex: none">{{userInitials}}</span>
+        <div style="display: flex; flex-direction: column; line-height: 1.3">
+          <span style="font-size: 14px; font-weight: 700">{{userName}}</span>
+          <span style="font-size: 12px; color: #AEBBD3">{{userRole}}</span>
+        </div>
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9D3E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: auto; flex: none"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.1a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>
+      </a>
+      <a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; min-height: 44px; color: #C9D3E6; text-decoration: none; font-size: 14px; font-weight: 600">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"></path></svg>Sign out</a>
+    </div>
+  </nav>
+
+  <main style="{{mainStyle}}">
+    <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <div style="display: flex; align-items: center; gap: 12px; min-width: 0">
+        <button type="button" aria-label="{{menuLabel}}" aria-pressed="{{menuHidden}}" onClick="{{toggleMenu}}" style="height: 44px; padding: 0 14px; border-radius: 8px; border: 1px solid #B9C3D3; background: #FFFFFF; color: #14213D; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer; display: flex; align-items: center; gap: 8px; flex: none">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14H3zM9 5v14"></path></svg>{{menuLabel}}
+        </button>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.01em">Messages</h1>
+      </div>
+      <sc-if value="{{isList}}" hint-placeholder-val="{{ true }}">
+        <button type="button" ref="{{topRef}}" onClick="{{newCheckin}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: #1F5FAD; color: #FFFFFF; font-size: 14px; font-weight: 700; font-family: inherit; display: flex; align-items: center; gap: 8px; cursor: pointer">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
+          New check-in
+        </button>
+      </sc-if>
+    </header>
+
+    <p style="margin: 0; padding: 12px 16px; border-radius: 10px; background: #FFF4E0; border: 1px solid #E9A23B; font-size: 14px; line-height: 1.45; color: #14213D"><strong>Nothing is really sent in this prototype.</strong> The travelers and their replies are made up. Replies arrive on their own, and one second here stands for one minute.</p>
+
+    <sc-if value="{{isList}}" hint-placeholder-val="{{ true }}">
+      <sc-if value="{{noCheckins}}" hint-placeholder-val="{{ false }}">
+        <section aria-label="Check-ins sent" style="background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; padding: 32px 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px">
+          <h2 style="margin: 0; font-size: 18px; font-weight: 800; color: #14213D">No check-ins yet</h2>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A4558; max-width: 620px">A check-in asks the travelers near an alert one question: are you safe? Each traveler answers with one tap, and you see who is safe, who needs help and who has not replied.</p>
+          <button type="button" onClick="{{newCheckin}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #1F5FAD; background: #EAF1FB; color: #1F5FAD; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Send your first check-in</button>
+        </section>
+      </sc-if>
+      <sc-if value="{{hasCheckins}}" hint-placeholder-val="{{ true }}">
+        <section aria-label="Check-ins sent" style="display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-size: 16px; font-weight: 800; color: #14213D">{{listTitle}}</h2>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+            <sc-for list="{{cards}}" as="c" hint-placeholder-count="2">
+              <li>
+                <button type="button" onClick="{{c.open}}" style="width: 100%; box-sizing: border-box; padding: 16px 20px; border-radius: 14px; border: 1px solid #E1E6EE; background: #FFFFFF; font-family: inherit; text-align: left; cursor: pointer; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px">
+                  <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0; flex: 1 1 320px">
+                    <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px"><span style="{{c.chip}}">{{c.sev}}</span><span style="font-size: 17px; font-weight: 800; color: #14213D">{{c.title}}</span></span>
+                    <span style="font-size: 14px; color: #556072">{{c.meta}}</span>
+                  </span>
+                  <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+                    <span style="{{c.helpStyle}}">{{c.helpText}}</span>
+                    <span style="padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; background: #E3F4EA; color: #14603A">{{c.safeText}}</span>
+                    <span style="padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; background: #EEF1F6; color: #3A4558">{{c.waitText}}</span>
+                    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F5FAD" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                  </span>
+                </button>
+              </li>
+            </sc-for>
+          </ul>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+            <sc-if value="{{askClear}}" hint-placeholder-val="{{ false }}">
+              <span style="font-size: 14px; color: #14213D">Clear every check-in and conversation?</span>
+              <button type="button" onClick="{{clearYes}}" style="min-height: 36px; padding: 0 14px; border-radius: 8px; border: 1px solid #8F1D1D; background: #FFFFFF; color: #8F1D1D; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Yes, clear them</button>
+              <button type="button" onClick="{{clearNo}}" style="min-height: 36px; padding: 0 14px; border-radius: 8px; border: 1px solid #B9C3D3; background: #FFFFFF; color: #14213D; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">No</button>
+            </sc-if>
+            <sc-if value="{{canClear}}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{clearAsk}}" style="min-height: 36px; padding: 0; border: 0; background: transparent; color: #556072; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer; text-decoration: underline">Clear all messages (start the demo over)</button>
+            </sc-if>
+          </div>
+        </section>
+      </sc-if>
+    </sc-if>
+
+    <sc-if value="{{isNew}}" hint-placeholder-val="{{ false }}">
+      <section aria-label="New check-in" style="background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 22px">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <h2 id="mstep1" tabindex="-1" ref="{{topRef}}" style="margin: 0; font-size: 17px; font-weight: 800; color: #14213D">1. Choose an alert</h2>
+          <p style="margin: 0; font-size: 14px; color: #556072">These alerts are active now and have travelers in the area.</p>
+          <ul aria-labelledby="mstep1" style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; max-height: 318px; overflow-y: auto">
+            <sc-for list="{{picks}}" as="a" hint-placeholder-count="4">
+              <li>
+                <button type="button" aria-pressed="{{a.on}}" onClick="{{a.pick}}" style="{{a.style}}">
+                  <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; min-width: 0"><span style="{{a.chip}}">{{a.sev}}</span><span style="font-size: 15px; font-weight: 700; color: #14213D">{{a.title}}</span></span>
+                  <span style="font-size: 14px; font-weight: 600; color: #3A4558; white-space: nowrap">{{a.count}}</span>
+                </button>
+              </li>
+            </sc-for>
+          </ul>
+          <sc-if value="{{noPicks}}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 0; font-size: 14px; color: #3A4558">No active alert has travelers in the area right now.</p>
+          </sc-if>
+        </div>
+        <sc-if value="{{hasPick}}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <h2 style="margin: 0; font-size: 17px; font-weight: 800; color: #14213D">2. Who gets it</h2>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #14213D"><strong>{{whoCount}}</strong> {{whoNames}}</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <h2 style="margin: 0; font-size: 17px; font-weight: 800; color: #14213D"><label for="mtext">3. Message</label></h2>
+            <textarea id="mtext" rows="3" value="{{text}}" onChange="{{onText}}" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid #B9C3D3; border-radius: 10px; font-size: 15px; line-height: 1.45; font-family: inherit; color: #14213D; background: #FFFFFF; resize: vertical"></textarea>
+            <p style="margin: 0; font-size: 13px; color: #556072">Travelers answer with one tap or by replying 1 or 2.</p>
+          </div>
+          <div role="group" aria-label="Send by" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px">
+            <h2 style="margin: 0; font-size: 17px; font-weight: 800; color: #14213D">4. Send by</h2>
+            <label style="display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; font-weight: 600; color: #14213D; cursor: pointer"><input type="checkbox" checked="{{byText}}" onChange="{{onByText}}" style="width: 18px; height: 18px; color-scheme: light">Text message</label>
+            <label style="display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; font-weight: 600; color: #14213D; cursor: pointer"><input type="checkbox" checked="{{byEmail}}" onChange="{{onByEmail}}" style="width: 18px; height: 18px; color-scheme: light">Email</label>
+          </div>
+        </sc-if>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+          <button type="button" onClick="{{send}}" disabled="{{sendOff}}" style="{{sendStyle}}">{{sendLabel}}</button>
+          <button type="button" onClick="{{cancelNew}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #B9C3D3; background: #FFFFFF; color: #14213D; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Cancel</button>
+          <span role="status" style="font-size: 14px; color: #8F1D1D; font-weight: 600">{{sendHint}}</span>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{isCheckin}}" hint-placeholder-val="{{ false }}">
+      <button type="button" ref="{{topRef}}" onClick="{{toList}}" style="align-self: flex-start; min-height: 44px; padding: 0; border: 0; background: transparent; color: #1F5FAD; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>All check-ins
+      </button>
+      <section aria-label="Check-in" style="background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; overflow: hidden">
+        <div style="padding: 22px 24px; display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px"><span style="{{kChip}}">{{kSev}}</span><h2 style="margin: 0; font-size: 22px; font-weight: 800; color: #14213D">{{kTitle}}</h2></div>
+          <p style="margin: 0; font-size: 14px; color: #556072">{{kMeta}}</p>
+          <p style="margin: 0; padding: 12px 16px; border-left: 4px solid #1F5FAD; background: #F7F9FC; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.5; color: #14213D">{{kText}}</p>
+          <div role="group" aria-label="Replies so far" style="display: flex; flex-wrap: wrap; gap: 12px">
+            <div style="{{tileHelp}}"><span style="font-size: 34px; font-weight: 800; line-height: 1">{{nHelp}}</span><span style="font-size: 14px; font-weight: 700">Need help</span></div>
+            <div style="flex: 1 1 150px; padding: 14px 18px; border-radius: 12px; background: #E3F4EA; color: #14603A; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 34px; font-weight: 800; line-height: 1">{{nSafe}}</span><span style="font-size: 14px; font-weight: 700">Safe</span></div>
+            <div style="flex: 1 1 150px; padding: 14px 18px; border-radius: 12px; background: #EEF1F6; color: #3A4558; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 34px; font-weight: 800; line-height: 1">{{nWait}}</span><span style="font-size: 14px; font-weight: 700">No reply yet</span></div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px">
+            <span role="status" style="font-size: 15px; font-weight: 700; color: #14213D">{{kProgress}}</span>
+            <sc-if value="{{canRemind}}" hint-placeholder-val="{{ false }}">
+              <button type="button" onClick="{{remind}}" style="min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #1F5FAD; background: #EAF1FB; color: #1F5FAD; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">{{remindLabel}}</button>
+            </sc-if>
+            <sc-if value="{{reminded}}" hint-placeholder-val="{{ false }}">
+              <span style="font-size: 14px; color: #556072">{{remindedText}}</span>
+            </sc-if>
+          </div>
+        </div>
+        <div role="table" aria-label="Travelers in this check-in" style="border-top: 1px solid #E1E6EE; overflow-x: auto">
+          <div role="row" style="display: grid; grid-template-columns: minmax(140px, 1.2fr) minmax(150px, 1.6fr) minmax(160px, 1.8fr) 80px; gap: 16px; padding: 10px 24px; background: #F7F9FC; border-bottom: 1px solid #E1E6EE; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #3A4558; min-width: 640px; box-sizing: border-box">
+            <span role="columnheader">TRAVELER</span><span role="columnheader">WHERE THEY ARE</span><span role="columnheader">REPLY</span><span role="columnheader" style="text-align: right">TALK</span>
+          </div>
+          <sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
+            <div role="row" style="{{r.rowStyle}}">
+              <span role="cell" style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 15px; font-weight: 700; color: #14213D">{{r.name}}</span><span style="font-size: 13px; color: #556072">{{r.dept}}</span></span>
+              <span role="cell" style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 14px; font-weight: 600; color: #14213D">{{r.place}}</span><span style="font-size: 13px; color: #556072">{{r.detail}}</span></span>
+              <span role="cell" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0"><span style="{{r.chip}}">{{r.status}}</span><span style="font-size: 13px; line-height: 1.4; color: #3A4558">{{r.note}}</span></span>
+              <span role="cell" style="display: flex; justify-content: flex-end"><button type="button" aria-label="{{r.chatLabel}}" onClick="{{r.chat}}" style="min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #1F5FAD; background: #EAF1FB; color: #1F5FAD; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Chat</button></span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{isChat}}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{toCheckin}}" style="align-self: flex-start; min-height: 44px; padding: 0; border: 0; background: transparent; color: #1F5FAD; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Back to the check-in
+      </button>
+      <section aria-label="Conversation" style="background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; overflow: hidden; max-width: 760px">
+        <div style="padding: 18px 24px; border-bottom: 1px solid #E1E6EE; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px">
+          <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><h2 style="margin: 0; font-size: 20px; font-weight: 800; color: #14213D">{{chName}}</h2><span style="font-size: 14px; color: #556072">{{chSub}}</span></div>
+          <span style="{{chChip}}">{{chStatus}}</span>
+        </div>
+        <div role="log" aria-label="{{chLogLabel}}" style="padding: 20px 24px; display: flex; flex-direction: column; gap: 12px; background: #F7F9FC">
+          <sc-for list="{{thread}}" as="m" hint-placeholder-count="3">
+            <div style="{{m.wrap}}">
+              <span style="font-size: 12px; font-weight: 700; color: #556072">{{m.who}}</span>
+              <p style="{{m.bubble}}">{{m.text}}</p>
+            </div>
+          </sc-for>
+          <sc-if value="{{typing}}" hint-placeholder-val="{{ false }}">
+            <p role="status" style="margin: 0; font-size: 13px; font-style: italic; color: #556072">{{typingText}}</p>
+          </sc-if>
+        </div>
+        <div style="padding: 16px 24px; border-top: 1px solid #E1E6EE; display: flex; gap: 10px">
+          <label for="chatbox" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Message</label>
+          <input id="chatbox" type="text" ref="{{topRef}}" value="{{chat}}" onChange="{{onChat}}" onKeyDown="{{onChatKey}}" placeholder="{{chatHint}}" autocomplete="off" style="flex: 1; min-width: 0; height: 44px; padding: 0 14px; border: 1px solid #B9C3D3; border-radius: 8px; font-size: 15px; font-family: inherit; color: #14213D; background: #FFFFFF; box-sizing: border-box">
+          <button type="button" onClick="{{sendChat}}" disabled="{{chatOff}}" style="{{chatBtn}}">Send</button>
+        </div>
+      </section>
+    </sc-if>
+
+    <p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: #6B7588">PROTOTYPE · SAMPLE DATA · NOTHING IS REALLY SENT · TODAY IS FROZEN AT TUE DEC 1, 2026, 9:30 AM</p>
+  </main>
 </template>
 <script>
 /** @license
@@ -2660,6 +3003,11 @@ class Component extends DCLogic {
       x.dcity = D[0]; x.dcountry = D[1]; x.dregion = D[2]; x.dlat = x.hotel ? x.hotel.lat : D[4]; x.dlng = x.hotel ? x.hotel.lng : D[5];
       x.homeApt = H[3]; x.destApt = D[3]; x.hubApt = x.hub >= 0 ? C[x.hub][3] : '';
       x.flight2 = x.hub >= 0 ? x.code + ' ' + x.fn2 : ''; x.flightBack = x.code + ' ' + x.fnr; x.routeBack = D[3] + '–' + H[3];
+      // each flight with its times, on the same clock the status line uses (od = minutes after midnight the trip leaves, rd = the return)
+      var leg = function (flt, a, b, dep, mins) { return { flight: flt, from: a[3], fromCity: a[0], to: b[3], toCity: b[0], dep: tm(dep), arr: tm(dep + mins), next: dep + mins >= 1440 }; };
+      if (x.hub >= 0) { var m1 = fd(x.home, x.hub); x.legsOut = [leg(fl, H, C[x.hub], x.od, m1), leg(x.code + ' ' + x.fn2, C[x.hub], D, x.od + m1 + 75, fd(x.hub, x.dest))]; }
+      else x.legsOut = [leg(fl, H, D, x.od, fd(x.home, x.dest))];
+      x.legBack = leg(flr, D, H, x.rd, fd(x.dest, x.home));
       x.alert = m ? AL[m.i] : null;
       x.rank = m ? AL[m.i].rank : 0;
       x.dist = m ? (m.dist < 0 ? 'Country-wide' : (m.dist < 1 ? 'Under 1 mi away' : Math.round(m.dist) + ' mi away')) : '';
@@ -3004,6 +3352,11 @@ class Component extends DCLogic {
       x.dcity = D[0]; x.dcountry = D[1]; x.dregion = D[2]; x.dlat = x.hotel ? x.hotel.lat : D[4]; x.dlng = x.hotel ? x.hotel.lng : D[5];
       x.homeApt = H[3]; x.destApt = D[3]; x.hubApt = x.hub >= 0 ? C[x.hub][3] : '';
       x.flight2 = x.hub >= 0 ? x.code + ' ' + x.fn2 : ''; x.flightBack = x.code + ' ' + x.fnr; x.routeBack = D[3] + '–' + H[3];
+      // each flight with its times, on the same clock the status line uses (od = minutes after midnight the trip leaves, rd = the return)
+      var leg = function (flt, a, b, dep, mins) { return { flight: flt, from: a[3], fromCity: a[0], to: b[3], toCity: b[0], dep: tm(dep), arr: tm(dep + mins), next: dep + mins >= 1440 }; };
+      if (x.hub >= 0) { var m1 = fd(x.home, x.hub); x.legsOut = [leg(fl, H, C[x.hub], x.od, m1), leg(x.code + ' ' + x.fn2, C[x.hub], D, x.od + m1 + 75, fd(x.hub, x.dest))]; }
+      else x.legsOut = [leg(fl, H, D, x.od, fd(x.home, x.dest))];
+      x.legBack = leg(flr, D, H, x.rd, fd(x.dest, x.home));
       x.alert = m ? AL[m.i] : null;
       x.rank = m ? AL[m.i].rank : 0;
       x.dist = m ? (m.dist < 0 ? 'Country-wide' : (m.dist < 1 ? 'Under 1 mi away' : Math.round(m.dist) + ' mi away')) : '';
@@ -3017,6 +3370,123 @@ class Component extends DCLogic {
     return this._d;
   }
 
+
+  // ===== Shared by several screens. rebuild.py copies this file in wherever a screen has the SHARED placeholder. Edit it here, never in a screen.
+
+  // ----- Handing a small instruction to another screen (for example "open the map zoomed in here").
+  // In the app the other screen reads it when it opens. In the design canvas every screen stays open, so it also hears an event.
+  handOff(to, data) {
+    var msg = { to: to, data: data, at: Date.now() };
+    window.__beaconHand = msg;
+    try { window.localStorage.setItem('beacon.hand', JSON.stringify(msg)); } catch (e) {}
+    try { window.dispatchEvent(new window.CustomEvent('beacon-hand')); } catch (e) {}
+  }
+  // Take an instruction meant for this screen, once. Anything older than 15 seconds is ignored.
+  handIn(name) {
+    var msg = window.__beaconHand || null;
+    if (!msg) { try { msg = JSON.parse(window.localStorage.getItem('beacon.hand') || 'null'); } catch (e) { msg = null; } }
+    if (!msg || msg.to !== name || !(Date.now() - msg.at < 15000)) return null;
+    window.__beaconHand = null;
+    try { window.localStorage.removeItem('beacon.hand'); } catch (e) {}
+    return msg.data || null;
+  }
+  // A link's click handler that opens the Map zoomed in on a place (the link's href does the moving)
+  mapLink(lat, lng, wide) {
+    var self = this;
+    return function () { self.handOff('Map', { lat: lat, lng: lng, z: wide ? 4 : 9 }); };
+  }
+
+  // ----- What an alert says (the same words on Alerts and in the alert popup)
+  summary(a) {
+    if (a.title === 'Earthquake, Los Angeles') return 'A strong earthquake struck the Los Angeles area early Sunday. Expect damaged roads, power cuts, and delays at LAX and Burbank airports. Aftershocks are likely for several days. Travelers should follow local emergency instructions and confirm they are safe.';
+    var where = a.cw ? a.country : a.cityName;
+    var S = {
+      'Travel Safety and Disruptions': ['Travel in and around ' + where + ' is disrupted. Expect delays and cancellations, allow extra time, and confirm bookings before leaving.', 'Transport services in ' + where + ' are running with long delays. Check flight and rail status before heading out.'],
+      'Natural/Weather': ['Weather conditions in ' + where + ' may disrupt flights and ground travel. Follow local advisories and allow extra travel time.', 'Local authorities have issued a weather warning for ' + where + '. Some roads and services may close at short notice.'],
+      'Demonstrations and Strikes': ['Industrial action or protests are affecting ' + where + '. Expect transport delays and avoid large gatherings.', 'Demonstrations are planned in ' + where + '. Roads near the route may close and public transport may be reduced.'],
+      'Crime': ['Police report an increase in crime affecting visitors in ' + where + '. Stay alert, keep valuables out of sight, and use trusted transport.', 'Recent incidents in ' + where + ' have targeted travelers. Avoid walking alone at night and use hotel-arranged cars.'],
+      'Health/Medical': ['Health officials have issued a notice for ' + where + '. Follow local health guidance and know where the nearest medical facility is.', 'A public health advisory is in effect for ' + where + '. Travelers with health conditions should take extra care.'],
+      'Political Disruption': ['Political tension in ' + where + ' may lead to protests and closures at short notice. Avoid government buildings and large crowds.', 'Authorities in ' + where + ' have put restrictions in place. Carry identification and follow official instructions.'],
+      'Conflict and Terrorism': ['Security forces are on heightened alert in ' + where + '. Expect checkpoints and avoid crowded public places.', 'A security incident has been reported in ' + where + '. Stay away from the affected area and follow instructions from local authorities.']
+    }[a.type];
+    return S[a.id % 2] + (a.rank >= 4 ? ' Avoid non-essential travel to the area until the alert ends.' : '');
+  }
+
+  // ----- The popup: a traveler's full itinerary, or an alert's details. Its markup is pop_block.html.
+  // what = { trip: <trip id> } for an itinerary, { trip: <trip id>, alert: <alert id> } for an alert
+  dlgOpen(e, what) {
+    var el = e && (e.currentTarget || e.target), y = 60;
+    // place it beside the row that was clicked, measured inside <main> (this also works when the canvas is zoomed)
+    try { var main = el.closest('main'), mr = main.getBoundingClientRect(), k = (mr.height / main.offsetHeight) || 1; y = (el.getBoundingClientRect().top - mr.top) / k; } catch (x) {}
+    if (e && e.preventDefault) e.preventDefault();
+    var kb = !!e && e.detail === 0;   // opened from the keyboard: move focus in, and back again on close
+    this._dlgFrom = kb ? el : null; this._dlgFocus = kb; this._dlgNew = true;
+    this.setState({ dlg: Object.assign({ y: Math.max(16, y - 150) }, what), dlgNote: false });
+  }
+  dlgVals(D) {
+    var self = this, d = this.state.dlg || null, t = d ? D.trips[d.trip] : null;
+    var close = function (e) {
+      var back = self._dlgFrom, kb = !e || e.detail === 0 || e.type === 'keydown';
+      self._dlgFrom = null;
+      self.setState({ dlg: null, dlgNote: false });
+      if (back && kb) setTimeout(function () { try { back.focus(); } catch (x) {} }, 0);
+    };
+    var out = {
+      dlgShown: false, dlg: {}, dlgClose: close,
+      dlgKey: function (e) { if (e.key === 'Escape' && self.state.dlg) close(e); },
+      dlgMain: d && d.min ? '; min-height: ' + d.min + 'px' : '',   // added to <main>'s style: room for a popup taller than the page
+      dlgRef: function (el) {
+        if (!el || !self._dlgNew) return;
+        // first draw: now that its height is known, keep the popup inside <main> (move it up, or give <main> room), then draw once more
+        if (self._dlgNew === true) {
+          self._dlgNew = 'placed';
+          try {
+            var cur = self.state.dlg, h = el.offsetHeight, mh = el.closest('main').offsetHeight;
+            var y = Math.max(16, Math.min(cur.y, mh - h - 24)), need = y + h + 24;
+            if (h && (y !== cur.y || need > mh)) { self.setState({ dlg: Object.assign({}, cur, { y: y, min: need > mh ? need : 0 }) }); return; }
+          } catch (x) {}
+        }
+        self._dlgNew = false;
+        try { if (el.scrollIntoView) el.scrollIntoView({ block: 'nearest' }); } catch (x) {}
+        if (self._dlgFocus) { self._dlgFocus = false; try { el.focus(); } catch (x) {} }
+      }
+    };
+    if (!t) return out;
+    var SEVC = { Extreme: ['#8F1D1D', '#FFFFFF'], High: ['#B23C0A', '#FFFFFF'], Medium: ['#F2C46B', '#14213D'], Moderate: ['#FBE3B5', '#6B4500'], Low: ['#E3ECF8', '#1F5FAD'] };
+    var box = 'position: absolute; z-index: 21; top: ' + Math.round(d.y) + 'px; left: 50%; transform: translateX(-50%); width: 560px; max-width: calc(100% - 32px); box-sizing: border-box; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; box-shadow: 0 18px 50px rgba(20, 33, 61, 0.30); outline: none; display: flex; flex-direction: column';
+    var a = d.alert !== undefined ? D.alerts[d.alert] : null, v;
+    if (a) {
+      var ended = a.e < D.today, c = SEVC[a.sev] || SEVC.Low;
+      v = { label: 'Alert details: ' + a.title, eyebrow: 'Alert details', title: a.title, sub: a.type + ' · ' + (a.cw ? a.country + ' (country-wide)' : a.cityName + ', ' + a.country),
+        hasChip: true, chip: a.sev, chipStyle: 'flex: none; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: ' + c[0] + '; color: ' + c[1],
+        hasBanner: false, hasText: true, text: this.summary(a),
+        rows: [
+          { k: 'Reported', v: a.reported, sub: '' },
+          { k: ended ? 'Ended' : 'Estimated end', v: a.ends, sub: ended ? 'This alert is no longer active.' : 'Active now.' },
+          { k: 'This traveler', v: t.name + (t.vip ? ' · VIP' : ''), sub: t.place + (t.dist ? ' · ' + t.dist : '') },
+          { k: 'Who it matches', v: a.cw ? 'Every traveler in ' + a.country : 'Travelers within ' + D.distText(a.sev), sub: '' }
+        ],
+        hasLink: true, linkLabel: 'Full report on Riskline' };
+    } else {
+      var al = t.alert, night = t.e - t.s, both = function (day, l) { return D.lab[day] + ' · departs ' + l.dep + ' · arrives ' + l.arr + (l.next ? ' (next day)' : ''); };
+      var rows = [{ k: 'Status', v: t.status, sub: t.e < D.today ? 'Trip ended ' + D.lab[t.e] : t.detail }, { k: 'Trip dates', v: t.dates, sub: night ? night + (night === 1 ? ' night' : ' nights') + ' in ' + t.dcity : 'Day trip to ' + t.dcity }];
+      t.legsOut.forEach(function (l, i) { rows.push({ k: 'Flight out' + (t.legsOut.length > 1 ? ' · ' + (i + 1) + ' of ' + t.legsOut.length : ''), v: l.flight + ' · ' + l.fromCity + ' (' + l.from + ') to ' + l.toCity + ' (' + l.to + ')', sub: both(t.s, l) }); });
+      rows.push(t.hotel ? { k: 'Hotel', v: t.hotel.name, sub: 'Check-in ' + D.lab[t.s] + ' · check-out ' + D.lab[t.e] } : { k: 'Hotel', v: 'None (day trip)', sub: '' });
+      rows.push(t.car ? { k: 'Rental car', v: t.car, sub: 'Pick-up ' + D.lab[t.s] + ' · return ' + D.lab[t.e] } : { k: 'Rental car', v: 'None booked', sub: '' });
+      rows.push({ k: 'Flight back', v: t.legBack.flight + ' · ' + t.legBack.fromCity + ' (' + t.legBack.from + ') to ' + t.legBack.toCity + ' (' + t.legBack.to + ')', sub: both(t.e, t.legBack) });
+      rows.push({ k: 'Booking reference (record locator)', v: t.pnr, sub: t.airline });
+      var bc = al ? (SEVC[al.sev] || SEVC.Low) : null;
+      v = { label: 'Itinerary for ' + t.name, eyebrow: 'Traveler itinerary', title: t.name, sub: t.dept + ' · ' + t.sub,
+        hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
+        hasBanner: !!al, bannerHead: al ? al.sev + ' alert' : '', banner: al ? al.title + (t.dist ? ' · ' + t.dist : '') : '',
+        bannerStyle: al ? 'margin: 0 24px 4px; padding: 10px 12px; border-radius: 8px; border-left: 5px solid ' + bc[0] + '; background: #F7F9FC; font-size: 14px; line-height: 1.4; color: #14213D' : '',
+        hasText: false, text: '', rows: rows, hasLink: false, linkLabel: '' };
+    }
+    v.style = box; v.hasNote = !!this.state.dlgNote;
+    v.link = function (e) { if (e && e.preventDefault) e.preventDefault(); self.setState({ dlgNote: true }); };
+    out.dlgShown = true; out.dlg = v;
+    return out;
+  }
 
   // Sub company picked in the sidebar. Kept in browser storage so other screens can pick it up.
   navSub() {
@@ -3114,6 +3584,9 @@ class Component extends DCLogic {
     var rows = filtered.slice(page * PER, page * PER + PER).map(function (t) {
       var sv = t.alert ? SEV[t.alert.sev] : null;
       return {
+        itin: function (e) { self.dlgOpen(e, { trip: t.id }); }, itinLabel: 'Itinerary for ' + t.name,
+        toMap: self.mapLink(t.lat, t.lng), mapLabel: 'Show ' + t.place + ' on the map',
+        alertInfo: function (e) { if (t.alert) self.dlgOpen(e, { trip: t.id, alert: t.alert.id }); }, alertLabel: t.alert ? 'Alert details: ' + t.alert.title : '',
         name: t.name, vip: t.vip,
         sub: t.dept + ' · ' + t.pnr,
         place: t.place, detail: t.detail,
@@ -3173,9 +3646,10 @@ class Component extends DCLogic {
     var num = function (x) { return String(x).replace(/\B(?=(\d{3})+(?!\d))/g, ','); };
     var set = function (key) { return function (e) { var o = { page: 0 }; o[key] = e.target.value; self.setState(o); }; };
 
-    return {
+    var dv = this.dlgVals(D);
+    return Object.assign(dv, {
       navSub: sub, navStyle: self.state.menuOff ? 'display: none' : 'flex: 1 1 236px; background: #14213D; color: #FFFFFF; padding: 28px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px',
-      mainStyle: 'flex: 999 1 560px; min-width: 0; padding: ' + (self.state.menuOff ? '20px 24px 32px' : '32px 40px 48px') + '; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; max-width: ' + (self.state.menuOff ? 'none' : '1280px'),
+      mainStyle: 'flex: 999 1 560px; min-width: 0; padding: ' + (self.state.menuOff ? '20px 24px 32px' : '32px 40px 48px') + '; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; position: relative; max-width: ' + (self.state.menuOff ? 'none' : '1280px') + dv.dlgMain,
       menuLabel: self.state.menuOff ? 'Show menu' : 'Hide menu', menuHidden: self.state.menuOff ? 'true' : 'false',
       toggleMenu: function () { self.setState({ menuOff: !self.state.menuOff }); }, onNavSub: function (e) { self.setNavSub(e.target.value); self.setState({ page: 0 }); },
       userName: 'Alex Morgan', userInitials: 'AM', userRole: 'Travel manager · Acme Corp',
@@ -3226,7 +3700,7 @@ class Component extends DCLogic {
           self.setState({ exportMsg: code === 'declined' ? 'Export cancelled' : 'Export is not available in this view' });
         });
       }
-    };
+    });
   }
 
   toCsv(list) {
@@ -3528,6 +4002,11 @@ class Component extends DCLogic {
       x.dcity = D[0]; x.dcountry = D[1]; x.dregion = D[2]; x.dlat = x.hotel ? x.hotel.lat : D[4]; x.dlng = x.hotel ? x.hotel.lng : D[5];
       x.homeApt = H[3]; x.destApt = D[3]; x.hubApt = x.hub >= 0 ? C[x.hub][3] : '';
       x.flight2 = x.hub >= 0 ? x.code + ' ' + x.fn2 : ''; x.flightBack = x.code + ' ' + x.fnr; x.routeBack = D[3] + '–' + H[3];
+      // each flight with its times, on the same clock the status line uses (od = minutes after midnight the trip leaves, rd = the return)
+      var leg = function (flt, a, b, dep, mins) { return { flight: flt, from: a[3], fromCity: a[0], to: b[3], toCity: b[0], dep: tm(dep), arr: tm(dep + mins), next: dep + mins >= 1440 }; };
+      if (x.hub >= 0) { var m1 = fd(x.home, x.hub); x.legsOut = [leg(fl, H, C[x.hub], x.od, m1), leg(x.code + ' ' + x.fn2, C[x.hub], D, x.od + m1 + 75, fd(x.hub, x.dest))]; }
+      else x.legsOut = [leg(fl, H, D, x.od, fd(x.home, x.dest))];
+      x.legBack = leg(flr, D, H, x.rd, fd(x.dest, x.home));
       x.alert = m ? AL[m.i] : null;
       x.rank = m ? AL[m.i].rank : 0;
       x.dist = m ? (m.dist < 0 ? 'Country-wide' : (m.dist < 1 ? 'Under 1 mi away' : Math.round(m.dist) + ' mi away')) : '';
@@ -3583,6 +4062,32 @@ class Component extends DCLogic {
     return out;
   }
 
+  // ===== Shared by several screens. rebuild.py copies this file in wherever a screen has the SHARED placeholder. Edit it here, never in a screen.
+
+  // ----- Handing a small instruction to another screen (for example "open the map zoomed in here").
+  // In the app the other screen reads it when it opens. In the design canvas every screen stays open, so it also hears an event.
+  handOff(to, data) {
+    var msg = { to: to, data: data, at: Date.now() };
+    window.__beaconHand = msg;
+    try { window.localStorage.setItem('beacon.hand', JSON.stringify(msg)); } catch (e) {}
+    try { window.dispatchEvent(new window.CustomEvent('beacon-hand')); } catch (e) {}
+  }
+  // Take an instruction meant for this screen, once. Anything older than 15 seconds is ignored.
+  handIn(name) {
+    var msg = window.__beaconHand || null;
+    if (!msg) { try { msg = JSON.parse(window.localStorage.getItem('beacon.hand') || 'null'); } catch (e) { msg = null; } }
+    if (!msg || msg.to !== name || !(Date.now() - msg.at < 15000)) return null;
+    window.__beaconHand = null;
+    try { window.localStorage.removeItem('beacon.hand'); } catch (e) {}
+    return msg.data || null;
+  }
+  // A link's click handler that opens the Map zoomed in on a place (the link's href does the moving)
+  mapLink(lat, lng, wide) {
+    var self = this;
+    return function () { self.handOff('Map', { lat: lat, lng: lng, z: wide ? 4 : 9 }); };
+  }
+
+  // ----- What an alert says (the same words on Alerts and in the alert popup)
   summary(a) {
     if (a.title === 'Earthquake, Los Angeles') return 'A strong earthquake struck the Los Angeles area early Sunday. Expect damaged roads, power cuts, and delays at LAX and Burbank airports. Aftershocks are likely for several days. Travelers should follow local emergency instructions and confirm they are safe.';
     var where = a.cw ? a.country : a.cityName;
@@ -3596,6 +4101,82 @@ class Component extends DCLogic {
       'Conflict and Terrorism': ['Security forces are on heightened alert in ' + where + '. Expect checkpoints and avoid crowded public places.', 'A security incident has been reported in ' + where + '. Stay away from the affected area and follow instructions from local authorities.']
     }[a.type];
     return S[a.id % 2] + (a.rank >= 4 ? ' Avoid non-essential travel to the area until the alert ends.' : '');
+  }
+
+  // ----- The popup: a traveler's full itinerary, or an alert's details. Its markup is pop_block.html.
+  // what = { trip: <trip id> } for an itinerary, { trip: <trip id>, alert: <alert id> } for an alert
+  dlgOpen(e, what) {
+    var el = e && (e.currentTarget || e.target), y = 60;
+    // place it beside the row that was clicked, measured inside <main> (this also works when the canvas is zoomed)
+    try { var main = el.closest('main'), mr = main.getBoundingClientRect(), k = (mr.height / main.offsetHeight) || 1; y = (el.getBoundingClientRect().top - mr.top) / k; } catch (x) {}
+    if (e && e.preventDefault) e.preventDefault();
+    var kb = !!e && e.detail === 0;   // opened from the keyboard: move focus in, and back again on close
+    this._dlgFrom = kb ? el : null; this._dlgFocus = kb; this._dlgNew = true;
+    this.setState({ dlg: Object.assign({ y: Math.max(16, y - 150) }, what), dlgNote: false });
+  }
+  dlgVals(D) {
+    var self = this, d = this.state.dlg || null, t = d ? D.trips[d.trip] : null;
+    var close = function (e) {
+      var back = self._dlgFrom, kb = !e || e.detail === 0 || e.type === 'keydown';
+      self._dlgFrom = null;
+      self.setState({ dlg: null, dlgNote: false });
+      if (back && kb) setTimeout(function () { try { back.focus(); } catch (x) {} }, 0);
+    };
+    var out = {
+      dlgShown: false, dlg: {}, dlgClose: close,
+      dlgKey: function (e) { if (e.key === 'Escape' && self.state.dlg) close(e); },
+      dlgMain: d && d.min ? '; min-height: ' + d.min + 'px' : '',   // added to <main>'s style: room for a popup taller than the page
+      dlgRef: function (el) {
+        if (!el || !self._dlgNew) return;
+        // first draw: now that its height is known, keep the popup inside <main> (move it up, or give <main> room), then draw once more
+        if (self._dlgNew === true) {
+          self._dlgNew = 'placed';
+          try {
+            var cur = self.state.dlg, h = el.offsetHeight, mh = el.closest('main').offsetHeight;
+            var y = Math.max(16, Math.min(cur.y, mh - h - 24)), need = y + h + 24;
+            if (h && (y !== cur.y || need > mh)) { self.setState({ dlg: Object.assign({}, cur, { y: y, min: need > mh ? need : 0 }) }); return; }
+          } catch (x) {}
+        }
+        self._dlgNew = false;
+        try { if (el.scrollIntoView) el.scrollIntoView({ block: 'nearest' }); } catch (x) {}
+        if (self._dlgFocus) { self._dlgFocus = false; try { el.focus(); } catch (x) {} }
+      }
+    };
+    if (!t) return out;
+    var SEVC = { Extreme: ['#8F1D1D', '#FFFFFF'], High: ['#B23C0A', '#FFFFFF'], Medium: ['#F2C46B', '#14213D'], Moderate: ['#FBE3B5', '#6B4500'], Low: ['#E3ECF8', '#1F5FAD'] };
+    var box = 'position: absolute; z-index: 21; top: ' + Math.round(d.y) + 'px; left: 50%; transform: translateX(-50%); width: 560px; max-width: calc(100% - 32px); box-sizing: border-box; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; box-shadow: 0 18px 50px rgba(20, 33, 61, 0.30); outline: none; display: flex; flex-direction: column';
+    var a = d.alert !== undefined ? D.alerts[d.alert] : null, v;
+    if (a) {
+      var ended = a.e < D.today, c = SEVC[a.sev] || SEVC.Low;
+      v = { label: 'Alert details: ' + a.title, eyebrow: 'Alert details', title: a.title, sub: a.type + ' · ' + (a.cw ? a.country + ' (country-wide)' : a.cityName + ', ' + a.country),
+        hasChip: true, chip: a.sev, chipStyle: 'flex: none; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: ' + c[0] + '; color: ' + c[1],
+        hasBanner: false, hasText: true, text: this.summary(a),
+        rows: [
+          { k: 'Reported', v: a.reported, sub: '' },
+          { k: ended ? 'Ended' : 'Estimated end', v: a.ends, sub: ended ? 'This alert is no longer active.' : 'Active now.' },
+          { k: 'This traveler', v: t.name + (t.vip ? ' · VIP' : ''), sub: t.place + (t.dist ? ' · ' + t.dist : '') },
+          { k: 'Who it matches', v: a.cw ? 'Every traveler in ' + a.country : 'Travelers within ' + D.distText(a.sev), sub: '' }
+        ],
+        hasLink: true, linkLabel: 'Full report on Riskline' };
+    } else {
+      var al = t.alert, night = t.e - t.s, both = function (day, l) { return D.lab[day] + ' · departs ' + l.dep + ' · arrives ' + l.arr + (l.next ? ' (next day)' : ''); };
+      var rows = [{ k: 'Status', v: t.status, sub: t.e < D.today ? 'Trip ended ' + D.lab[t.e] : t.detail }, { k: 'Trip dates', v: t.dates, sub: night ? night + (night === 1 ? ' night' : ' nights') + ' in ' + t.dcity : 'Day trip to ' + t.dcity }];
+      t.legsOut.forEach(function (l, i) { rows.push({ k: 'Flight out' + (t.legsOut.length > 1 ? ' · ' + (i + 1) + ' of ' + t.legsOut.length : ''), v: l.flight + ' · ' + l.fromCity + ' (' + l.from + ') to ' + l.toCity + ' (' + l.to + ')', sub: both(t.s, l) }); });
+      rows.push(t.hotel ? { k: 'Hotel', v: t.hotel.name, sub: 'Check-in ' + D.lab[t.s] + ' · check-out ' + D.lab[t.e] } : { k: 'Hotel', v: 'None (day trip)', sub: '' });
+      rows.push(t.car ? { k: 'Rental car', v: t.car, sub: 'Pick-up ' + D.lab[t.s] + ' · return ' + D.lab[t.e] } : { k: 'Rental car', v: 'None booked', sub: '' });
+      rows.push({ k: 'Flight back', v: t.legBack.flight + ' · ' + t.legBack.fromCity + ' (' + t.legBack.from + ') to ' + t.legBack.toCity + ' (' + t.legBack.to + ')', sub: both(t.e, t.legBack) });
+      rows.push({ k: 'Booking reference (record locator)', v: t.pnr, sub: t.airline });
+      var bc = al ? (SEVC[al.sev] || SEVC.Low) : null;
+      v = { label: 'Itinerary for ' + t.name, eyebrow: 'Traveler itinerary', title: t.name, sub: t.dept + ' · ' + t.sub,
+        hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
+        hasBanner: !!al, bannerHead: al ? al.sev + ' alert' : '', banner: al ? al.title + (t.dist ? ' · ' + t.dist : '') : '',
+        bannerStyle: al ? 'margin: 0 24px 4px; padding: 10px 12px; border-radius: 8px; border-left: 5px solid ' + bc[0] + '; background: #F7F9FC; font-size: 14px; line-height: 1.4; color: #14213D' : '',
+        hasText: false, text: '', rows: rows, hasLink: false, linkLabel: '' };
+    }
+    v.style = box; v.hasNote = !!this.state.dlgNote;
+    v.link = function (e) { if (e && e.preventDefault) e.preventDefault(); self.setState({ dlgNote: true }); };
+    out.dlgShown = true; out.dlg = v;
+    return out;
   }
 
   renderVals() {
@@ -3645,9 +4226,13 @@ class Component extends DCLogic {
     };
     var esc = function (v) { v = v == null ? '' : String(v); return /[",\r\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
     var base = { navSub: this.navSub(), navStyle: self.state.menuOff ? 'display: none' : 'flex: 1 1 236px; background: #14213D; color: #FFFFFF; padding: 28px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px',
-      mainStyle: 'flex: 999 1 560px; min-width: 0; padding: ' + (self.state.menuOff ? '20px 24px 32px' : '32px 40px 48px') + '; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; max-width: ' + (self.state.menuOff ? 'none' : '1280px'),
+      mainStyle: 'flex: 999 1 560px; min-width: 0; padding: ' + (self.state.menuOff ? '20px 24px 32px' : '32px 40px 48px') + '; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; position: relative; max-width: ' + (self.state.menuOff ? 'none' : '1280px'),
       menuLabel: self.state.menuOff ? 'Show menu' : 'Hide menu', menuHidden: self.state.menuOff ? 'true' : 'false',
-      toggleMenu: function () { self.setState({ menuOff: !self.state.menuOff }); }, onNavSub: function (e) { self.setNavSub(e.target.value); self.setState({ page: 0, tpage: 0 }); }, userName: 'Alex Morgan', userInitials: 'AM', userRole: 'Travel manager · Acme Corp', exportedShown: !!s.exportMsg, exportedText: s.exportMsg };
+      toggleMenu: function () { self.setState({ menuOff: !self.state.menuOff }); }, onNavSub: function (e) { self.setNavSub(e.target.value); self.setState({ page: 0, tpage: 0 }); }, userName: 'Alex Morgan', userInitials: 'AM', userRole: 'Travel manager · Acme Corp', exportedShown: !!s.exportMsg, exportedText: s.exportMsg,
+      // Leaving this screen by any link (the menu, the map, a check-in) puts Alerts back on its main list for next time.
+      // The app already starts each screen fresh; this is for the design canvas, where a screen keeps its place.
+      rootClick: function (e) { var l = e.target && e.target.closest ? e.target.closest('a') : null; if (l && /\.dc\.html$/.test(l.getAttribute('href') || '') && (self.state.sel >= 0 || self.state.dlg)) self.setState({ sel: -1, exportMsg: '', dlg: null }); } };
+    Object.assign(base, this.dlgVals(D)); base.mainStyle += base.dlgMain;
 
     // ---------- One alert: its travelers ----------
     if (s.sel >= 0) {
@@ -3656,6 +4241,8 @@ class Component extends DCLogic {
       im.now.forEach(function (x) { list.push({ t: x.t, dist: x.dist, when: 'There now', wk: 0 }); });
       im.arr.forEach(function (x) { list.push({ t: x.t, dist: x.dist, when: 'Arriving', wk: 1 }); });
       im.was.forEach(function (x) { list.push({ t: x.t, dist: x.dist, when: 'Was there', wk: 2 }); });
+      if (s.tvip) list = list.filter(function (x) { return x.t.vip; });   // "VIP only": the tabs, the count and the export all follow it
+      var nNow = 0, nArr = 0; list.forEach(function (x) { if (x.wk === 0) nNow++; else if (x.wk === 1) nArr++; });
       var tw = (s.tq || '').trim().toLowerCase().split(/\s+/).filter(function (w) { return w; });
       var shown = list.filter(function (x) {
         if (s.tmode === 'now' && x.wk !== 0) return false;
@@ -3667,27 +4254,32 @@ class Component extends DCLogic {
       shown.sort(function (p, q2) { var x = tkey(p), y = tkey(q2); if (x < y) return -s.tsortDir; if (x > y) return s.tsortDir; return p.t.name < q2.t.name ? -1 : (p.t.name > q2.t.name ? 1 : p.t.id - q2.t.id); });
       var PER2 = 50, tt = shown.length, tpages = Math.max(1, Math.ceil(tt / PER2)), tp = Math.min(s.tpage || 0, tpages - 1);
       var whenStyle = function (wk) { return 'display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 700; ' + (wk === 0 ? 'background: #14213D; color: #FFFFFF' : (wk === 1 ? 'background: #E3ECF8; color: #1F5FAD' : 'background: #EEF1F5; color: #3A4558')); };
-      var modes = ended ? [['all', 'All (' + list.length + ')']] : [['all', 'All (' + list.length + ')'], ['now', 'There now (' + im.now.length + ')'], ['arr', 'Arriving (' + im.arr.length + ')']];
+      var modes = ended ? [['all', 'All (' + list.length + ')']] : [['all', 'All (' + list.length + ')'], ['now', 'There now (' + nNow + ')'], ['arr', 'Arriving (' + nArr + ')']];
       return Object.assign(base, {
         listView: false, detailView: true,
+        // start a safety check-in for the travelers who are in this alert's area now (the Messages screen picks it up)
+        canCheckin: !ended && im.now.length > 0, checkinLabel: 'Send check-in to ' + im.now.length + ' there now',
+        startCheckin: function () { self.handOff('Messages', { alertId: a.id }); },
         dChip: chip(a.sev, 84), dSev: a.sev, dTitle: a.title,
         dMeta: a.type + ' · ' + (a.cw ? a.country + ' (country-wide)' : a.cityName + ', ' + a.country) + ' · Reported ' + a.reported + ' · ' + (ended ? 'Ended ' : 'Est. end ') + a.ends,
         dSummary: this.summary(a),
         tq: s.tq, onTSearch: function (e) { self.setState({ tq: e.target.value, tpage: 0 }); },
         modeChips: modes.map(function (m) { return { label: m[1], on: s.tmode === m[0] ? 'true' : 'false', style: pill(s.tmode === m[0]), pick: function () { self.setState({ tmode: m[0], tpage: 0 }); } }; }),
-        tCount: num(tt), tCountLabel: (tt === 1 ? 'traveler' : 'travelers') + ' potentially impacted',
+        tvip: !!s.tvip, onTVip: function (e) { self.setState({ tvip: !!e.target.checked, tpage: 0 }); },
+        tCount: num(tt), tCountLabel: (s.tvip ? 'VIP ' : '') + (tt === 1 ? 'traveler' : 'travelers') + ' potentially impacted',
         tcols: [['name', 'TRAVELER'], ['place', 'LOCATION'], ['trip', 'TRIP DATES'], ['when', 'STATUS'], ['dist', 'DISTANCE']].map(function (c) {
           var act = s.tsortKey === c[0];
           return { label: c[1], arrow: act ? (s.tsortDir === 1 ? '↑' : '↓') : '↕', aria: 'Sort by ' + c[1].toLowerCase(), arrowStyle: 'font-size: 14px; color: ' + (act ? '#1F5FAD' : '#9AA5B8'), style: headStyle(act), sort: function () { self.setState(act ? { tsortDir: -s.tsortDir, tpage: 0 } : { tsortKey: c[0], tsortDir: 1, tpage: 0 }); } };
         }),
         trows: shown.slice(tp * PER2, tp * PER2 + PER2).map(function (x) {
-          return { name: x.t.name, vip: x.t.vip, sub: x.t.dept + ' · ' + x.t.pnr, place: x.t.place, detail: x.t.detail, dates: x.t.dates, statusLabel: x.t.status, when: x.when, whenStyle: whenStyle(x.wk), dist: distText(x.dist) };
+          return { itin: function (e) { self.dlgOpen(e, { trip: x.t.id }); }, itinLabel: 'Itinerary for ' + x.t.name, toMap: self.mapLink(x.t.lat, x.t.lng), mapLabel: 'Show ' + x.t.place + ' on the map',
+            name: x.t.name, vip: x.t.vip, sub: x.t.dept + ' · ' + x.t.pnr, place: x.t.place, detail: x.t.detail, dates: x.t.dates, statusLabel: x.t.status, when: x.when, whenStyle: whenStyle(x.wk), dist: distText(x.dist) };
         }),
         tEmpty: tt === 0, tHasRows: tt > 0,
         tPageText: tt ? 'Rows ' + (tp * PER2 + 1) + '–' + Math.min(tt, tp * PER2 + PER2) + ' of ' + num(tt) : '',
         tPrevOff: tp === 0, tNextOff: tp >= tpages - 1, tPrevStyle: pagerStyle(tp === 0), tNextStyle: pagerStyle(tp >= tpages - 1),
         tPrev: function () { self.setState({ tpage: Math.max(0, tp - 1) }); }, tNext: function () { self.setState({ tpage: Math.min(tpages - 1, tp + 1) }); },
-        back: function () { self.setState({ sel: -1, exportMsg: '' }); },
+        back: function () { self.setState({ sel: -1, exportMsg: '', dlg: null }); },
         exportCsv: function () {
           var out = [['Alert', 'Risk level', 'Traveler', 'VIP', 'Department', 'Record locator', 'Status for this alert', 'Distance', 'City', 'Country', 'Location detail', 'Trip start', 'Trip end', 'Airline', 'Flight', 'Hotel'].join(',')];
           shown.forEach(function (x) { var t = x.t; out.push([a.title, a.sev, t.name, t.vip ? 'Yes' : '', t.dept, t.pnr, x.when, distText(x.dist), t.city, t.country, t.detail, t.si, t.ei, t.airline, t.flight, t.hotel ? t.hotel.name : ''].map(esc).join(',')); });
@@ -3726,14 +4318,16 @@ class Component extends DCLogic {
       return {
         sev: a.sev, chipStyle: chip(a.sev), title: a.title, type: a.type, icon: ICON[a.type],
         city: a.cw ? 'Country-wide' : a.cityName, country: a.country,
+        toMap: self.mapLink(a.lat, a.lng, a.cw), mapLabel: 'Show ' + (a.cw ? a.country : a.cityName) + ' on the map',
         reported: a.reported, ends: a.ends, status: ended ? 'Ended' : 'Active',
         statusStyle: 'font-size: 13px; font-weight: 700; color: ' + (ended ? '#6B7588' : '#1F5FAD'),
         hasTrav: n > 0, noTrav: n === 0, travText: n + (n === 1 ? ' traveler' : ' travelers'),
         isOpen: open, openStr: open ? 'true' : 'false', caret: open ? '▲' : '▼',
         summary: open ? self.summary(a) : '',
         matchText: a.cw ? 'Matches every traveler in ' + a.country : 'Matches travelers within ' + D.distText(a.sev),
-        toggle: function () { self.setState({ open: open ? -1 : a.id }); },
-        open: function () { self.setState({ sel: a.id, tq: '', tmode: 'all', tpage: 0, tsortKey: 'when', tsortDir: 1, exportMsg: '' }); }
+        toggle: function () { self.setState({ open: open ? -1 : a.id, riskNote: -1 }); },
+        risk: function (e) { if (e && e.preventDefault) e.preventDefault(); self.setState({ riskNote: a.id }); }, riskNote: open && s.riskNote === a.id,
+        open: function () { self.setState({ sel: a.id, tq: '', tmode: 'all', tvip: false, tpage: 0, tsortKey: 'when', tsortDir: 1, exportMsg: '', dlg: null }); }
       };
     });
 
@@ -4117,6 +4711,11 @@ class Component extends DCLogic {
       x.dcity = D[0]; x.dcountry = D[1]; x.dregion = D[2]; x.dlat = x.hotel ? x.hotel.lat : D[4]; x.dlng = x.hotel ? x.hotel.lng : D[5];
       x.homeApt = H[3]; x.destApt = D[3]; x.hubApt = x.hub >= 0 ? C[x.hub][3] : '';
       x.flight2 = x.hub >= 0 ? x.code + ' ' + x.fn2 : ''; x.flightBack = x.code + ' ' + x.fnr; x.routeBack = D[3] + '–' + H[3];
+      // each flight with its times, on the same clock the status line uses (od = minutes after midnight the trip leaves, rd = the return)
+      var leg = function (flt, a, b, dep, mins) { return { flight: flt, from: a[3], fromCity: a[0], to: b[3], toCity: b[0], dep: tm(dep), arr: tm(dep + mins), next: dep + mins >= 1440 }; };
+      if (x.hub >= 0) { var m1 = fd(x.home, x.hub); x.legsOut = [leg(fl, H, C[x.hub], x.od, m1), leg(x.code + ' ' + x.fn2, C[x.hub], D, x.od + m1 + 75, fd(x.hub, x.dest))]; }
+      else x.legsOut = [leg(fl, H, D, x.od, fd(x.home, x.dest))];
+      x.legBack = leg(flr, D, H, x.rd, fd(x.dest, x.home));
       x.alert = m ? AL[m.i] : null;
       x.rank = m ? AL[m.i].rank : 0;
       x.dist = m ? (m.dist < 0 ? 'Country-wide' : (m.dist < 1 ? 'Under 1 mi away' : Math.round(m.dist) + ' mi away')) : '';
@@ -4189,6 +4788,8 @@ class Component extends DCLogic {
     var kept = window.__beaconMapFilters, st0 = this.state;
     if (kept) ['q', 'adv', 'levels', 'riskType', 'showTravelers', 'showAlerts', 'showLocs', 'fRegion', 'fDept', 'fStatus', 'fVip', 'fRisk', 'fFrom', 'fTo', 'fAirline', 'fFlight', 'fAptDir', 'fApt'].forEach(function (k) { if (kept[k] !== undefined) st0[k] = kept[k]; });
     try { if (window.localStorage.getItem('beacon.demo') === '1') { window.localStorage.removeItem('beacon.demo'); this._demoPending = true; this.state.cx = 500; this.state.cy = 334; this.state.z = 1; } } catch (e) {}
+    // another screen asked for the map zoomed in on a place (a traveler's or an alert's location)
+    this._go = this.handIn('Map');
     this.W = 1000; this.H = 668;
   }
 
@@ -4506,6 +5107,11 @@ class Component extends DCLogic {
       x.dcity = D[0]; x.dcountry = D[1]; x.dregion = D[2]; x.dlat = x.hotel ? x.hotel.lat : D[4]; x.dlng = x.hotel ? x.hotel.lng : D[5];
       x.homeApt = H[3]; x.destApt = D[3]; x.hubApt = x.hub >= 0 ? C[x.hub][3] : '';
       x.flight2 = x.hub >= 0 ? x.code + ' ' + x.fn2 : ''; x.flightBack = x.code + ' ' + x.fnr; x.routeBack = D[3] + '–' + H[3];
+      // each flight with its times, on the same clock the status line uses (od = minutes after midnight the trip leaves, rd = the return)
+      var leg = function (flt, a, b, dep, mins) { return { flight: flt, from: a[3], fromCity: a[0], to: b[3], toCity: b[0], dep: tm(dep), arr: tm(dep + mins), next: dep + mins >= 1440 }; };
+      if (x.hub >= 0) { var m1 = fd(x.home, x.hub); x.legsOut = [leg(fl, H, C[x.hub], x.od, m1), leg(x.code + ' ' + x.fn2, C[x.hub], D, x.od + m1 + 75, fd(x.hub, x.dest))]; }
+      else x.legsOut = [leg(fl, H, D, x.od, fd(x.home, x.dest))];
+      x.legBack = leg(flr, D, H, x.rd, fd(x.dest, x.home));
       x.alert = m ? AL[m.i] : null;
       x.rank = m ? AL[m.i].rank : 0;
       x.dist = m ? (m.dist < 0 ? 'Country-wide' : (m.dist < 1 ? 'Under 1 mi away' : Math.round(m.dist) + ' mi away')) : '';
@@ -4519,6 +5125,123 @@ class Component extends DCLogic {
     return this._d;
   }
 
+
+  // ===== Shared by several screens. rebuild.py copies this file in wherever a screen has the SHARED placeholder. Edit it here, never in a screen.
+
+  // ----- Handing a small instruction to another screen (for example "open the map zoomed in here").
+  // In the app the other screen reads it when it opens. In the design canvas every screen stays open, so it also hears an event.
+  handOff(to, data) {
+    var msg = { to: to, data: data, at: Date.now() };
+    window.__beaconHand = msg;
+    try { window.localStorage.setItem('beacon.hand', JSON.stringify(msg)); } catch (e) {}
+    try { window.dispatchEvent(new window.CustomEvent('beacon-hand')); } catch (e) {}
+  }
+  // Take an instruction meant for this screen, once. Anything older than 15 seconds is ignored.
+  handIn(name) {
+    var msg = window.__beaconHand || null;
+    if (!msg) { try { msg = JSON.parse(window.localStorage.getItem('beacon.hand') || 'null'); } catch (e) { msg = null; } }
+    if (!msg || msg.to !== name || !(Date.now() - msg.at < 15000)) return null;
+    window.__beaconHand = null;
+    try { window.localStorage.removeItem('beacon.hand'); } catch (e) {}
+    return msg.data || null;
+  }
+  // A link's click handler that opens the Map zoomed in on a place (the link's href does the moving)
+  mapLink(lat, lng, wide) {
+    var self = this;
+    return function () { self.handOff('Map', { lat: lat, lng: lng, z: wide ? 4 : 9 }); };
+  }
+
+  // ----- What an alert says (the same words on Alerts and in the alert popup)
+  summary(a) {
+    if (a.title === 'Earthquake, Los Angeles') return 'A strong earthquake struck the Los Angeles area early Sunday. Expect damaged roads, power cuts, and delays at LAX and Burbank airports. Aftershocks are likely for several days. Travelers should follow local emergency instructions and confirm they are safe.';
+    var where = a.cw ? a.country : a.cityName;
+    var S = {
+      'Travel Safety and Disruptions': ['Travel in and around ' + where + ' is disrupted. Expect delays and cancellations, allow extra time, and confirm bookings before leaving.', 'Transport services in ' + where + ' are running with long delays. Check flight and rail status before heading out.'],
+      'Natural/Weather': ['Weather conditions in ' + where + ' may disrupt flights and ground travel. Follow local advisories and allow extra travel time.', 'Local authorities have issued a weather warning for ' + where + '. Some roads and services may close at short notice.'],
+      'Demonstrations and Strikes': ['Industrial action or protests are affecting ' + where + '. Expect transport delays and avoid large gatherings.', 'Demonstrations are planned in ' + where + '. Roads near the route may close and public transport may be reduced.'],
+      'Crime': ['Police report an increase in crime affecting visitors in ' + where + '. Stay alert, keep valuables out of sight, and use trusted transport.', 'Recent incidents in ' + where + ' have targeted travelers. Avoid walking alone at night and use hotel-arranged cars.'],
+      'Health/Medical': ['Health officials have issued a notice for ' + where + '. Follow local health guidance and know where the nearest medical facility is.', 'A public health advisory is in effect for ' + where + '. Travelers with health conditions should take extra care.'],
+      'Political Disruption': ['Political tension in ' + where + ' may lead to protests and closures at short notice. Avoid government buildings and large crowds.', 'Authorities in ' + where + ' have put restrictions in place. Carry identification and follow official instructions.'],
+      'Conflict and Terrorism': ['Security forces are on heightened alert in ' + where + '. Expect checkpoints and avoid crowded public places.', 'A security incident has been reported in ' + where + '. Stay away from the affected area and follow instructions from local authorities.']
+    }[a.type];
+    return S[a.id % 2] + (a.rank >= 4 ? ' Avoid non-essential travel to the area until the alert ends.' : '');
+  }
+
+  // ----- The popup: a traveler's full itinerary, or an alert's details. Its markup is pop_block.html.
+  // what = { trip: <trip id> } for an itinerary, { trip: <trip id>, alert: <alert id> } for an alert
+  dlgOpen(e, what) {
+    var el = e && (e.currentTarget || e.target), y = 60;
+    // place it beside the row that was clicked, measured inside <main> (this also works when the canvas is zoomed)
+    try { var main = el.closest('main'), mr = main.getBoundingClientRect(), k = (mr.height / main.offsetHeight) || 1; y = (el.getBoundingClientRect().top - mr.top) / k; } catch (x) {}
+    if (e && e.preventDefault) e.preventDefault();
+    var kb = !!e && e.detail === 0;   // opened from the keyboard: move focus in, and back again on close
+    this._dlgFrom = kb ? el : null; this._dlgFocus = kb; this._dlgNew = true;
+    this.setState({ dlg: Object.assign({ y: Math.max(16, y - 150) }, what), dlgNote: false });
+  }
+  dlgVals(D) {
+    var self = this, d = this.state.dlg || null, t = d ? D.trips[d.trip] : null;
+    var close = function (e) {
+      var back = self._dlgFrom, kb = !e || e.detail === 0 || e.type === 'keydown';
+      self._dlgFrom = null;
+      self.setState({ dlg: null, dlgNote: false });
+      if (back && kb) setTimeout(function () { try { back.focus(); } catch (x) {} }, 0);
+    };
+    var out = {
+      dlgShown: false, dlg: {}, dlgClose: close,
+      dlgKey: function (e) { if (e.key === 'Escape' && self.state.dlg) close(e); },
+      dlgMain: d && d.min ? '; min-height: ' + d.min + 'px' : '',   // added to <main>'s style: room for a popup taller than the page
+      dlgRef: function (el) {
+        if (!el || !self._dlgNew) return;
+        // first draw: now that its height is known, keep the popup inside <main> (move it up, or give <main> room), then draw once more
+        if (self._dlgNew === true) {
+          self._dlgNew = 'placed';
+          try {
+            var cur = self.state.dlg, h = el.offsetHeight, mh = el.closest('main').offsetHeight;
+            var y = Math.max(16, Math.min(cur.y, mh - h - 24)), need = y + h + 24;
+            if (h && (y !== cur.y || need > mh)) { self.setState({ dlg: Object.assign({}, cur, { y: y, min: need > mh ? need : 0 }) }); return; }
+          } catch (x) {}
+        }
+        self._dlgNew = false;
+        try { if (el.scrollIntoView) el.scrollIntoView({ block: 'nearest' }); } catch (x) {}
+        if (self._dlgFocus) { self._dlgFocus = false; try { el.focus(); } catch (x) {} }
+      }
+    };
+    if (!t) return out;
+    var SEVC = { Extreme: ['#8F1D1D', '#FFFFFF'], High: ['#B23C0A', '#FFFFFF'], Medium: ['#F2C46B', '#14213D'], Moderate: ['#FBE3B5', '#6B4500'], Low: ['#E3ECF8', '#1F5FAD'] };
+    var box = 'position: absolute; z-index: 21; top: ' + Math.round(d.y) + 'px; left: 50%; transform: translateX(-50%); width: 560px; max-width: calc(100% - 32px); box-sizing: border-box; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; box-shadow: 0 18px 50px rgba(20, 33, 61, 0.30); outline: none; display: flex; flex-direction: column';
+    var a = d.alert !== undefined ? D.alerts[d.alert] : null, v;
+    if (a) {
+      var ended = a.e < D.today, c = SEVC[a.sev] || SEVC.Low;
+      v = { label: 'Alert details: ' + a.title, eyebrow: 'Alert details', title: a.title, sub: a.type + ' · ' + (a.cw ? a.country + ' (country-wide)' : a.cityName + ', ' + a.country),
+        hasChip: true, chip: a.sev, chipStyle: 'flex: none; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: ' + c[0] + '; color: ' + c[1],
+        hasBanner: false, hasText: true, text: this.summary(a),
+        rows: [
+          { k: 'Reported', v: a.reported, sub: '' },
+          { k: ended ? 'Ended' : 'Estimated end', v: a.ends, sub: ended ? 'This alert is no longer active.' : 'Active now.' },
+          { k: 'This traveler', v: t.name + (t.vip ? ' · VIP' : ''), sub: t.place + (t.dist ? ' · ' + t.dist : '') },
+          { k: 'Who it matches', v: a.cw ? 'Every traveler in ' + a.country : 'Travelers within ' + D.distText(a.sev), sub: '' }
+        ],
+        hasLink: true, linkLabel: 'Full report on Riskline' };
+    } else {
+      var al = t.alert, night = t.e - t.s, both = function (day, l) { return D.lab[day] + ' · departs ' + l.dep + ' · arrives ' + l.arr + (l.next ? ' (next day)' : ''); };
+      var rows = [{ k: 'Status', v: t.status, sub: t.e < D.today ? 'Trip ended ' + D.lab[t.e] : t.detail }, { k: 'Trip dates', v: t.dates, sub: night ? night + (night === 1 ? ' night' : ' nights') + ' in ' + t.dcity : 'Day trip to ' + t.dcity }];
+      t.legsOut.forEach(function (l, i) { rows.push({ k: 'Flight out' + (t.legsOut.length > 1 ? ' · ' + (i + 1) + ' of ' + t.legsOut.length : ''), v: l.flight + ' · ' + l.fromCity + ' (' + l.from + ') to ' + l.toCity + ' (' + l.to + ')', sub: both(t.s, l) }); });
+      rows.push(t.hotel ? { k: 'Hotel', v: t.hotel.name, sub: 'Check-in ' + D.lab[t.s] + ' · check-out ' + D.lab[t.e] } : { k: 'Hotel', v: 'None (day trip)', sub: '' });
+      rows.push(t.car ? { k: 'Rental car', v: t.car, sub: 'Pick-up ' + D.lab[t.s] + ' · return ' + D.lab[t.e] } : { k: 'Rental car', v: 'None booked', sub: '' });
+      rows.push({ k: 'Flight back', v: t.legBack.flight + ' · ' + t.legBack.fromCity + ' (' + t.legBack.from + ') to ' + t.legBack.toCity + ' (' + t.legBack.to + ')', sub: both(t.e, t.legBack) });
+      rows.push({ k: 'Booking reference (record locator)', v: t.pnr, sub: t.airline });
+      var bc = al ? (SEVC[al.sev] || SEVC.Low) : null;
+      v = { label: 'Itinerary for ' + t.name, eyebrow: 'Traveler itinerary', title: t.name, sub: t.dept + ' · ' + t.sub,
+        hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
+        hasBanner: !!al, bannerHead: al ? al.sev + ' alert' : '', banner: al ? al.title + (t.dist ? ' · ' + t.dist : '') : '',
+        bannerStyle: al ? 'margin: 0 24px 4px; padding: 10px 12px; border-radius: 8px; border-left: 5px solid ' + bc[0] + '; background: #F7F9FC; font-size: 14px; line-height: 1.4; color: #14213D' : '',
+        hasText: false, text: '', rows: rows, hasLink: false, linkLabel: '' };
+    }
+    v.style = box; v.hasNote = !!this.state.dlgNote;
+    v.link = function (e) { if (e && e.preventDefault) e.preventDefault(); self.setState({ dlgNote: true }); };
+    out.dlgShown = true; out.dlg = v;
+    return out;
+  }
 
   summary(a) {
     if (a.title === 'Earthquake, Los Angeles') return 'A strong earthquake struck the Los Angeles area early Sunday. Expect damaged roads, power cuts, and delays at LAX and Burbank airports. Aftershocks are likely for several days. Travelers should follow local emergency instructions and confirm they are safe.';
@@ -4534,6 +5257,13 @@ class Component extends DCLogic {
     }[a.type];
     return S[a.id % 2] + (a.rank >= 4 ? ' Avoid non-essential travel to the area until the alert ends.' : '');
   }
+
+  componentDidMount() {
+    var self = this;
+    this._onHand = function () { var g = self.handIn('Map'); if (g) { self._go = g; self.forceUpdate(); } };
+    try { window.addEventListener('beacon-hand', this._onHand); window.addEventListener('storage', this._onHand); } catch (e) {}
+  }
+  componentWillUnmount() { try { window.removeEventListener('beacon-hand', this._onHand); window.removeEventListener('storage', this._onHand); } catch (e) {} }
 
   renderVals() {
     var self = this, s = this.state, W = this.W, H = this.H, MAPH = this.world().h;
@@ -4560,6 +5290,10 @@ class Component extends DCLogic {
       var w = W / zz, h = H / zz;
       return { cx: Math.max(w / 2, Math.min(W - w / 2, cx)), cy: Math.max(Math.min(h / 2, MAPH / 2), Math.min(Math.max(MAPH - h / 2, MAPH / 2), cy)), z: zz };
     };
+    if (this._go) {   // set once, here, because turning a place into a map position needs the map's own maths
+      var go = this._go, gp = px(+go.lng, +go.lat); this._go = null;
+      if (isFinite(gp[0]) && isFinite(gp[1])) { var gv = clamp(gp[0], gp[1], Math.max(1, Math.min(40, +go.z || 9))); s.cx = gv.cx; s.cy = gv.cy; s.z = z = gv.z; this._target = null; }
+    }
     // glide to a new view; a drag or a scroll cancels the glide
     var fly = function (to) {
       var raf = window.requestAnimationFrame;
@@ -5667,6 +6401,11 @@ class Component extends DCLogic {
       x.dcity = D[0]; x.dcountry = D[1]; x.dregion = D[2]; x.dlat = x.hotel ? x.hotel.lat : D[4]; x.dlng = x.hotel ? x.hotel.lng : D[5];
       x.homeApt = H[3]; x.destApt = D[3]; x.hubApt = x.hub >= 0 ? C[x.hub][3] : '';
       x.flight2 = x.hub >= 0 ? x.code + ' ' + x.fn2 : ''; x.flightBack = x.code + ' ' + x.fnr; x.routeBack = D[3] + '–' + H[3];
+      // each flight with its times, on the same clock the status line uses (od = minutes after midnight the trip leaves, rd = the return)
+      var leg = function (flt, a, b, dep, mins) { return { flight: flt, from: a[3], fromCity: a[0], to: b[3], toCity: b[0], dep: tm(dep), arr: tm(dep + mins), next: dep + mins >= 1440 }; };
+      if (x.hub >= 0) { var m1 = fd(x.home, x.hub); x.legsOut = [leg(fl, H, C[x.hub], x.od, m1), leg(x.code + ' ' + x.fn2, C[x.hub], D, x.od + m1 + 75, fd(x.hub, x.dest))]; }
+      else x.legsOut = [leg(fl, H, D, x.od, fd(x.home, x.dest))];
+      x.legBack = leg(flr, D, H, x.rd, fd(x.dest, x.home));
       x.alert = m ? AL[m.i] : null;
       x.rank = m ? AL[m.i].rank : 0;
       x.dist = m ? (m.dist < 0 ? 'Country-wide' : (m.dist < 1 ? 'Under 1 mi away' : Math.round(m.dist) + ' mi away')) : '';
@@ -6068,13 +6807,717 @@ class Component extends DCLogic {
 
 return Component;
 })(BEACON_DCLogic);
+
+BEACON_SCREENS['Messages'] = (function (DCLogic) {
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menuOff: false, view: 'list', sel: -1, chatWith: -1, pick: -1, text: '', edited: false, byText: true, byEmail: true, chat: '', askClear: false };
+    // a hand-off from another screen (an alert's "Send check-in" link)
+    var h = this.handIn('Messages');
+    if (h && typeof h.alertId === 'number') { this.state.view = 'new'; this.state.pick = h.alertId; }
+  }
+  // the design canvas keeps every screen open, so Messages also listens for the hand-over there
+  componentDidMount() {
+    var self = this;
+    this._onHand = function () { var h = self.handIn('Messages'); if (h && typeof h.alertId === 'number') self.setState({ view: 'new', pick: h.alertId, text: '', edited: false, byText: true, byEmail: true }); };
+    try { window.addEventListener('beacon-hand', this._onHand); window.addEventListener('storage', this._onHand); } catch (e) {}
+  }
+  componentWillUnmount() { try { window.removeEventListener('beacon-hand', this._onHand); window.removeEventListener('storage', this._onHand); } catch (e) {} }
+
+  rng(seed) {
+    var a = seed >>> 0;
+    return function () {
+      a |= 0; a = a + 0x6D2B79F5 | 0;
+      var t = Math.imul(a ^ a >>> 15, 1 | a);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  // Sample data, generated the same way every time. Feb 1 2026 – Jan 31 2027. "Today" is frozen at Tue Dec 1 2026, 9:30 AM.
+  build() {
+    // The signed-in user's alert preferences (set on the Preferences page) decide which alerts count and how far they reach
+    var PREF = null, pkey = '';
+    try { pkey = window.localStorage.getItem('beacon.prefs') || ''; PREF = pkey ? JSON.parse(pkey) : null; } catch (e) { PREF = null; pkey = ''; }
+    if (this._d && this._dk === pkey) return this._d;
+    var R = this.rng(12);
+    var pick = function (a) { return a[Math.floor(R() * a.length)]; };
+    var wpick = function (w) { var tot = 0, i; for (i = 0; i < w.length; i++) tot += w[i]; var x = R() * tot; for (i = 0; i < w.length; i++) { x -= w[i]; if (x < 0) return i; } return w.length - 1; };
+    var T = 303, NOW = 570, DAYS = 365;
+    var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var iso = [], lab = [], yr = [], d, i;
+    for (d = -20; d < DAYS; d++) {
+      var dt = new Date(Date.UTC(2026, 1, 1) + d * 86400000);
+      iso[d] = dt.toISOString().slice(0, 10);
+      lab[d] = MON[dt.getUTCMonth()] + ' ' + dt.getUTCDate();
+      yr[d] = dt.getUTCFullYear();
+    }
+    var NA = 'North America', EU = 'Europe', AP = 'Asia Pacific', LA = 'Latin America', ME = 'Middle East & Africa';
+    // name, country, region, airport, lat, lng, weight, local airline
+    var C = [
+      ['New York', 'United States', NA, 'JFK', 40.71, -74.01, 14], ['Chicago', 'United States', NA, 'ORD', 41.88, -87.63, 11],
+      ['Dallas', 'United States', NA, 'DFW', 32.78, -96.80, 9], ['Atlanta', 'United States', NA, 'ATL', 33.75, -84.39, 9],
+      ['San Francisco', 'United States', NA, 'SFO', 37.77, -122.42, 10], ['Los Angeles', 'United States', NA, 'LAX', 34.05, -118.24, 10],
+      ['Boston', 'United States', NA, 'BOS', 42.36, -71.06, 7], ['Seattle', 'United States', NA, 'SEA', 47.61, -122.33, 6],
+      ['Denver', 'United States', NA, 'DEN', 39.74, -104.99, 6], ['Miami', 'United States', NA, 'MIA', 25.76, -80.19, 6],
+      ['Washington', 'United States', NA, 'DCA', 38.91, -77.04, 8], ['Houston', 'United States', NA, 'IAH', 29.76, -95.37, 6],
+      ['Phoenix', 'United States', NA, 'PHX', 33.45, -112.07, 4], ['Philadelphia', 'United States', NA, 'PHL', 39.95, -75.17, 4],
+      ['Minneapolis', 'United States', NA, 'MSP', 44.98, -93.27, 4], ['Detroit', 'United States', NA, 'DTW', 42.33, -83.05, 3],
+      ['Charlotte', 'United States', NA, 'CLT', 35.23, -80.84, 4], ['Austin', 'United States', NA, 'AUS', 30.27, -97.74, 5],
+      ['Nashville', 'United States', NA, 'BNA', 36.16, -86.78, 3], ['San Diego', 'United States', NA, 'SAN', 32.72, -117.16, 3],
+      ['Las Vegas', 'United States', NA, 'LAS', 36.17, -115.14, 4], ['Orlando', 'United States', NA, 'MCO', 28.54, -81.38, 3],
+      ['Salt Lake City', 'United States', NA, 'SLC', 40.76, -111.89, 2], ['Portland', 'United States', NA, 'PDX', 45.52, -122.68, 2],
+      ['Raleigh', 'United States', NA, 'RDU', 35.78, -78.64, 2], ['Toronto', 'Canada', NA, 'YYZ', 43.65, -79.38, 4, 'AC'],
+      ['Montreal', 'Canada', NA, 'YUL', 45.50, -73.57, 2, 'AC'], ['Vancouver', 'Canada', NA, 'YVR', 49.28, -123.12, 2, 'AC'],
+      ['London', 'United Kingdom', EU, 'LHR', 51.51, -0.13, 10, 'BA'], ['Paris', 'France', EU, 'CDG', 48.86, 2.35, 6, 'AF'],
+      ['Frankfurt', 'Germany', EU, 'FRA', 50.11, 8.68, 5, 'LH'], ['Amsterdam', 'Netherlands', EU, 'AMS', 52.37, 4.90, 4, 'KL'],
+      ['Madrid', 'Spain', EU, 'MAD', 40.42, -3.70, 3, 'IB'], ['Milan', 'Italy', EU, 'MXP', 45.46, 9.19, 3, 'AZ'],
+      ['Zurich', 'Switzerland', EU, 'ZRH', 47.38, 8.54, 3, 'LX'], ['Dublin', 'Ireland', EU, 'DUB', 53.35, -6.26, 3, 'EI'],
+      ['Munich', 'Germany', EU, 'MUC', 48.14, 11.58, 3, 'LH'], ['Stockholm', 'Sweden', EU, 'ARN', 59.33, 18.07, 2, 'SK'],
+      ['Istanbul', 'Türkiye', EU, 'IST', 41.01, 28.98, 2, 'TK'],
+      ['Tokyo', 'Japan', AP, 'NRT', 35.68, 139.69, 6, 'JL'], ['Singapore', 'Singapore', AP, 'SIN', 1.35, 103.82, 5, 'SQ'],
+      ['Hong Kong', 'Hong Kong', AP, 'HKG', 22.32, 114.17, 3, 'CX'], ['Sydney', 'Australia', AP, 'SYD', -33.87, 151.21, 3, 'QF'],
+      ['Seoul', 'South Korea', AP, 'ICN', 37.57, 126.98, 3, 'KE'], ['Shanghai', 'China', AP, 'PVG', 31.23, 121.47, 3, 'MU'],
+      ['Mumbai', 'India', AP, 'BOM', 19.08, 72.88, 3, 'AI'], ['Bangalore', 'India', AP, 'BLR', 12.97, 77.59, 3, 'AI'],
+      ['Bangkok', 'Thailand', AP, 'BKK', 13.76, 100.50, 2, 'TG'],
+      ['Mexico City', 'Mexico', LA, 'MEX', 19.43, -99.13, 6, 'AM'], ['São Paulo', 'Brazil', LA, 'GRU', -23.55, -46.63, 5, 'LA'],
+      ['Bogotá', 'Colombia', LA, 'BOG', 4.71, -74.07, 3, 'AV'], ['Buenos Aires', 'Argentina', LA, 'EZE', -34.60, -58.38, 2, 'AR'],
+      ['Santiago', 'Chile', LA, 'SCL', -33.45, -70.67, 2, 'LA'], ['Lima', 'Peru', LA, 'LIM', -12.05, -77.04, 2, 'LA'],
+      ['Panama City', 'Panama', LA, 'PTY', 8.98, -79.52, 2, 'CM'],
+      ['Dubai', 'United Arab Emirates', ME, 'DXB', 25.20, 55.27, 5, 'EK'], ['Tel Aviv', 'Israel', ME, 'TLV', 32.09, 34.78, 3, 'LY'],
+      ['Johannesburg', 'South Africa', ME, 'JNB', -26.20, 28.05, 2], ['Riyadh', 'Saudi Arabia', ME, 'RUH', 24.71, 46.68, 2, 'SV'],
+      ['Doha', 'Qatar', ME, 'DOH', 25.29, 51.53, 2, 'QR'], ['Lagos', 'Nigeria', ME, 'LOS', 6.52, 3.38, 1],
+      ['Cairo', 'Egypt', ME, 'CAI', 30.04, 31.24, 1, 'MS'], ['Nairobi', 'Kenya', ME, 'NBO', -1.29, 36.82, 1, 'KQ']
+    ];
+    var AIR = { DL: 'Delta Air Lines', UA: 'United Airlines', AA: 'American Airlines', AS: 'Alaska Airlines', B6: 'JetBlue', WN: 'Southwest Airlines', AC: 'Air Canada', BA: 'British Airways', AF: 'Air France', LH: 'Lufthansa', KL: 'KLM', IB: 'Iberia', AZ: 'ITA Airways', LX: 'SWISS', EI: 'Aer Lingus', SK: 'SAS', TK: 'Turkish Airlines', JL: 'Japan Airlines', SQ: 'Singapore Airlines', CX: 'Cathay Pacific', QF: 'Qantas', KE: 'Korean Air', MU: 'China Eastern', AI: 'Air India', TG: 'Thai Airways', AM: 'Aeroméxico', LA: 'LATAM Airlines', AV: 'Avianca', AR: 'Aerolíneas Argentinas', CM: 'Copa Airlines', EK: 'Emirates', LY: 'El Al', SV: 'Saudia', QR: 'Qatar Airways', MS: 'EgyptAir', KQ: 'Kenya Airways' };
+    var byApt = {}; C.forEach(function (c, k) { byApt[c[3]] = k; });
+    var HUBS = {};
+    HUBS[NA] = ['ATL', 'ORD', 'DFW', 'DEN', 'CLT', 'IAH']; HUBS[EU] = ['LHR', 'FRA', 'AMS', 'CDG']; HUBS[AP] = ['NRT', 'ICN', 'SFO', 'LAX'];
+    HUBS[LA] = ['MIA', 'PTY', 'DFW']; HUBS[ME] = ['DXB', 'DOH', 'IST', 'LHR', 'FRA'];
+    var rad = Math.PI / 180;
+    var miles = function (a1, o1, a2, o2) {
+      var x = Math.sin((a2 - a1) * rad / 2), y = Math.sin((o2 - o1) * rad / 2);
+      var h = x * x + Math.cos(a1 * rad) * Math.cos(a2 * rad) * y * y;
+      return 7918 * Math.asin(Math.min(1, Math.sqrt(h)));
+    };
+    var tm = function (m) { m = ((m % 1440) + 1440) % 1440; var h = Math.floor(m / 60), mm = m % 60; return ((h + 11) % 12 + 1) + ':' + (mm < 10 ? '0' : '') + mm + (h < 12 ? ' AM' : ' PM'); };
+
+    // Hotels: six per city, each with a fixed spot near the center
+    var CHAINS = ['Marriott', 'Hilton', 'Hyatt Regency', 'Westin', 'Sheraton', 'InterContinental', 'Courtyard by Marriott', 'Hilton Garden Inn', 'Four Seasons', 'DoubleTree by Hilton', 'JW Marriott', 'Holiday Inn', 'Radisson Blu', 'Novotel'];
+    var HOT = C.map(function (c) {
+      var pool = CHAINS.slice(), out = [];
+      for (var k = 0; k < 6; k++) {
+        var ch = pool.splice(Math.floor(R() * pool.length), 1)[0];
+        out.push({ name: ch + ' ' + c[0] + (R() < 0.3 ? ' Downtown' : ''), lat: c[4] + (R() - 0.5) * 0.1, lng: c[5] + (R() - 0.5) * 0.1 });
+      }
+      return out;
+    });
+
+    // Travelers: 1,500 people, all Acme-US
+    var FIRST = ['James', 'Maria', 'David', 'Priya', 'Michael', 'Sarah', 'Wei', 'Emma', 'Carlos', 'Aisha', 'Daniel', 'Olivia', 'Raj', 'Hannah', 'Lucas', 'Sofia', 'Ben', 'Grace', 'Omar', 'Rachel', 'Tom', 'Nadia', 'Kevin', 'Laura', 'Andre', 'Julia', 'Marcus', 'Elena', 'Peter', 'Yuki', 'Sam', 'Nina', 'Victor', 'Chloe', 'Diego', 'Megan', 'Arjun', 'Kate', 'Ethan', 'Leila', 'Jason', 'Anna', 'Malik', 'Claire', 'Ryan', 'Isabel', 'Noah', 'Tara', 'Henry', 'Mei', 'Jack', 'Zoe', 'Luis', 'Amy', 'Sean', 'Dana', 'Paul', 'Ines', 'Greg', 'Lily'];
+    var LAST = ['Chen', 'Smith', 'Patel', 'Johnson', 'Garcia', 'Kim', 'Brown', 'Nguyen', 'Davis', 'Martinez', 'Wilson', 'Lee', 'Anderson', 'Shah', 'Taylor', 'Lopez', 'Thomas', 'Park', 'Moore', 'Rossi', 'Jackson', 'Cohen', 'White', 'Okafor', 'Harris', 'Tanaka', 'Clark', 'Ruiz', 'Lewis', 'Becker', 'Walker', 'Haddad', 'Hall', 'Silva', 'Young', 'Petrov', 'King', 'Reid', 'Wright', 'Alvarez', 'Scott', 'Fischer', 'Green', 'Bello', 'Baker', 'Lind', 'Adams', 'Rahman', 'Nelson', 'Grant', 'Carter', 'Stein', 'Mitchell', 'Ortiz', 'Turner', 'Cole', 'Parker', 'Zhang', 'Evans', 'Murphy'];
+    var DEPTS = ['Sales', 'Account Management', 'Engineering', 'Operations', 'Marketing', 'Finance', 'Product', 'Legal', 'Human Resources', 'Executive'];
+    var DW = [22, 14, 12, 10, 9, 8, 8, 6, 6, 5];
+    var HW = [20, 12, 10, 9, 10, 10, 8, 7, 7, 7];
+    var combos = [];
+    for (i = 0; i < 3600; i++) combos.push(i);
+    for (i = 3599; i > 0; i--) { var j = Math.floor(R() * (i + 1)); var tmp = combos[i]; combos[i] = combos[j]; combos[j] = tmp; }
+    var TR = [], TW = [];
+    for (i = 0; i < 1500; i++) {
+      var dep = wpick(DW);
+      TR.push({ name: FIRST[combos[i] % 60] + ' ' + LAST[Math.floor(combos[i] / 60)], dept: DEPTS[dep], home: wpick(HW), vip: R() < (dep === 9 ? 0.4 : 0.011), sub: 'Acme-US' });
+      var f = R();
+      TW.push((0.3 + f * f * 3) * (dep === 0 ? 1.5 : 1));
+    }
+    var twTot = 0; TW.forEach(function (w) { twTot += w; });
+    var pickTraveler = function () { var x = R() * twTot; for (var k = 0; k < 1500; k++) { x -= TW[k]; if (x < 0) return k; } return 1499; };
+
+    // Risk alerts (Riskline-style). Only alerts reported up to today exist.
+    var SEVS = ['Low', 'Moderate', 'Medium', 'High', 'Extreme'];
+    var RANK = { Low: 1, Moderate: 2, Medium: 3, High: 4, Extreme: 5 };
+    var RADIUS = { Low: 5, Moderate: 10, Medium: 25, High: 50, Extreme: 100 };
+    var SEVOFF = {}, TYPEOFF = {}, CWON = true, KMU = false;
+    if (PREF) {
+      Object.keys(RADIUS).forEach(function (k) { var p = PREF.sev && PREF.sev[k]; if (!p) return; if (p.on === false) SEVOFF[k] = 1; if (p.mi > 0) RADIUS[k] = +p.mi; });
+      Object.keys(PREF.types || {}).forEach(function (k) { if (PREF.types[k] === false) TYPEOFF[k] = 1; });
+      CWON = PREF.countryWide !== false; KMU = PREF.units === 'km';
+    }
+    var DUR = { Low: [1, 3], Moderate: [1, 4], Medium: [2, 6], High: [3, 8], Extreme: [4, 10] };
+    var TYPES = ['Travel Safety and Disruptions', 'Natural/Weather', 'Demonstrations and Strikes', 'Crime', 'Health/Medical', 'Political Disruption', 'Conflict and Terrorism'];
+    var TYW = [22, 22, 20, 10, 10, 9, 7];
+    var TITLES = [
+      ['Air traffic control delays, {c}', 'Road closures, central {c}', 'Airport power outage, {c}', 'Metro line shutdown, {c}'],
+      ['Severe storm warning, {c}', 'Flooding, {c}', 'Heat advisory, {c}', 'High wind warning, {c}', 'Wildfire smoke, {c}'],
+      ['Transit workers strike, {c}', 'Protest march, downtown {c}', 'Airport staff strike, {c}'],
+      ['Rise in street crime, {c}', 'Pickpocketing warning near stations, {c}', 'Carjacking reports, {c}'],
+      ['Flu outbreak, {c}', 'Air quality warning, {c}', 'Water contamination notice, {c}'],
+      ['Protests after election results, {c}', 'Government building closures, {c}', 'Curfew in central {c}'],
+      ['Security alert at transit hubs, {c}', 'Heightened threat level, {c}', 'Security operation, central {c}']
+    ];
+    var TITLES_HI = [
+      ['Airport closure, {c}', 'Major transport shutdown, {c}'],
+      ['Hurricane-force storm, {c}', 'Major flooding, {c}', 'Wildfire evacuation zones, {c}'],
+      ['Violent clashes at protests, {c}', 'City-wide general strike, {c}'],
+      ['Violent crime surge, {c}', 'Armed robbery spike, {c}'],
+      ['Disease outbreak, {c}', 'Hospital system emergency, {c}'],
+      ['State of emergency declared, {c}', 'City-wide curfew, {c}'],
+      ['Attack near city center, {c}', 'Active security incident, {c}']
+    ];
+    var CW = { 2: ['National rail strike, {n}', 'General strike, {n}'], 4: ['Dengue outbreak, {n}'], 5: ['Nationwide protests, {n}'] };
+    var AL = [];
+    for (d = -10; d <= T; d++) {
+      var n = Math.floor(4.64 + R());
+      for (i = 0; i < n; i++) {
+        var sv = SEVS[wpick([30, 30, 25, 11, 4])], ty = wpick(TYW), ci = Math.floor(R() * C.length);
+        var cw = !!CW[ty] && C[ci][1] !== 'United States' && R() < 0.12;
+        var len = DUR[sv][0] + Math.floor(R() * (DUR[sv][1] - DUR[sv][0] + 1));
+        AL.push({
+          s: d, e: d + len - 1, city: ci, country: C[ci][1], lat: C[ci][4] + (R() - 0.5) * 0.16, lng: C[ci][5] + (R() - 0.5) * 0.16,
+          sev: sv, rank: RANK[sv], type: TYPES[ty], cw: cw, min: Math.floor(R() * 1440),
+          title: (cw ? pick(CW[ty]) : pick(RANK[sv] >= 4 ? TITLES_HI[ty] : TITLES[ty])).replace('{c}', C[ci][0]).replace('{n}', C[ci][1])
+        });
+      }
+    }
+    var QUAKE = AL.length;
+    AL.push({ s: T - 2, e: T + 3, city: 5, country: 'United States', lat: 34.05, lng: -118.24, sev: 'Extreme', rank: 5, type: 'Natural/Weather', cw: false, min: 194, title: 'Earthquake, Los Angeles' });
+    AL.forEach(function (a, k) {
+      a.id = k;
+      if (a.s === T && a.min > 540) a.min = a.min % 540;
+      a.reported = lab[a.s] + ', ' + tm(a.min) + (k === QUAKE ? ' PT' : ' ET');
+      a.ends = lab[a.e];
+      a.link = 'https://riskline.example/alerts/' + (40000 + k);
+      a.si = iso[a.s]; a.ei = iso[a.e]; a.cityName = C[a.city][0]; a.region = C[a.city][2];
+      a.off = !!(SEVOFF[a.sev] || TYPEOFF[a.type]);
+    });
+    var bestAlert = function (lat, lng, country, from, to) {
+      var best = -1, bd = 0;
+      for (var k = 0; k < AL.length; k++) {
+        var a = AL[k];
+        if (a.off || a.s > to || a.e < from) continue;
+        var dist;
+        if (a.cw) { if (!CWON || a.country !== country) continue; dist = -1; }
+        else { dist = miles(lat, lng, a.lat, a.lng); if (dist > RADIUS[a.sev]) continue; }
+        if (best < 0 || a.rank > AL[best].rank || (a.rank === AL[best].rank && dist < bd)) { best = k; bd = dist; }
+      }
+      return best < 0 ? null : { i: best, dist: bd };
+    };
+
+    // Trips
+    var SW = [0.012, 0.36, 0.30, 0.18, 0.10, 0.04, 0.008];
+    var LW = [24, 30, 25, 12, 7, 2];
+    var WEEKLY = 207;
+    var NAI = [], NAW = [], RG = [EU, AP, LA, ME], RGW = [45, 25, 18, 12], INTL = {};
+    C.forEach(function (c, k) { if (c[2] === NA) { NAI.push(k); NAW.push(c[6]); } else { (INTL[c[2]] = INTL[c[2]] || { i: [], w: [] }).i.push(k); INTL[c[2]].w.push(c[6]); } });
+    var busy = [], TRIPS = [], CH = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    var fd = function (a, b) { return Math.round(miles(C[a][4], C[a][5], C[b][4], C[b][5]) / 8.3) + 40; };
+    for (d = 0; d < DAYS; d++) {
+      var starts = Math.floor(WEEKLY * SW[d % 7] * (0.9 + R() * 0.2) + R());
+      for (i = 0; i < starts; i++) {
+        var t = -1;
+        for (var tries = 0; tries < 30 && t < 0; tries++) { var c0 = pickTraveler(); if (!(busy[c0] >= d - 1)) t = c0; }
+        if (t < 0) continue;
+        var dw = d % 7, home = TR[t].home, dest, intl = dw >= 1 && dw <= 3 && R() < 0.30;
+        do {
+          if (intl) { var g = INTL[RG[wpick(RGW)]]; dest = g.i[wpick(g.w)]; } else { dest = NAI[wpick(NAW)]; }
+        } while (dest === home);
+        var L = 1;
+        for (var a2 = 0; a2 < 6; a2++) {
+          L = wpick(LW) + 1; if (L === 6) L = 6 + Math.floor(R() * 4);
+          if (intl && L < 3) L = 3 + (R() < 0.35 ? 1 : 0);
+          if ((d % 7) + L - 1 <= 5 || R() > (L >= 6 ? 0.5 : 0.93)) break;
+        }
+        var e = Math.min(DAYS - 1, d + L - 1);
+        busy[t] = e;
+        var reg = C[dest][2], local = C[dest][7], code;
+        if (local && R() < 0.55) code = local;
+        else if (reg === NA && C[dest][1] === 'United States') code = ['DL', 'UA', 'AA', 'AS', 'B6', 'WN'][wpick([28, 26, 26, 7, 6, 7])];
+        else code = pick(['DL', 'UA', 'AA']);
+        var hub = -1;
+        if (R() < 0.25) { var hc = byApt[pick(HUBS[reg])]; if (hc !== home && hc !== dest) hub = hc; }
+        var pnr = ''; for (var p = 0; p < 6; p++) pnr += CH[Math.floor(R() * CH.length)];
+        var day = d === e;
+        var h = day ? null : (TR[t].vip && R() < 0.5 ? HOT[dest][0] : pick(HOT[dest]));
+        TRIPS.push({
+          t: t, s: d, e: e, dest: dest, home: home, hub: hub, code: code,
+          fn: 100 + Math.floor(R() * 2800), fn2: 100 + Math.floor(R() * 2800), fnr: 100 + Math.floor(R() * 2800),
+          hotel: h, car: R() < 0.05 ? pick(['Hertz', 'Avis', 'Enterprise', 'National']) : '', pnr: pnr,
+          od: day ? 360 + Math.floor(R() * 120) : 360 + Math.floor(R() * R() * 720),
+          rd: day ? 960 + Math.floor(R() * 240) : 480 + Math.floor(R() * 660)
+        });
+      }
+    }
+
+    // Where each traveler is, and which alert (if any) touches them
+    TRIPS.forEach(function (x, k) {
+      var tr = TR[x.t], D = C[x.dest], H = C[x.home], fl = x.code + ' ' + x.fn, flr = x.code + ' ' + x.fnr;
+      var loc = x.dest, atHome = false, atHotel = !!x.hotel, detail, st;
+      x.id = k;
+      if (x.e < T) { detail = x.hotel ? 'Hotel · ' + x.hotel.name : 'Day trip'; st = 'Completed'; }
+      else if (x.s > T) { detail = 'Departs ' + H[3] + ' on ' + fl; st = 'Upcoming'; }
+      else if (x.s === T) {
+        atHotel = false;
+        if (NOW < x.od) { detail = 'Departs ' + H[3] + ' at ' + tm(x.od) + ' · ' + fl; st = 'Departing today'; }
+        else {
+          st = 'Departed today';
+          var l1 = fd(x.home, x.hub >= 0 ? x.hub : x.dest), arr = x.od + l1, landed = false;
+          if (x.hub >= 0) {
+            var U = C[x.hub], l2 = fd(x.hub, x.dest);
+            if (NOW < arr) detail = 'In the air · ' + fl + ' ' + H[3] + ' to ' + U[3];
+            else if (NOW < arr + 75) { detail = 'Connecting at ' + U[3] + ' · ' + x.code + ' ' + x.fn2 + ' to ' + D[3] + ' at ' + tm(arr + 75); loc = x.hub; }
+            else if (NOW < arr + 75 + l2) detail = 'In the air · ' + x.code + ' ' + x.fn2 + ' from ' + U[3] + ', lands ' + tm(arr + 75 + l2);
+            else landed = true;
+          } else if (NOW < arr) detail = 'In the air · ' + fl + ' from ' + H[3] + ', lands ' + tm(arr);
+          else landed = true;
+          if (landed) {
+            if (x.hotel) { detail = 'Hotel · ' + x.hotel.name; st = 'Arrived today'; atHotel = true; }
+            else { detail = 'Day trip · returns ' + flr + ' at ' + tm(x.rd); st = 'Day trip'; }
+          }
+        }
+      } else if (x.e === T) {
+        st = 'Returning today';
+        if (NOW < x.rd) detail = 'Hotel · ' + x.hotel.name + ' · flies home ' + tm(x.rd);
+        else if (NOW < x.rd + fd(x.dest, x.home)) { detail = 'In the air · ' + flr + ' to ' + H[3]; atHome = true; }
+        else { detail = 'Back home · trip ended today'; atHome = true; }
+      } else { detail = 'Hotel · ' + x.hotel.name; st = 'Away now'; }
+
+      var P = atHome ? H : C[loc];
+      var lat = (atHotel && loc === x.dest) ? x.hotel.lat : P[4], lng = (atHotel && loc === x.dest) ? x.hotel.lng : P[5];
+      var m = null;
+      if (!atHome) {
+        if (x.e < T) m = bestAlert(lat, lng, P[1], x.s, x.e);
+        else if (x.s > T) m = bestAlert(lat, lng, P[1], x.s, 9999);
+        else m = bestAlert(lat, lng, P[1], T, T);
+      }
+      x.lat = lat; x.lng = lng; x.atHome = atHome;
+      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub;
+      x.city = P[0]; x.country = P[1]; x.region = P[2];
+      x.place = P[0] === P[1] ? P[0] : P[0] + ', ' + P[1];
+      x.detail = detail; x.status = st; x.today = x.s <= T && x.e >= T; x.away = x.today && !atHome;
+      x.si = iso[x.s]; x.ei = iso[x.e];
+      x.dates = (x.s === x.e ? lab[x.s] : lab[x.s] + ' – ' + lab[x.e]) + (yr[x.e] === 2027 ? ', 2027' : '');
+      x.airline = AIR[x.code]; x.flight = x.code + ' ' + x.fn;
+      x.route = H[3] + (x.hub >= 0 ? '–' + C[x.hub][3] : '') + '–' + D[3];
+      // the trip's own facts, independent of "now": where it goes, and every flight on it
+      x.dcity = D[0]; x.dcountry = D[1]; x.dregion = D[2]; x.dlat = x.hotel ? x.hotel.lat : D[4]; x.dlng = x.hotel ? x.hotel.lng : D[5];
+      x.homeApt = H[3]; x.destApt = D[3]; x.hubApt = x.hub >= 0 ? C[x.hub][3] : '';
+      x.flight2 = x.hub >= 0 ? x.code + ' ' + x.fn2 : ''; x.flightBack = x.code + ' ' + x.fnr; x.routeBack = D[3] + '–' + H[3];
+      // each flight with its times, on the same clock the status line uses (od = minutes after midnight the trip leaves, rd = the return)
+      var leg = function (flt, a, b, dep, mins) { return { flight: flt, from: a[3], fromCity: a[0], to: b[3], toCity: b[0], dep: tm(dep), arr: tm(dep + mins), next: dep + mins >= 1440 }; };
+      if (x.hub >= 0) { var m1 = fd(x.home, x.hub); x.legsOut = [leg(fl, H, C[x.hub], x.od, m1), leg(x.code + ' ' + x.fn2, C[x.hub], D, x.od + m1 + 75, fd(x.hub, x.dest))]; }
+      else x.legsOut = [leg(fl, H, D, x.od, fd(x.home, x.dest))];
+      x.legBack = leg(flr, D, H, x.rd, fd(x.dest, x.home));
+      x.alert = m ? AL[m.i] : null;
+      x.rank = m ? AL[m.i].rank : 0;
+      x.dist = m ? (m.dist < 0 ? 'Country-wide' : (m.dist < 1 ? 'Under 1 mi away' : Math.round(m.dist) + ' mi away')) : '';
+      x.quake = !!m && x.away && miles(lat, lng, 34.05, -118.24) <= 100;
+      x.hay = [x.name, x.dept, x.sub, D[0], D[1], D[2], D[3], H[0], H[3], x.hub >= 0 ? C[x.hub][3] : '', x.airline, x.flight, x.code + x.fn, x.hotel ? x.hotel.name : '', x.car, x.pnr, x.vip ? 'vip' : '', x.status, x.alert ? x.alert.title + ' ' + x.alert.type : ''].join(' ').toLowerCase();
+    });
+
+    this._d = { trips: TRIPS, travelers: TR, alerts: AL, quake: QUAKE, today: T, iso: iso, lab: lab, depts: DEPTS.slice().sort(), miles: miles, radius: RADIUS, cities: C, cwOn: CWON, airlines: Object.keys(AIR).map(function (k) { return AIR[k]; }).sort(),
+      distText: function (sev) { return KMU ? Math.round(RADIUS[sev] * 1.609344) + ' km' : RADIUS[sev] + ' miles'; } };
+    this._dk = pkey;
+    return this._d;
+  }
+
+
+  // Sub company picked in the sidebar. Kept in browser storage so other screens can pick it up.
+  navSub() {
+    if (this._sub === undefined) {
+      var v = 'all';
+      try { v = window.localStorage.getItem('beacon.sub') || 'all'; } catch (e) {}
+      this._sub = v;
+    }
+    return this._sub;
+  }
+  setNavSub(v) {
+    this._sub = v;
+    try { window.localStorage.setItem('beacon.sub', v); } catch (e) {}
+    this.forceUpdate();
+  }
+  // Key locations (headquarters, offices). Company-wide in the real product; this prototype keeps them in the browser.
+  keyLocs() {
+    try { var v = JSON.parse(window.localStorage.getItem('beacon.keyLocs') || 'null'); if (v && v.length !== undefined) return v; } catch (e) {}
+    return []; // none to start with: the user adds their own in Preferences
+  }
+  // Where a key location is: its exact coordinates when given, otherwise its city
+  keyLocPlace(k, D) {
+    var i, c = null;
+    if (typeof k.lat === 'number' && typeof k.lng === 'number') {
+      var best = null, bd = Infinity;
+      for (i = 0; i < D.cities.length; i++) { var m = D.miles(k.lat, k.lng, D.cities[i][4], D.cities[i][5]); if (m < bd) { bd = m; best = D.cities[i]; } }
+      // the country (used for country-wide alerts) is taken from the nearest known city, when one is reasonably close
+      return { lat: k.lat, lng: k.lng, country: best && bd <= 250 ? best[1] : '' };
+    }
+    for (i = 0; i < D.cities.length; i++) if (D.cities[i][0] === k.city) c = D.cities[i];
+    return c ? { lat: c[4], lng: c[5], country: c[1] } : null;
+  }
+
+
+  // ===== Shared by several screens. rebuild.py copies this file in wherever a screen has the SHARED placeholder. Edit it here, never in a screen.
+
+  // ----- Handing a small instruction to another screen (for example "open the map zoomed in here").
+  // In the app the other screen reads it when it opens. In the design canvas every screen stays open, so it also hears an event.
+  handOff(to, data) {
+    var msg = { to: to, data: data, at: Date.now() };
+    window.__beaconHand = msg;
+    try { window.localStorage.setItem('beacon.hand', JSON.stringify(msg)); } catch (e) {}
+    try { window.dispatchEvent(new window.CustomEvent('beacon-hand')); } catch (e) {}
+  }
+  // Take an instruction meant for this screen, once. Anything older than 15 seconds is ignored.
+  handIn(name) {
+    var msg = window.__beaconHand || null;
+    if (!msg) { try { msg = JSON.parse(window.localStorage.getItem('beacon.hand') || 'null'); } catch (e) { msg = null; } }
+    if (!msg || msg.to !== name || !(Date.now() - msg.at < 15000)) return null;
+    window.__beaconHand = null;
+    try { window.localStorage.removeItem('beacon.hand'); } catch (e) {}
+    return msg.data || null;
+  }
+  // A link's click handler that opens the Map zoomed in on a place (the link's href does the moving)
+  mapLink(lat, lng, wide) {
+    var self = this;
+    return function () { self.handOff('Map', { lat: lat, lng: lng, z: wide ? 4 : 9 }); };
+  }
+
+  // ----- What an alert says (the same words on Alerts and in the alert popup)
+  summary(a) {
+    if (a.title === 'Earthquake, Los Angeles') return 'A strong earthquake struck the Los Angeles area early Sunday. Expect damaged roads, power cuts, and delays at LAX and Burbank airports. Aftershocks are likely for several days. Travelers should follow local emergency instructions and confirm they are safe.';
+    var where = a.cw ? a.country : a.cityName;
+    var S = {
+      'Travel Safety and Disruptions': ['Travel in and around ' + where + ' is disrupted. Expect delays and cancellations, allow extra time, and confirm bookings before leaving.', 'Transport services in ' + where + ' are running with long delays. Check flight and rail status before heading out.'],
+      'Natural/Weather': ['Weather conditions in ' + where + ' may disrupt flights and ground travel. Follow local advisories and allow extra travel time.', 'Local authorities have issued a weather warning for ' + where + '. Some roads and services may close at short notice.'],
+      'Demonstrations and Strikes': ['Industrial action or protests are affecting ' + where + '. Expect transport delays and avoid large gatherings.', 'Demonstrations are planned in ' + where + '. Roads near the route may close and public transport may be reduced.'],
+      'Crime': ['Police report an increase in crime affecting visitors in ' + where + '. Stay alert, keep valuables out of sight, and use trusted transport.', 'Recent incidents in ' + where + ' have targeted travelers. Avoid walking alone at night and use hotel-arranged cars.'],
+      'Health/Medical': ['Health officials have issued a notice for ' + where + '. Follow local health guidance and know where the nearest medical facility is.', 'A public health advisory is in effect for ' + where + '. Travelers with health conditions should take extra care.'],
+      'Political Disruption': ['Political tension in ' + where + ' may lead to protests and closures at short notice. Avoid government buildings and large crowds.', 'Authorities in ' + where + ' have put restrictions in place. Carry identification and follow official instructions.'],
+      'Conflict and Terrorism': ['Security forces are on heightened alert in ' + where + '. Expect checkpoints and avoid crowded public places.', 'A security incident has been reported in ' + where + '. Stay away from the affected area and follow instructions from local authorities.']
+    }[a.type];
+    return S[a.id % 2] + (a.rank >= 4 ? ' Avoid non-essential travel to the area until the alert ends.' : '');
+  }
+
+  // ----- The popup: a traveler's full itinerary, or an alert's details. Its markup is pop_block.html.
+  // what = { trip: <trip id> } for an itinerary, { trip: <trip id>, alert: <alert id> } for an alert
+  dlgOpen(e, what) {
+    var el = e && (e.currentTarget || e.target), y = 60;
+    // place it beside the row that was clicked, measured inside <main> (this also works when the canvas is zoomed)
+    try { var main = el.closest('main'), mr = main.getBoundingClientRect(), k = (mr.height / main.offsetHeight) || 1; y = (el.getBoundingClientRect().top - mr.top) / k; } catch (x) {}
+    if (e && e.preventDefault) e.preventDefault();
+    var kb = !!e && e.detail === 0;   // opened from the keyboard: move focus in, and back again on close
+    this._dlgFrom = kb ? el : null; this._dlgFocus = kb; this._dlgNew = true;
+    this.setState({ dlg: Object.assign({ y: Math.max(16, y - 150) }, what), dlgNote: false });
+  }
+  dlgVals(D) {
+    var self = this, d = this.state.dlg || null, t = d ? D.trips[d.trip] : null;
+    var close = function (e) {
+      var back = self._dlgFrom, kb = !e || e.detail === 0 || e.type === 'keydown';
+      self._dlgFrom = null;
+      self.setState({ dlg: null, dlgNote: false });
+      if (back && kb) setTimeout(function () { try { back.focus(); } catch (x) {} }, 0);
+    };
+    var out = {
+      dlgShown: false, dlg: {}, dlgClose: close,
+      dlgKey: function (e) { if (e.key === 'Escape' && self.state.dlg) close(e); },
+      dlgMain: d && d.min ? '; min-height: ' + d.min + 'px' : '',   // added to <main>'s style: room for a popup taller than the page
+      dlgRef: function (el) {
+        if (!el || !self._dlgNew) return;
+        // first draw: now that its height is known, keep the popup inside <main> (move it up, or give <main> room), then draw once more
+        if (self._dlgNew === true) {
+          self._dlgNew = 'placed';
+          try {
+            var cur = self.state.dlg, h = el.offsetHeight, mh = el.closest('main').offsetHeight;
+            var y = Math.max(16, Math.min(cur.y, mh - h - 24)), need = y + h + 24;
+            if (h && (y !== cur.y || need > mh)) { self.setState({ dlg: Object.assign({}, cur, { y: y, min: need > mh ? need : 0 }) }); return; }
+          } catch (x) {}
+        }
+        self._dlgNew = false;
+        try { if (el.scrollIntoView) el.scrollIntoView({ block: 'nearest' }); } catch (x) {}
+        if (self._dlgFocus) { self._dlgFocus = false; try { el.focus(); } catch (x) {} }
+      }
+    };
+    if (!t) return out;
+    var SEVC = { Extreme: ['#8F1D1D', '#FFFFFF'], High: ['#B23C0A', '#FFFFFF'], Medium: ['#F2C46B', '#14213D'], Moderate: ['#FBE3B5', '#6B4500'], Low: ['#E3ECF8', '#1F5FAD'] };
+    var box = 'position: absolute; z-index: 21; top: ' + Math.round(d.y) + 'px; left: 50%; transform: translateX(-50%); width: 560px; max-width: calc(100% - 32px); box-sizing: border-box; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; box-shadow: 0 18px 50px rgba(20, 33, 61, 0.30); outline: none; display: flex; flex-direction: column';
+    var a = d.alert !== undefined ? D.alerts[d.alert] : null, v;
+    if (a) {
+      var ended = a.e < D.today, c = SEVC[a.sev] || SEVC.Low;
+      v = { label: 'Alert details: ' + a.title, eyebrow: 'Alert details', title: a.title, sub: a.type + ' · ' + (a.cw ? a.country + ' (country-wide)' : a.cityName + ', ' + a.country),
+        hasChip: true, chip: a.sev, chipStyle: 'flex: none; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: ' + c[0] + '; color: ' + c[1],
+        hasBanner: false, hasText: true, text: this.summary(a),
+        rows: [
+          { k: 'Reported', v: a.reported, sub: '' },
+          { k: ended ? 'Ended' : 'Estimated end', v: a.ends, sub: ended ? 'This alert is no longer active.' : 'Active now.' },
+          { k: 'This traveler', v: t.name + (t.vip ? ' · VIP' : ''), sub: t.place + (t.dist ? ' · ' + t.dist : '') },
+          { k: 'Who it matches', v: a.cw ? 'Every traveler in ' + a.country : 'Travelers within ' + D.distText(a.sev), sub: '' }
+        ],
+        hasLink: true, linkLabel: 'Full report on Riskline' };
+    } else {
+      var al = t.alert, night = t.e - t.s, both = function (day, l) { return D.lab[day] + ' · departs ' + l.dep + ' · arrives ' + l.arr + (l.next ? ' (next day)' : ''); };
+      var rows = [{ k: 'Status', v: t.status, sub: t.e < D.today ? 'Trip ended ' + D.lab[t.e] : t.detail }, { k: 'Trip dates', v: t.dates, sub: night ? night + (night === 1 ? ' night' : ' nights') + ' in ' + t.dcity : 'Day trip to ' + t.dcity }];
+      t.legsOut.forEach(function (l, i) { rows.push({ k: 'Flight out' + (t.legsOut.length > 1 ? ' · ' + (i + 1) + ' of ' + t.legsOut.length : ''), v: l.flight + ' · ' + l.fromCity + ' (' + l.from + ') to ' + l.toCity + ' (' + l.to + ')', sub: both(t.s, l) }); });
+      rows.push(t.hotel ? { k: 'Hotel', v: t.hotel.name, sub: 'Check-in ' + D.lab[t.s] + ' · check-out ' + D.lab[t.e] } : { k: 'Hotel', v: 'None (day trip)', sub: '' });
+      rows.push(t.car ? { k: 'Rental car', v: t.car, sub: 'Pick-up ' + D.lab[t.s] + ' · return ' + D.lab[t.e] } : { k: 'Rental car', v: 'None booked', sub: '' });
+      rows.push({ k: 'Flight back', v: t.legBack.flight + ' · ' + t.legBack.fromCity + ' (' + t.legBack.from + ') to ' + t.legBack.toCity + ' (' + t.legBack.to + ')', sub: both(t.e, t.legBack) });
+      rows.push({ k: 'Booking reference (record locator)', v: t.pnr, sub: t.airline });
+      var bc = al ? (SEVC[al.sev] || SEVC.Low) : null;
+      v = { label: 'Itinerary for ' + t.name, eyebrow: 'Traveler itinerary', title: t.name, sub: t.dept + ' · ' + t.sub,
+        hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
+        hasBanner: !!al, bannerHead: al ? al.sev + ' alert' : '', banner: al ? al.title + (t.dist ? ' · ' + t.dist : '') : '',
+        bannerStyle: al ? 'margin: 0 24px 4px; padding: 10px 12px; border-radius: 8px; border-left: 5px solid ' + bc[0] + '; background: #F7F9FC; font-size: 14px; line-height: 1.4; color: #14213D' : '',
+        hasText: false, text: '', rows: rows, hasLink: false, linkLabel: '' };
+    }
+    v.style = box; v.hasNote = !!this.state.dlgNote;
+    v.link = function (e) { if (e && e.preventDefault) e.preventDefault(); self.setState({ dlgNote: true }); };
+    out.dlgShown = true; out.dlg = v;
+    return out;
+  }
+
+  // ----- Messages: every check-in and conversation, kept in the browser (nothing is really sent)
+  msgLoad() {
+    if (this._m) return this._m;
+    var m = null;
+    try { m = JSON.parse(window.localStorage.getItem('beacon.msgs') || 'null'); } catch (e) {}
+    if (!m || !m.checkins || !m.chats) m = window.__beaconMsgs || { seq: 0, checkins: [], chats: {} };
+    this._m = window.__beaconMsgs = m;
+    return m;
+  }
+  msgSave() {
+    window.__beaconMsgs = this._m;
+    try { window.localStorage.setItem('beacon.msgs', JSON.stringify(this._m)); } catch (e) {}
+  }
+  // How fast the pretend replies arrive. 1 = one real second per pretend minute.
+  msgSpeed() { return window.BEACON_NO_ANIM ? 1e6 : (+window.BEACON_MSG_SPEED || 1); }
+
+  // Travelers who are in an alert's area right now (the same rule the Alerts screen uses for "there now")
+  thereNow(a) {
+    var D = this.build(), T = D.today, sub = this.navSub(), out = [];
+    if (a.off || a.e < T || a.s > T) return out;
+    for (var i = 0; i < D.trips.length; i++) {
+      var t = D.trips[i];
+      if (t.s > a.e || t.e < a.s || t.atHome || !t.today || t.status === 'Departing today' || (sub !== 'all' && t.sub !== sub)) continue;
+      if (a.cw) { if (!D.cwOn || a.country !== t.country) continue; }
+      else if (D.miles(t.lat, t.lng, a.lat, a.lng) > D.radius[a.sev]) continue;
+      out.push(t);
+    }
+    out.sort(function (x, y) { return x.name < y.name ? -1 : x.name > y.name ? 1 : 0; });
+    return out;
+  }
+
+  // Decide, once, how each traveler will answer a check-in: most are safe, someone needs help, a few stay silent
+  planReplies(seq, people) {
+    var R = this.rng(7000 + seq * 97), n = people.length;
+    var out = people.map(function (t) { return { id: t.id, kind: 'safe', air: t.detail.indexOf('In the air') === 0, note: 0, again: 0 }; });
+    var take = function (list) { return list.splice(Math.floor(R() * list.length), 1)[0]; };
+    // someone on the ground needs help (two in a big group)
+    var ground = out.filter(function (o) { return !o.air; }), nHelp = n >= 12 ? 2 : n >= 3 ? 1 : 0, k = Math.floor(R() * 3);
+    while (nHelp-- > 0 && ground.length) { var h = take(ground); h.kind = 'help'; h.note = k++ % 3; }
+    // about one in five does not answer: travelers in the air first, since their phones are off
+    var nNone = n >= 4 ? Math.max(1, Math.round(n * 0.2)) : 0, first = true;
+    var air = out.filter(function (o) { return o.air && o.kind === 'safe'; });
+    while (nNone-- > 0) {
+      var pool = air.length ? air : ground; if (!pool.length) break;
+      var q = take(pool); q.kind = 'none';
+      q.again = first || R() < 0.5 ? 4 + Math.floor(R() * 16) : 0;   // seconds after a reminder; 0 = still silent
+      first = false;
+    }
+    out.forEach(function (o) { o.after = o.kind === 'safe' ? 3 + Math.floor(R() * 45) : o.kind === 'help' ? 6 + Math.floor(R() * 18) : 0; delete o.air; });   // seconds until the reply
+    return out;
+  }
+  // Where one traveler's answer stands at this moment: 'safe', 'help' or 'wait' (no reply yet), and after how many pretend minutes
+  replyOf(c, r, now) {
+    var sp = this.msgSpeed(), el = (now - c.at) / 1000 * sp;
+    if (r.kind !== 'none') return el >= r.after ? { st: r.kind, min: r.after, due: false } : { st: 'wait', due: true };
+    if (c.remindedAt && r.again) {
+      var el2 = (now - c.remindedAt) / 1000 * sp;
+      if (el2 >= r.again) return { st: 'safe', min: Math.min(480, Math.round((c.remindedAt - c.at) / 1000 * sp)) + r.again, due: false };
+      return { st: 'wait', due: true };
+    }
+    return { st: 'wait', due: false };
+  }
+  // Redraw shortly, while replies are still on their way
+  tick() {
+    var self = this;
+    if (this._t) return;
+    this._t = setTimeout(function () { self._t = null; self.forceUpdate(); }, window.BEACON_NO_ANIM ? 20 : 400);
+  }
+
+  renderVals() {
+    var self = this, s = this.state, D = this.build(), M = this.msgLoad(), now = Date.now();
+    var SEV = { Extreme: ['#8F1D1D', '#FFFFFF'], High: ['#B23C0A', '#FFFFFF'], Medium: ['#F2C46B', '#14213D'], Moderate: ['#FBE3B5', '#6B4500'], Low: ['#E3ECF8', '#1F5FAD'] };
+    var chip = function (sev) { var c = SEV[sev] || SEV.Low; return 'flex: none; display: inline-block; min-width: 72px; padding: 3px 10px; border-radius: 4px; text-align: center; font-size: 12px; font-weight: 700; background: ' + c[0] + '; color: ' + c[1]; };
+    var STC = { help: ['#8F1D1D', '#FFFFFF', 'Needs help'], safe: ['#E3F4EA', '#14603A', 'Safe'], wait: ['#EEF1F6', '#3A4558', 'No reply yet'] };
+    var stChip = function (st) { return 'padding: 3px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; white-space: nowrap; background: ' + STC[st][0] + '; color: ' + STC[st][1]; };
+    var clock = function (min) { var m = 570 + min, h = Math.floor(m / 60) % 24, mm = m % 60; return ((h + 11) % 12 + 1) + ':' + (mm < 10 ? '0' : '') + mm + (h < 12 ? ' AM' : ' PM'); };
+    var plural = function (n, one, many) { return n + ' ' + (n === 1 ? one : many); };
+    var byText = function (by) { return by.length === 2 ? 'text and email' : by[0] === 'email' ? 'email' : 'text'; };
+    var NOTES = ['My hotel has no power and I cannot get a ride.', 'I am shaken up and want to leave the area today.', 'I lost my bag with my passport in the rush.'];
+    var pending = false;
+    var go = function (e, patch) { self._kb = !!(e && e.detail === 0); self.setState(patch); };
+
+    // every check-in, with its tally as of this moment
+    var tallies = M.checkins.map(function (c) {
+      var t = { c: c, help: 0, safe: 0, wait: 0, people: [] };
+      c.people.forEach(function (r) { var st = self.replyOf(c, r, now); if (st.due) pending = true; t[st.st]++; t.people.push({ r: r, st: st }); });
+      return t;
+    });
+    var byId = {}; tallies.forEach(function (t) { byId[t.c.id] = t; });
+    var view = s.view, cur = byId[s.sel] || null;
+    if ((view === 'checkin' || view === 'chat') && !cur) view = 'list';
+
+    var base = {
+      navSub: this.navSub(), navStyle: s.menuOff ? 'display: none' : 'flex: 1 1 236px; background: #14213D; color: #FFFFFF; padding: 28px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px',
+      mainStyle: 'flex: 999 1 560px; min-width: 0; padding: ' + (s.menuOff ? '20px 24px 32px' : '32px 40px 48px') + '; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; max-width: ' + (s.menuOff ? 'none' : '1280px'),
+      menuLabel: s.menuOff ? 'Show menu' : 'Hide menu', menuHidden: s.menuOff ? 'true' : 'false',
+      toggleMenu: function () { self.setState({ menuOff: !self.state.menuOff }); }, onNavSub: function (e) { self.setNavSub(e.target.value); },
+      userName: 'Alex Morgan', userInitials: 'AM', userRole: 'Travel manager · Acme Corp',
+      // Leaving by any link puts Messages back on its list for next time (the app already does; this is for the design canvas)
+      rootClick: function (e) { var l = e.target && e.target.closest ? e.target.closest('a') : null; if (l && /\.dc\.html$/.test(l.getAttribute('href') || '') && self.state.view !== 'list') self.setState({ view: 'list', sel: -1, chatWith: -1, chat: '', pick: -1 }); },
+      isList: view === 'list', isNew: view === 'new', isCheckin: view === 'checkin', isChat: view === 'chat',
+      topRef: function (el) { if (el && self._kb) { self._kb = false; try { el.focus(); } catch (x) {} } },
+      newCheckin: function (e) { go(e, { view: 'new', pick: -1, text: '', edited: false, byText: true, byEmail: true, askClear: false }); },
+      toList: function (e) { go(e, { view: 'list', sel: -1, chatWith: -1, chat: '' }); },
+      toCheckin: function (e) { go(e, { view: 'checkin', chatWith: -1, chat: '' }); }
+    };
+
+    // ----- the list of check-ins sent
+    if (view === 'list') {
+      base.noCheckins = !tallies.length; base.hasCheckins = !!tallies.length;
+      base.listTitle = plural(tallies.length, 'check-in sent', 'check-ins sent');
+      base.cards = tallies.slice().reverse().map(function (t) {
+        var c = t.c;
+        return { sev: c.sev, chip: chip(c.sev), title: c.title, meta: 'Sent today at 9:30 AM ET by ' + byText(c.by) + ' to ' + plural(c.people.length, 'traveler', 'travelers'),
+          helpText: plural(t.help, 'needs help', 'need help'), safeText: t.safe + ' safe', waitText: t.wait + ' no reply',
+          helpStyle: 'padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; ' + (t.help ? 'background: #8F1D1D; color: #FFFFFF' : 'background: #EEF1F6; color: #3A4558'),
+          open: function (e) { go(e, { view: 'checkin', sel: c.id, askClear: false }); } };
+      });
+      base.askClear = !!s.askClear; base.canClear = !s.askClear;
+      base.clearAsk = function () { self.setState({ askClear: true }); };
+      base.clearNo = function () { self.setState({ askClear: false }); };
+      base.clearYes = function () { self._m = { seq: M.seq, checkins: [], chats: {} }; self.msgSave(); self.setState({ askClear: false }); };
+    }
+
+    // ----- writing a new check-in
+    if (view === 'new') {
+      var T = D.today;
+      var live = D.alerts.filter(function (a) { return !a.off && a.s <= T && a.e >= T; }).map(function (a) { return { a: a, who: self.thereNow(a) }; }).filter(function (x) { return x.who.length > 0; });
+      live.sort(function (x, y) { return y.a.rank - x.a.rank || y.who.length - x.who.length || x.a.id - y.a.id; });
+      var chosen = null; live.forEach(function (x) { if (x.a.id === s.pick) chosen = x; });
+      var def = chosen ? 'Acme Corp safety check: ' + chosen.a.title + '. Are you safe? Reply 1 if you are safe. Reply 2 if you need help.' : '';
+      var text = s.edited ? s.text : def, okText = text.trim().length > 0, okBy = s.byText || s.byEmail, canSend = !!chosen && okText && okBy;
+      base.picks = live.map(function (x) {
+        var on = chosen === x;
+        return { sev: x.a.sev, chip: chip(x.a.sev), title: x.a.title, count: plural(x.who.length, 'traveler there now', 'travelers there now'), on: on ? 'true' : 'false',
+          style: 'width: 100%; box-sizing: border-box; min-height: 48px; padding: 8px 14px; border-radius: 10px; font-family: inherit; text-align: left; cursor: pointer; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; ' + (on ? 'border: 2px solid #1F5FAD; background: #EAF1FB' : 'border: 1px solid #E1E6EE; background: #FFFFFF'),
+          pick: function () { self.setState({ pick: x.a.id }); } };
+      });
+      base.noPicks = !live.length; base.hasPick = !!chosen;
+      if (chosen) {
+        var names = chosen.who.map(function (t) { return t.name; });
+        base.whoCount = plural(names.length, 'traveler', 'travelers') + ' in the area now:';
+        base.whoNames = names.length <= 6 ? names.join(', ') + '.' : names.slice(0, 6).join(', ') + ' and ' + (names.length - 6) + ' more.';
+      }
+      base.text = text; base.onText = function (e) { self.setState({ text: e.target.value, edited: true }); };
+      base.byText = !!s.byText; base.byEmail = !!s.byEmail;
+      base.onByText = function (e) { self.setState({ byText: !!e.target.checked }); }; base.onByEmail = function (e) { self.setState({ byEmail: !!e.target.checked }); };
+      base.sendOff = !canSend;
+      base.sendLabel = chosen ? 'Send check-in to ' + plural(chosen.who.length, 'traveler', 'travelers') : 'Send check-in';
+      base.sendStyle = 'min-height: 44px; padding: 0 18px; border-radius: 8px; border: 0; font-size: 14px; font-weight: 700; font-family: inherit; ' + (canSend ? 'background: #1F5FAD; color: #FFFFFF; cursor: pointer' : 'background: #D5DBE6; color: #556072; cursor: default');
+      base.sendHint = !chosen ? '' : !okText ? 'Write a message first.' : !okBy ? 'Choose text message, email, or both.' : '';
+      base.cancelNew = function (e) { go(e, { view: 'list', pick: -1, text: '', edited: false }); };
+      base.send = function (e) {
+        if (!canSend) return;
+        var m = self.msgLoad(); m.seq++;
+        var c = { id: m.seq, at: Date.now(), kind: 'alert', alertId: chosen.a.id, title: chosen.a.title, sev: chosen.a.sev, text: text.trim(), by: [s.byText ? 'text' : '', s.byEmail ? 'email' : ''].filter(function (x) { return x; }), people: self.planReplies(m.seq, chosen.who) };
+        m.checkins.push(c); self.msgSave();
+        go(e, { view: 'checkin', sel: c.id, pick: -1, text: '', edited: false });
+      };
+    }
+
+    // ----- one check-in: the tally and who said what
+    var person = function (t, st, r) {
+      return { name: t.name + (t.vip ? ' · VIP' : ''), dept: t.dept + ' · ' + t.sub, place: t.city + (t.city === t.country ? '' : ', ' + t.country), detail: t.detail,
+        status: STC[st.st][2], chip: stChip(st.st),
+        note: st.st === 'help' ? '"' + NOTES[r.note] + '" · ' + clock(st.min) : st.st === 'safe' ? 'Replied ' + clock(st.min) : '' };
+    };
+    if (cur && (view === 'checkin' || view === 'chat')) {
+      var c = cur.c, total = c.people.length, replied = cur.help + cur.safe, ORD = { help: 0, wait: 1, safe: 2 };
+      base.kSev = c.sev; base.kChip = chip(c.sev); base.kTitle = c.title; base.kText = c.text;
+      base.kMeta = 'Check-in sent today at 9:30 AM ET by ' + byText(c.by) + ' to ' + plural(total, 'traveler', 'travelers');
+      base.nHelp = cur.help; base.nSafe = cur.safe; base.nWait = cur.wait;
+      base.tileHelp = 'flex: 1 1 150px; padding: 14px 18px; border-radius: 12px; display: flex; flex-direction: column; gap: 4px; ' + (cur.help ? 'background: #8F1D1D; color: #FFFFFF' : 'background: #EEF1F6; color: #3A4558');
+      base.kProgress = total === 1 ? (replied ? 'The traveler has replied.' : 'Waiting for a reply.') : replied === total ? 'All ' + total + ' have replied.' : replied + ' of ' + total + ' have replied.';
+      var stillComing = cur.people.some(function (p) { return p.st.due; });
+      base.canRemind = cur.wait > 0 && !c.remindedAt && !stillComing;
+      base.remindLabel = 'Send a reminder to ' + plural(cur.wait, 'traveler', 'travelers');
+      base.reminded = !!c.remindedAt;
+      base.remindedText = cur.wait ? 'Reminder sent. ' + plural(cur.wait, 'traveler has', 'travelers have') + ' still not replied.' : 'Reminder sent.';
+      base.remind = function () { c.remindedAt = Date.now(); self.msgSave(); self.forceUpdate(); };
+      var list = cur.people.map(function (p) { return { p: p, t: D.trips[p.r.id] }; }).filter(function (x) { return x.t; });
+      list.sort(function (x, y) { return ORD[x.p.st.st] - ORD[y.p.st.st] || (x.p.st.min || 0) - (y.p.st.min || 0) || (x.t.name < y.t.name ? -1 : 1); });
+      base.rows = list.map(function (x) {
+        var o = person(x.t, x.p.st, x.p.r), help = x.p.st.st === 'help';
+        o.rowStyle = 'display: grid; grid-template-columns: minmax(140px, 1.2fr) minmax(150px, 1.6fr) minmax(160px, 1.8fr) 80px; gap: 16px; align-items: center; padding: 14px 24px; border-bottom: 1px solid #EEF1F5; min-width: 640px; box-sizing: border-box; ' + (help ? 'background: #FDF1F1; box-shadow: inset 5px 0 0 #8F1D1D' : 'background: #FFFFFF');
+        o.chatLabel = 'Chat with ' + x.t.name;
+        o.chat = function (e) { go(e, { view: 'chat', chatWith: x.t.id, chat: '' }); };
+        return o;
+      });
+
+      // ----- a conversation with one traveler
+      if (view === 'chat') {
+        var who = null; cur.people.forEach(function (p) { if (p.r.id === s.chatWith) who = p; });
+        var tr = who ? D.trips[who.r.id] : null;
+        if (!who || !tr) { base.isChat = false; base.isCheckin = true; }
+        else {
+          var first = tr.name.split(' ')[0], msgs = M.chats[tr.id] || (M.chats[tr.id] = []);
+          var thread = [{ me: true, text: c.text }];
+          if (who.st.st === 'safe') thread.push({ me: false, text: 'I am safe.' });
+          if (who.st.st === 'help') thread.push({ me: false, text: 'I need help. ' + NOTES[who.r.note] });
+          var typing = false;
+          msgs.forEach(function (m) { if (m.at <= now) thread.push({ me: m.who === 'me', text: m.text }); else { typing = true; pending = true; } });
+          base.chName = tr.name + (tr.vip ? ' · VIP' : ''); base.chSub = tr.dept + ' · ' + tr.city + ' · ' + tr.detail;
+          base.chStatus = STC[who.st.st][2]; base.chChip = stChip(who.st.st); base.chLogLabel = 'Messages with ' + tr.name;
+          base.thread = thread.map(function (m) {
+            return { who: m.me ? 'You' : first, text: m.text,
+              wrap: 'display: flex; flex-direction: column; gap: 4px; max-width: 78%; ' + (m.me ? 'align-self: flex-end; align-items: flex-end' : 'align-self: flex-start; align-items: flex-start'),
+              bubble: 'margin: 0; padding: 10px 14px; border-radius: 14px; font-size: 15px; line-height: 1.45; ' + (m.me ? 'background: #1F5FAD; color: #FFFFFF; border-bottom-right-radius: 4px' : 'background: #FFFFFF; color: #14213D; border: 1px solid #E1E6EE; border-bottom-left-radius: 4px') };
+          });
+          base.typing = typing; base.typingText = first + ' is typing…';
+          var draft = s.chat || '', can = draft.trim().length > 0;
+          base.chat = draft; base.chatHint = 'Write to ' + first; base.chatOff = !can;
+          base.chatBtn = 'min-height: 44px; padding: 0 18px; border-radius: 8px; border: 0; font-size: 14px; font-weight: 700; font-family: inherit; ' + (can ? 'background: #1F5FAD; color: #FFFFFF; cursor: pointer' : 'background: #D5DBE6; color: #556072; cursor: default');
+          base.onChat = function (e) { self.setState({ chat: e.target.value }); };
+          var sendChat = function () {
+            var txt = (self.state.chat || '').trim(); if (!txt) return;
+            var t0 = Date.now(), mine = msgs.filter(function (m) { return m.who === 'them'; }).length, R = self.rng(900 + tr.id * 13 + msgs.length);
+            msgs.push({ who: 'me', text: txt, at: t0 });
+            // the made-up traveler answers two to four seconds later; someone who has not replied to the check-in stays silent
+            var at = 'I am ' + (tr.hotel ? 'at the ' + tr.hotel.name : 'in ' + tr.city) + '. ';
+            var HELP = [[at + 'The power is out and no cars are running.', at + 'I am not hurt, but I do not feel safe staying here.', at + 'I have my phone and a credit card, but no passport.'][who.r.note], 'Yes please. That would help a lot.', 'Thank you. I will stay where I am until I hear from you.', 'OK, thank you.'];
+            var SAFE = ['All good here. Thanks for checking in.', 'Will do.', 'Thanks!'];
+            var lines = who.st.st === 'help' ? HELP : who.st.st === 'safe' ? SAFE : null;
+            if (lines) msgs.push({ who: 'them', text: lines[Math.min(mine, lines.length - 1)], at: t0 + (window.BEACON_NO_ANIM ? 0 : 2000 + Math.floor(R() * 2000)) });
+            self.msgSave(); self.setState({ chat: '' });
+          };
+          base.sendChat = sendChat;
+          base.onChatKey = function (e) { if (e.key === 'Enter') { e.preventDefault(); sendChat(); } };
+        }
+      }
+    }
+
+    if (pending) this.tick();
+    return base;
+  }
+}
+
+return Component;
+})(BEACON_DCLogic);
 </script>
 <script>
 // CTCS Beacon prototype: a small runtime that draws each screen from its template and logic class.
 (function () {
   'use strict';
   var SCREENS = window.BEACON_SCREENS, app = document.getElementById('app');
-  var ROUTES = { 'sign-in': 'Main', 'home': 'Home', 'travelers': 'Travelers', 'alerts': 'Alerts', 'daily-brief': 'DailyBrief', 'map': 'Map', 'preferences': 'Preferences', 'legend': 'Legend', 'pre-travel-brief': 'PreTravel' };
+  var ROUTES = { 'sign-in': 'Main', 'home': 'Home', 'travelers': 'Travelers', 'alerts': 'Alerts', 'messages': 'Messages', 'daily-brief': 'DailyBrief', 'map': 'Map', 'preferences': 'Preferences', 'legend': 'Legend', 'pre-travel-brief': 'PreTravel' };
   var HASH = {}; Object.keys(ROUTES).forEach(function (k) { HASH[ROUTES[k]] = k; });
   var current = null, queued = false;
 
