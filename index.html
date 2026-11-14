@@ -13,7 +13,7 @@ body{font-family:'Open Sans',system-ui,-apple-system,'Segoe UI',sans-serif;color
 a{color:#1F5FAD}a:hover{color:#14213D}
 input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid #1F5FAD;outline-offset:2px}
 input[type=range]{accent-color:#1F5FAD}
-@media (min-width: 820px){nav[aria-label="Main"]{position:sticky;top:0;height:100vh;align-self:flex-start;overflow-y:auto}}
+@media (min-width: 820px){nav[aria-label="Main"]{position:sticky;top:0;height:100vh;align-self:flex-start;overflow-y:auto;max-width:236px}}
 @media print{nav,header{display:none!important}}
 </style>
 </head>
@@ -767,6 +767,12 @@ input[type=range]{accent-color:#1F5FAD}
           </div>
           <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; min-height: 24px">
             <span style="font-size: 14px; color: #3A4558"><strong style="color: #14213D">{{tCount}}</strong> {{tCountLabel}}</span>
+            <span role="group" aria-label="Automatic alert" style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; font-size: 14px; color: #3A4558">
+              <span>Automatic alert:</span>
+              <sc-for list="{{cSum}}" as="c" hint-placeholder-count="3">
+                <span style="display: inline-flex; align-items: center; gap: 6px"><span aria-hidden="true" style="{{c.style}}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="{{c.icon}}"></path></svg></span><strong style="color: #14213D">{{c.n}}</strong> {{c.text}}</span>
+              </sc-for>
+            </span>
             <sc-if value="{{exportedShown}}" hint-placeholder-val="{{ false }}">
               <span role="status" style="font-size: 14px; font-weight: 600; color: #1F5FAD">{{exportedText}}</span>
             </sc-if>
@@ -774,14 +780,14 @@ input[type=range]{accent-color:#1F5FAD}
         </div>
 
         <div style="overflow-x: auto">
-          <div style="min-width: 800px">
-            <div style="display: grid; grid-template-columns: minmax(160px, 1.1fr) minmax(200px, 1.6fr) minmax(120px, 0.8fr) minmax(110px, 0.7fr) minmax(90px, 0.6fr); gap: 16px; padding: 0 24px; background: #F7F9FC; border-top: 1px solid #E1E6EE; border-bottom: 1px solid #E1E6EE">
+          <div style="min-width: 980px">
+            <div style="display: grid; grid-template-columns: minmax(160px, 1.1fr) minmax(190px, 1.5fr) minmax(120px, 0.8fr) minmax(110px, 0.7fr) minmax(90px, 0.55fr) minmax(150px, 0.9fr); gap: 16px; padding: 0 24px; background: #F7F9FC; border-top: 1px solid #E1E6EE; border-bottom: 1px solid #E1E6EE">
               <sc-for list="{{tcols}}" as="c" hint-placeholder-count="5">
                 <button type="button" onClick="{{c.sort}}" aria-label="{{c.aria}}" style="{{c.style}}">{{c.label}}<span aria-hidden="true" style="{{c.arrowStyle}}">{{c.arrow}}</span></button>
               </sc-for>
             </div>
             <sc-for list="{{trows}}" as="r" hint-placeholder-count="6">
-              <div style="display: grid; grid-template-columns: minmax(160px, 1.1fr) minmax(200px, 1.6fr) minmax(120px, 0.8fr) minmax(110px, 0.7fr) minmax(90px, 0.6fr); gap: 16px; align-items: center; padding: 16px 24px; border-bottom: 1px solid #EEF1F5">
+              <div style="display: grid; grid-template-columns: minmax(160px, 1.1fr) minmax(190px, 1.5fr) minmax(120px, 0.8fr) minmax(110px, 0.7fr) minmax(90px, 0.55fr) minmax(150px, 0.9fr); gap: 16px; align-items: center; padding: 16px 24px; border-bottom: 1px solid #EEF1F5">
                 <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
                   <span style="display: flex; align-items: center; gap: 8px">
                     <a href="#" onClick="{{r.itin}}" aria-label="{{r.itinLabel}}" style="font-size: 15px; font-weight: 700; color: #1F5FAD; text-decoration: underline">{{r.name}}</a>
@@ -799,6 +805,12 @@ input[type=range]{accent-color:#1F5FAD}
                 </div>
                 <div><span style="{{r.whenStyle}}">{{r.when}}</span></div>
                 <span style="font-size: 14px; color: #14213D">{{r.dist}}</span>
+                <div style="display: flex; align-items: center; gap: 10px; min-width: 0">
+                  <span role="img" aria-label="{{r.cLabel}}" title="{{r.cLabel}}" style="{{r.cStyle}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="{{r.cIcon}}"></path></svg></span>
+                  <sc-if value="{{r.cHelp}}" hint-placeholder-val="{{ false }}">
+                    <button type="button" onClick="{{r.contact}}" aria-label="{{r.contactLabel}}" style="padding: 0; min-height: 32px; border: 0; background: transparent; color: #1F5FAD; font-size: 14px; font-weight: 700; font-family: inherit; text-decoration: underline; cursor: pointer; white-space: nowrap">Contact info</button>
+                  </sc-if>
+                </div>
               </div>
             </sc-for>
             <sc-if value="{{tEmpty}}" hint-placeholder-val="{{ false }}">
@@ -1861,6 +1873,27 @@ input[type=range]{accent-color:#1F5FAD}
         </div>
       </section>
 
+      <section aria-label="Contacted" style="flex: 1 1 100%; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <h2 style="margin: 0; font-size: 18px; font-weight: 800; color: #14213D">Contacted</h2>
+          <p style="margin: 0; font-size: 14px; color: #3A4558">When an alert is reported, Beacon sends it to each traveler in the area automatically, using the contact settings that traveler chose. The Contacted column in an alert's traveler list shows whether it reached them.</p>
+        </div>
+        <div role="list" style="display: flex; flex-wrap: wrap; column-gap: 40px">
+          <div role="listitem" style="flex: 1 1 380px; display: flex; align-items: center; gap: 16px; padding: 10px 0; border-top: 1px solid #EEF1F6">
+            <span aria-hidden="true" style="flex: none; width: 64px; height: 44px; display: flex; align-items: center; justify-content: center"><span style="box-sizing: border-box; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: #1E7B4B; color: #FFFFFF; border: 2px solid #1E7B4B"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></span>
+            <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 15px; font-weight: 700; color: #14213D">Contacted</span><span style="font-size: 14px; color: #3A4558">The automatic alert reached this traveler.</span></span>
+          </div>
+          <div role="listitem" style="flex: 1 1 380px; display: flex; align-items: center; gap: 16px; padding: 10px 0; border-top: 1px solid #EEF1F6">
+            <span aria-hidden="true" style="flex: none; width: 64px; height: 44px; display: flex; align-items: center; justify-content: center"><span style="box-sizing: border-box; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: #8F1D1D; color: #FFFFFF; border: 2px solid #8F1D1D"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"></path></svg></span></span>
+            <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 15px; font-weight: 700; color: #14213D">Not contacted</span><span style="font-size: 14px; color: #3A4558">The alert could not be delivered. Open "Contact info" and reach the traveler yourself.</span></span>
+          </div>
+          <div role="listitem" style="flex: 1 1 380px; display: flex; align-items: center; gap: 16px; padding: 10px 0; border-top: 1px solid #EEF1F6">
+            <span aria-hidden="true" style="flex: none; width: 64px; height: 44px; display: flex; align-items: center; justify-content: center"><span style="box-sizing: border-box; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: #FFFFFF; color: #556072; border: 2px solid #6B7588"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 12h11"></path></svg></span></span>
+            <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 15px; font-weight: 700; color: #14213D">Opted out</span><span style="font-size: 14px; color: #3A4558">The traveler chose not to receive automatic alerts. "Contact info" still shows how to reach them.</span></span>
+          </div>
+        </div>
+      </section>
+
     </div>
 
     <p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: #6B7588">PROTOTYPE · SAMPLE DATA</p>
@@ -2831,6 +2864,17 @@ class Component extends DCLogic {
       var f = R();
       TW.push((0.3 + f * f * 3) * (dep === 0 ? 1.5 : 1));
     }
+    // Whether the automatic alerts reach each traveler, and their contact details. This uses its own random stream
+    // (seed 156), so nothing else in the sample data moves. 'ok' = contacted, 'fail' = the alert could not be delivered,
+    // 'out' = the traveler opted out of automatic alerts. Phone numbers are 555-01xx, which are reserved for fiction.
+    var RC = this.rng(156), seenMail = {}, AREA = ['212', '312', '415', '617', '214', '404', '305', '206', '303', '713'];
+    TR.forEach(function (tr, k) {
+      var c = RC(), mail = tr.name.toLowerCase().replace(/[^a-z ]/g, '').replace(/ +/g, '.');
+      seenMail[mail] = (seenMail[mail] || 0) + 1;
+      tr.contact = c < 0.07 ? 'out' : c < 0.16 ? 'fail' : 'ok';
+      tr.email = mail + (seenMail[mail] > 1 ? seenMail[mail] : '') + '@acme.example';
+      tr.phone = '+1 (' + AREA[k % 10] + ') 555-01' + ('0' + (k * 7) % 100).slice(-2);
+    });
     var twTot = 0; TW.forEach(function (w) { twTot += w; });
     var pickTraveler = function () { var x = R() * twTot; for (var k = 0; k < 1500; k++) { x -= TW[k]; if (x < 0) return k; } return 1499; };
 
@@ -2991,7 +3035,7 @@ class Component extends DCLogic {
         else m = bestAlert(lat, lng, P[1], T, T);
       }
       x.lat = lat; x.lng = lng; x.atHome = atHome;
-      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub;
+      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub; x.contact = tr.contact; x.email = tr.email; x.phone = tr.phone;
       x.city = P[0]; x.country = P[1]; x.region = P[2];
       x.place = P[0] === P[1] ? P[0] : P[0] + ', ' + P[1];
       x.detail = detail; x.status = st; x.today = x.s <= T && x.e >= T; x.away = x.today && !atHome;
@@ -3180,6 +3224,17 @@ class Component extends DCLogic {
       var f = R();
       TW.push((0.3 + f * f * 3) * (dep === 0 ? 1.5 : 1));
     }
+    // Whether the automatic alerts reach each traveler, and their contact details. This uses its own random stream
+    // (seed 156), so nothing else in the sample data moves. 'ok' = contacted, 'fail' = the alert could not be delivered,
+    // 'out' = the traveler opted out of automatic alerts. Phone numbers are 555-01xx, which are reserved for fiction.
+    var RC = this.rng(156), seenMail = {}, AREA = ['212', '312', '415', '617', '214', '404', '305', '206', '303', '713'];
+    TR.forEach(function (tr, k) {
+      var c = RC(), mail = tr.name.toLowerCase().replace(/[^a-z ]/g, '').replace(/ +/g, '.');
+      seenMail[mail] = (seenMail[mail] || 0) + 1;
+      tr.contact = c < 0.07 ? 'out' : c < 0.16 ? 'fail' : 'ok';
+      tr.email = mail + (seenMail[mail] > 1 ? seenMail[mail] : '') + '@acme.example';
+      tr.phone = '+1 (' + AREA[k % 10] + ') 555-01' + ('0' + (k * 7) % 100).slice(-2);
+    });
     var twTot = 0; TW.forEach(function (w) { twTot += w; });
     var pickTraveler = function () { var x = R() * twTot; for (var k = 0; k < 1500; k++) { x -= TW[k]; if (x < 0) return k; } return 1499; };
 
@@ -3340,7 +3395,7 @@ class Component extends DCLogic {
         else m = bestAlert(lat, lng, P[1], T, T);
       }
       x.lat = lat; x.lng = lng; x.atHome = atHome;
-      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub;
+      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub; x.contact = tr.contact; x.email = tr.email; x.phone = tr.phone;
       x.city = P[0]; x.country = P[1]; x.region = P[2];
       x.place = P[0] === P[1] ? P[0] : P[0] + ', ' + P[1];
       x.detail = detail; x.status = st; x.today = x.s <= T && x.e >= T; x.away = x.today && !atHome;
@@ -3412,7 +3467,20 @@ class Component extends DCLogic {
     return S[a.id % 2] + (a.rank >= 4 ? ' Avoid non-essential travel to the area until the alert ends.' : '');
   }
 
-  // ----- The popup: a traveler's full itinerary, or an alert's details. Its markup is pop_block.html.
+  // ----- "Contacted": did the automatic alert reach this traveler? One symbol each, used on Alerts and in the popup.
+  // kind is the traveler's 'ok', 'fail' or 'out'. The Legend screen shows the same three symbols (it has its own copy of the markup).
+  contactMark(kind) {
+    var M = {
+      ok: { label: 'Contacted', icon: 'M5 12.5l4.5 4.5L19 7.5', css: 'background: #1E7B4B; color: #FFFFFF; border: 2px solid #1E7B4B' },
+      fail: { label: 'Not contacted', icon: 'M6.5 6.5l11 11M17.5 6.5l-11 11', css: 'background: #8F1D1D; color: #FFFFFF; border: 2px solid #8F1D1D' },
+      out: { label: 'Opted out', icon: 'M6.5 12h11', css: 'background: #FFFFFF; color: #556072; border: 2px solid #6B7588' }
+    }[kind] || null;
+    if (!M) return null;
+    return { kind: kind, label: M.label, icon: M.icon, style: 'flex: none; box-sizing: border-box; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; ' + M.css };
+  }
+
+  // ----- The popup: a traveler's full itinerary, an alert's details, or a traveler's contact details. Its markup is pop_block.html.
+  // also: { trip: <trip id>, contact: true, alert: <alert id> } for the contact details of a traveler the alert did not reach
   // what = { trip: <trip id> } for an itinerary, { trip: <trip id>, alert: <alert id> } for an alert
   dlgOpen(e, what) {
     var el = e && (e.currentTarget || e.target), y = 60;
@@ -3455,7 +3523,17 @@ class Component extends DCLogic {
     var SEVC = { Extreme: ['#8F1D1D', '#FFFFFF'], High: ['#B23C0A', '#FFFFFF'], Medium: ['#F2C46B', '#14213D'], Moderate: ['#FBE3B5', '#6B4500'], Low: ['#E3ECF8', '#1F5FAD'] };
     var box = 'position: absolute; z-index: 21; top: ' + Math.round(d.y) + 'px; left: 50%; transform: translateX(-50%); width: 560px; max-width: calc(100% - 32px); box-sizing: border-box; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; box-shadow: 0 18px 50px rgba(20, 33, 61, 0.30); outline: none; display: flex; flex-direction: column';
     var a = d.alert !== undefined ? D.alerts[d.alert] : null, v;
-    if (a) {
+    if (d.contact) {
+      var out2 = t.contact === 'out', mark = this.contactMark(t.contact) || this.contactMark('ok');
+      v = { label: 'Contact details for ' + t.name, eyebrow: 'Contact details', title: t.name, sub: t.dept + ' · ' + t.sub,
+        hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
+        hasBanner: t.contact !== 'ok', bannerHead: mark.label,
+        banner: out2 ? 'This traveler chose not to receive automatic alerts' + (a ? ', so the alert for ' + a.title + ' was not sent.' : '.') + ' You can still reach them yourself.' : 'The automatic alert' + (a ? ' for ' + a.title : '') + ' could not be delivered. Please reach this traveler yourself.',
+        bannerStyle: 'margin: 0 24px 4px; padding: 10px 12px; border-radius: 8px; border-left: 5px solid ' + (out2 ? '#6B7588' : '#8F1D1D') + '; background: ' + (out2 ? '#F3F5F9' : '#FDF1F1') + '; font-size: 14px; line-height: 1.4; color: #14213D',
+        hasText: false, text: '',
+        rows: [{ k: 'Mobile phone', v: t.phone, sub: '' }, { k: 'Email', v: t.email, sub: '' }, { k: 'This trip', v: t.place + ' · ' + t.dates, sub: t.detail }],
+        hasLink: false, linkLabel: '' };
+    } else if (a) {
       var ended = a.e < D.today, c = SEVC[a.sev] || SEVC.Low;
       v = { label: 'Alert details: ' + a.title, eyebrow: 'Alert details', title: a.title, sub: a.type + ' · ' + (a.cw ? a.country + ' (country-wide)' : a.cityName + ', ' + a.country),
         hasChip: true, chip: a.sev, chipStyle: 'flex: none; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: ' + c[0] + '; color: ' + c[1],
@@ -3475,6 +3553,7 @@ class Component extends DCLogic {
       rows.push(t.car ? { k: 'Rental car', v: t.car, sub: 'Pick-up ' + D.lab[t.s] + ' · return ' + D.lab[t.e] } : { k: 'Rental car', v: 'None booked', sub: '' });
       rows.push({ k: 'Flight back', v: t.legBack.flight + ' · ' + t.legBack.fromCity + ' (' + t.legBack.from + ') to ' + t.legBack.toCity + ' (' + t.legBack.to + ')', sub: both(t.e, t.legBack) });
       rows.push({ k: 'Booking reference (record locator)', v: t.pnr, sub: t.airline });
+      rows.push({ k: 'Contact', v: t.phone, sub: t.email });
       var bc = al ? (SEVC[al.sev] || SEVC.Low) : null;
       v = { label: 'Itinerary for ' + t.name, eyebrow: 'Traveler itinerary', title: t.name, sub: t.dept + ' · ' + t.sub,
         hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
@@ -3830,6 +3909,17 @@ class Component extends DCLogic {
       var f = R();
       TW.push((0.3 + f * f * 3) * (dep === 0 ? 1.5 : 1));
     }
+    // Whether the automatic alerts reach each traveler, and their contact details. This uses its own random stream
+    // (seed 156), so nothing else in the sample data moves. 'ok' = contacted, 'fail' = the alert could not be delivered,
+    // 'out' = the traveler opted out of automatic alerts. Phone numbers are 555-01xx, which are reserved for fiction.
+    var RC = this.rng(156), seenMail = {}, AREA = ['212', '312', '415', '617', '214', '404', '305', '206', '303', '713'];
+    TR.forEach(function (tr, k) {
+      var c = RC(), mail = tr.name.toLowerCase().replace(/[^a-z ]/g, '').replace(/ +/g, '.');
+      seenMail[mail] = (seenMail[mail] || 0) + 1;
+      tr.contact = c < 0.07 ? 'out' : c < 0.16 ? 'fail' : 'ok';
+      tr.email = mail + (seenMail[mail] > 1 ? seenMail[mail] : '') + '@acme.example';
+      tr.phone = '+1 (' + AREA[k % 10] + ') 555-01' + ('0' + (k * 7) % 100).slice(-2);
+    });
     var twTot = 0; TW.forEach(function (w) { twTot += w; });
     var pickTraveler = function () { var x = R() * twTot; for (var k = 0; k < 1500; k++) { x -= TW[k]; if (x < 0) return k; } return 1499; };
 
@@ -3990,7 +4080,7 @@ class Component extends DCLogic {
         else m = bestAlert(lat, lng, P[1], T, T);
       }
       x.lat = lat; x.lng = lng; x.atHome = atHome;
-      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub;
+      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub; x.contact = tr.contact; x.email = tr.email; x.phone = tr.phone;
       x.city = P[0]; x.country = P[1]; x.region = P[2];
       x.place = P[0] === P[1] ? P[0] : P[0] + ', ' + P[1];
       x.detail = detail; x.status = st; x.today = x.s <= T && x.e >= T; x.away = x.today && !atHome;
@@ -4103,7 +4193,20 @@ class Component extends DCLogic {
     return S[a.id % 2] + (a.rank >= 4 ? ' Avoid non-essential travel to the area until the alert ends.' : '');
   }
 
-  // ----- The popup: a traveler's full itinerary, or an alert's details. Its markup is pop_block.html.
+  // ----- "Contacted": did the automatic alert reach this traveler? One symbol each, used on Alerts and in the popup.
+  // kind is the traveler's 'ok', 'fail' or 'out'. The Legend screen shows the same three symbols (it has its own copy of the markup).
+  contactMark(kind) {
+    var M = {
+      ok: { label: 'Contacted', icon: 'M5 12.5l4.5 4.5L19 7.5', css: 'background: #1E7B4B; color: #FFFFFF; border: 2px solid #1E7B4B' },
+      fail: { label: 'Not contacted', icon: 'M6.5 6.5l11 11M17.5 6.5l-11 11', css: 'background: #8F1D1D; color: #FFFFFF; border: 2px solid #8F1D1D' },
+      out: { label: 'Opted out', icon: 'M6.5 12h11', css: 'background: #FFFFFF; color: #556072; border: 2px solid #6B7588' }
+    }[kind] || null;
+    if (!M) return null;
+    return { kind: kind, label: M.label, icon: M.icon, style: 'flex: none; box-sizing: border-box; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; ' + M.css };
+  }
+
+  // ----- The popup: a traveler's full itinerary, an alert's details, or a traveler's contact details. Its markup is pop_block.html.
+  // also: { trip: <trip id>, contact: true, alert: <alert id> } for the contact details of a traveler the alert did not reach
   // what = { trip: <trip id> } for an itinerary, { trip: <trip id>, alert: <alert id> } for an alert
   dlgOpen(e, what) {
     var el = e && (e.currentTarget || e.target), y = 60;
@@ -4146,7 +4249,17 @@ class Component extends DCLogic {
     var SEVC = { Extreme: ['#8F1D1D', '#FFFFFF'], High: ['#B23C0A', '#FFFFFF'], Medium: ['#F2C46B', '#14213D'], Moderate: ['#FBE3B5', '#6B4500'], Low: ['#E3ECF8', '#1F5FAD'] };
     var box = 'position: absolute; z-index: 21; top: ' + Math.round(d.y) + 'px; left: 50%; transform: translateX(-50%); width: 560px; max-width: calc(100% - 32px); box-sizing: border-box; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; box-shadow: 0 18px 50px rgba(20, 33, 61, 0.30); outline: none; display: flex; flex-direction: column';
     var a = d.alert !== undefined ? D.alerts[d.alert] : null, v;
-    if (a) {
+    if (d.contact) {
+      var out2 = t.contact === 'out', mark = this.contactMark(t.contact) || this.contactMark('ok');
+      v = { label: 'Contact details for ' + t.name, eyebrow: 'Contact details', title: t.name, sub: t.dept + ' · ' + t.sub,
+        hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
+        hasBanner: t.contact !== 'ok', bannerHead: mark.label,
+        banner: out2 ? 'This traveler chose not to receive automatic alerts' + (a ? ', so the alert for ' + a.title + ' was not sent.' : '.') + ' You can still reach them yourself.' : 'The automatic alert' + (a ? ' for ' + a.title : '') + ' could not be delivered. Please reach this traveler yourself.',
+        bannerStyle: 'margin: 0 24px 4px; padding: 10px 12px; border-radius: 8px; border-left: 5px solid ' + (out2 ? '#6B7588' : '#8F1D1D') + '; background: ' + (out2 ? '#F3F5F9' : '#FDF1F1') + '; font-size: 14px; line-height: 1.4; color: #14213D',
+        hasText: false, text: '',
+        rows: [{ k: 'Mobile phone', v: t.phone, sub: '' }, { k: 'Email', v: t.email, sub: '' }, { k: 'This trip', v: t.place + ' · ' + t.dates, sub: t.detail }],
+        hasLink: false, linkLabel: '' };
+    } else if (a) {
       var ended = a.e < D.today, c = SEVC[a.sev] || SEVC.Low;
       v = { label: 'Alert details: ' + a.title, eyebrow: 'Alert details', title: a.title, sub: a.type + ' · ' + (a.cw ? a.country + ' (country-wide)' : a.cityName + ', ' + a.country),
         hasChip: true, chip: a.sev, chipStyle: 'flex: none; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: ' + c[0] + '; color: ' + c[1],
@@ -4166,6 +4279,7 @@ class Component extends DCLogic {
       rows.push(t.car ? { k: 'Rental car', v: t.car, sub: 'Pick-up ' + D.lab[t.s] + ' · return ' + D.lab[t.e] } : { k: 'Rental car', v: 'None booked', sub: '' });
       rows.push({ k: 'Flight back', v: t.legBack.flight + ' · ' + t.legBack.fromCity + ' (' + t.legBack.from + ') to ' + t.legBack.toCity + ' (' + t.legBack.to + ')', sub: both(t.e, t.legBack) });
       rows.push({ k: 'Booking reference (record locator)', v: t.pnr, sub: t.airline });
+      rows.push({ k: 'Contact', v: t.phone, sub: t.email });
       var bc = al ? (SEVC[al.sev] || SEVC.Low) : null;
       v = { label: 'Itinerary for ' + t.name, eyebrow: 'Traveler itinerary', title: t.name, sub: t.dept + ' · ' + t.sub,
         hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
@@ -4250,7 +4364,8 @@ class Component extends DCLogic {
         for (var i = 0; i < tw.length; i++) { if (x.t.hay.indexOf(tw[i]) < 0) return false; }
         return true;
       });
-      var tkey = { name: function (x) { return x.t.name; }, place: function (x) { return x.t.place; }, trip: function (x) { return x.t.si; }, when: function (x) { return x.wk; }, dist: function (x) { return x.dist; } }[s.tsortKey];
+      var CORD = { fail: 0, out: 1, ok: 2 };   // sorting by Contacted puts the travelers who were not reached first
+      var tkey = { name: function (x) { return x.t.name; }, place: function (x) { return x.t.place; }, trip: function (x) { return x.t.si; }, when: function (x) { return x.wk; }, dist: function (x) { return x.dist; }, contact: function (x) { return CORD[x.t.contact]; } }[s.tsortKey];
       shown.sort(function (p, q2) { var x = tkey(p), y = tkey(q2); if (x < y) return -s.tsortDir; if (x > y) return s.tsortDir; return p.t.name < q2.t.name ? -1 : (p.t.name > q2.t.name ? 1 : p.t.id - q2.t.id); });
       var PER2 = 50, tt = shown.length, tpages = Math.max(1, Math.ceil(tt / PER2)), tp = Math.min(s.tpage || 0, tpages - 1);
       var whenStyle = function (wk) { return 'display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 700; ' + (wk === 0 ? 'background: #14213D; color: #FFFFFF' : (wk === 1 ? 'background: #E3ECF8; color: #1F5FAD' : 'background: #EEF1F5; color: #3A4558')); };
@@ -4267,12 +4382,15 @@ class Component extends DCLogic {
         modeChips: modes.map(function (m) { return { label: m[1], on: s.tmode === m[0] ? 'true' : 'false', style: pill(s.tmode === m[0]), pick: function () { self.setState({ tmode: m[0], tpage: 0 }); } }; }),
         tvip: !!s.tvip, onTVip: function (e) { self.setState({ tvip: !!e.target.checked, tpage: 0 }); },
         tCount: num(tt), tCountLabel: (s.tvip ? 'VIP ' : '') + (tt === 1 ? 'traveler' : 'travelers') + ' potentially impacted',
-        tcols: [['name', 'TRAVELER'], ['place', 'LOCATION'], ['trip', 'TRIP DATES'], ['when', 'STATUS'], ['dist', 'DISTANCE']].map(function (c) {
+        cSum: ['ok', 'fail', 'out'].map(function (k) { var m = self.contactMark(k), n = shown.filter(function (x) { return x.t.contact === k; }).length; return { n: n, text: m.label.toLowerCase(), icon: m.icon, style: m.style.replace('width: 28px; height: 28px', 'width: 20px; height: 20px') }; }),
+        tcols: [['name', 'TRAVELER'], ['place', 'LOCATION'], ['trip', 'TRIP DATES'], ['when', 'STATUS'], ['dist', 'DISTANCE'], ['contact', 'CONTACTED']].map(function (c) {
           var act = s.tsortKey === c[0];
           return { label: c[1], arrow: act ? (s.tsortDir === 1 ? '↑' : '↓') : '↕', aria: 'Sort by ' + c[1].toLowerCase(), arrowStyle: 'font-size: 14px; color: ' + (act ? '#1F5FAD' : '#9AA5B8'), style: headStyle(act), sort: function () { self.setState(act ? { tsortDir: -s.tsortDir, tpage: 0 } : { tsortKey: c[0], tsortDir: 1, tpage: 0 }); } };
         }),
         trows: shown.slice(tp * PER2, tp * PER2 + PER2).map(function (x) {
-          return { itin: function (e) { self.dlgOpen(e, { trip: x.t.id }); }, itinLabel: 'Itinerary for ' + x.t.name, toMap: self.mapLink(x.t.lat, x.t.lng), mapLabel: 'Show ' + x.t.place + ' on the map',
+          var cm = self.contactMark(x.t.contact);
+          return { cLabel: cm.label, cStyle: cm.style, cIcon: cm.icon, cHelp: x.t.contact !== 'ok', contact: function (e) { self.dlgOpen(e, { trip: x.t.id, contact: true, alert: a.id }); }, contactLabel: 'Contact info for ' + x.t.name,
+            itin: function (e) { self.dlgOpen(e, { trip: x.t.id }); }, itinLabel: 'Itinerary for ' + x.t.name, toMap: self.mapLink(x.t.lat, x.t.lng), mapLabel: 'Show ' + x.t.place + ' on the map',
             name: x.t.name, vip: x.t.vip, sub: x.t.dept + ' · ' + x.t.pnr, place: x.t.place, detail: x.t.detail, dates: x.t.dates, statusLabel: x.t.status, when: x.when, whenStyle: whenStyle(x.wk), dist: distText(x.dist) };
         }),
         tEmpty: tt === 0, tHasRows: tt > 0,
@@ -4281,8 +4399,8 @@ class Component extends DCLogic {
         tPrev: function () { self.setState({ tpage: Math.max(0, tp - 1) }); }, tNext: function () { self.setState({ tpage: Math.min(tpages - 1, tp + 1) }); },
         back: function () { self.setState({ sel: -1, exportMsg: '', dlg: null }); },
         exportCsv: function () {
-          var out = [['Alert', 'Risk level', 'Traveler', 'VIP', 'Department', 'Record locator', 'Status for this alert', 'Distance', 'City', 'Country', 'Location detail', 'Trip start', 'Trip end', 'Airline', 'Flight', 'Hotel'].join(',')];
-          shown.forEach(function (x) { var t = x.t; out.push([a.title, a.sev, t.name, t.vip ? 'Yes' : '', t.dept, t.pnr, x.when, distText(x.dist), t.city, t.country, t.detail, t.si, t.ei, t.airline, t.flight, t.hotel ? t.hotel.name : ''].map(esc).join(',')); });
+          var out = [['Alert', 'Risk level', 'Traveler', 'VIP', 'Department', 'Record locator', 'Status for this alert', 'Distance', 'Contacted', 'Mobile phone', 'Email', 'City', 'Country', 'Location detail', 'Trip start', 'Trip end', 'Airline', 'Flight', 'Hotel'].join(',')];
+          shown.forEach(function (x) { var t = x.t; out.push([a.title, a.sev, t.name, t.vip ? 'Yes' : '', t.dept, t.pnr, x.when, distText(x.dist), self.contactMark(t.contact).label, t.phone, t.email, t.city, t.country, t.detail, t.si, t.ei, t.airline, t.flight, t.hotel ? t.hotel.name : ''].map(esc).join(',')); });
           save('beacon-alert-' + a.id + '-travelers.csv', '﻿' + out.join('\r\n'), num(shown.length) + ' rows');
         }
       });
@@ -4539,6 +4657,17 @@ class Component extends DCLogic {
       var f = R();
       TW.push((0.3 + f * f * 3) * (dep === 0 ? 1.5 : 1));
     }
+    // Whether the automatic alerts reach each traveler, and their contact details. This uses its own random stream
+    // (seed 156), so nothing else in the sample data moves. 'ok' = contacted, 'fail' = the alert could not be delivered,
+    // 'out' = the traveler opted out of automatic alerts. Phone numbers are 555-01xx, which are reserved for fiction.
+    var RC = this.rng(156), seenMail = {}, AREA = ['212', '312', '415', '617', '214', '404', '305', '206', '303', '713'];
+    TR.forEach(function (tr, k) {
+      var c = RC(), mail = tr.name.toLowerCase().replace(/[^a-z ]/g, '').replace(/ +/g, '.');
+      seenMail[mail] = (seenMail[mail] || 0) + 1;
+      tr.contact = c < 0.07 ? 'out' : c < 0.16 ? 'fail' : 'ok';
+      tr.email = mail + (seenMail[mail] > 1 ? seenMail[mail] : '') + '@acme.example';
+      tr.phone = '+1 (' + AREA[k % 10] + ') 555-01' + ('0' + (k * 7) % 100).slice(-2);
+    });
     var twTot = 0; TW.forEach(function (w) { twTot += w; });
     var pickTraveler = function () { var x = R() * twTot; for (var k = 0; k < 1500; k++) { x -= TW[k]; if (x < 0) return k; } return 1499; };
 
@@ -4699,7 +4828,7 @@ class Component extends DCLogic {
         else m = bestAlert(lat, lng, P[1], T, T);
       }
       x.lat = lat; x.lng = lng; x.atHome = atHome;
-      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub;
+      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub; x.contact = tr.contact; x.email = tr.email; x.phone = tr.phone;
       x.city = P[0]; x.country = P[1]; x.region = P[2];
       x.place = P[0] === P[1] ? P[0] : P[0] + ', ' + P[1];
       x.detail = detail; x.status = st; x.today = x.s <= T && x.e >= T; x.away = x.today && !atHome;
@@ -4935,6 +5064,17 @@ class Component extends DCLogic {
       var f = R();
       TW.push((0.3 + f * f * 3) * (dep === 0 ? 1.5 : 1));
     }
+    // Whether the automatic alerts reach each traveler, and their contact details. This uses its own random stream
+    // (seed 156), so nothing else in the sample data moves. 'ok' = contacted, 'fail' = the alert could not be delivered,
+    // 'out' = the traveler opted out of automatic alerts. Phone numbers are 555-01xx, which are reserved for fiction.
+    var RC = this.rng(156), seenMail = {}, AREA = ['212', '312', '415', '617', '214', '404', '305', '206', '303', '713'];
+    TR.forEach(function (tr, k) {
+      var c = RC(), mail = tr.name.toLowerCase().replace(/[^a-z ]/g, '').replace(/ +/g, '.');
+      seenMail[mail] = (seenMail[mail] || 0) + 1;
+      tr.contact = c < 0.07 ? 'out' : c < 0.16 ? 'fail' : 'ok';
+      tr.email = mail + (seenMail[mail] > 1 ? seenMail[mail] : '') + '@acme.example';
+      tr.phone = '+1 (' + AREA[k % 10] + ') 555-01' + ('0' + (k * 7) % 100).slice(-2);
+    });
     var twTot = 0; TW.forEach(function (w) { twTot += w; });
     var pickTraveler = function () { var x = R() * twTot; for (var k = 0; k < 1500; k++) { x -= TW[k]; if (x < 0) return k; } return 1499; };
 
@@ -5095,7 +5235,7 @@ class Component extends DCLogic {
         else m = bestAlert(lat, lng, P[1], T, T);
       }
       x.lat = lat; x.lng = lng; x.atHome = atHome;
-      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub;
+      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub; x.contact = tr.contact; x.email = tr.email; x.phone = tr.phone;
       x.city = P[0]; x.country = P[1]; x.region = P[2];
       x.place = P[0] === P[1] ? P[0] : P[0] + ', ' + P[1];
       x.detail = detail; x.status = st; x.today = x.s <= T && x.e >= T; x.away = x.today && !atHome;
@@ -5167,7 +5307,20 @@ class Component extends DCLogic {
     return S[a.id % 2] + (a.rank >= 4 ? ' Avoid non-essential travel to the area until the alert ends.' : '');
   }
 
-  // ----- The popup: a traveler's full itinerary, or an alert's details. Its markup is pop_block.html.
+  // ----- "Contacted": did the automatic alert reach this traveler? One symbol each, used on Alerts and in the popup.
+  // kind is the traveler's 'ok', 'fail' or 'out'. The Legend screen shows the same three symbols (it has its own copy of the markup).
+  contactMark(kind) {
+    var M = {
+      ok: { label: 'Contacted', icon: 'M5 12.5l4.5 4.5L19 7.5', css: 'background: #1E7B4B; color: #FFFFFF; border: 2px solid #1E7B4B' },
+      fail: { label: 'Not contacted', icon: 'M6.5 6.5l11 11M17.5 6.5l-11 11', css: 'background: #8F1D1D; color: #FFFFFF; border: 2px solid #8F1D1D' },
+      out: { label: 'Opted out', icon: 'M6.5 12h11', css: 'background: #FFFFFF; color: #556072; border: 2px solid #6B7588' }
+    }[kind] || null;
+    if (!M) return null;
+    return { kind: kind, label: M.label, icon: M.icon, style: 'flex: none; box-sizing: border-box; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; ' + M.css };
+  }
+
+  // ----- The popup: a traveler's full itinerary, an alert's details, or a traveler's contact details. Its markup is pop_block.html.
+  // also: { trip: <trip id>, contact: true, alert: <alert id> } for the contact details of a traveler the alert did not reach
   // what = { trip: <trip id> } for an itinerary, { trip: <trip id>, alert: <alert id> } for an alert
   dlgOpen(e, what) {
     var el = e && (e.currentTarget || e.target), y = 60;
@@ -5210,7 +5363,17 @@ class Component extends DCLogic {
     var SEVC = { Extreme: ['#8F1D1D', '#FFFFFF'], High: ['#B23C0A', '#FFFFFF'], Medium: ['#F2C46B', '#14213D'], Moderate: ['#FBE3B5', '#6B4500'], Low: ['#E3ECF8', '#1F5FAD'] };
     var box = 'position: absolute; z-index: 21; top: ' + Math.round(d.y) + 'px; left: 50%; transform: translateX(-50%); width: 560px; max-width: calc(100% - 32px); box-sizing: border-box; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; box-shadow: 0 18px 50px rgba(20, 33, 61, 0.30); outline: none; display: flex; flex-direction: column';
     var a = d.alert !== undefined ? D.alerts[d.alert] : null, v;
-    if (a) {
+    if (d.contact) {
+      var out2 = t.contact === 'out', mark = this.contactMark(t.contact) || this.contactMark('ok');
+      v = { label: 'Contact details for ' + t.name, eyebrow: 'Contact details', title: t.name, sub: t.dept + ' · ' + t.sub,
+        hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
+        hasBanner: t.contact !== 'ok', bannerHead: mark.label,
+        banner: out2 ? 'This traveler chose not to receive automatic alerts' + (a ? ', so the alert for ' + a.title + ' was not sent.' : '.') + ' You can still reach them yourself.' : 'The automatic alert' + (a ? ' for ' + a.title : '') + ' could not be delivered. Please reach this traveler yourself.',
+        bannerStyle: 'margin: 0 24px 4px; padding: 10px 12px; border-radius: 8px; border-left: 5px solid ' + (out2 ? '#6B7588' : '#8F1D1D') + '; background: ' + (out2 ? '#F3F5F9' : '#FDF1F1') + '; font-size: 14px; line-height: 1.4; color: #14213D',
+        hasText: false, text: '',
+        rows: [{ k: 'Mobile phone', v: t.phone, sub: '' }, { k: 'Email', v: t.email, sub: '' }, { k: 'This trip', v: t.place + ' · ' + t.dates, sub: t.detail }],
+        hasLink: false, linkLabel: '' };
+    } else if (a) {
       var ended = a.e < D.today, c = SEVC[a.sev] || SEVC.Low;
       v = { label: 'Alert details: ' + a.title, eyebrow: 'Alert details', title: a.title, sub: a.type + ' · ' + (a.cw ? a.country + ' (country-wide)' : a.cityName + ', ' + a.country),
         hasChip: true, chip: a.sev, chipStyle: 'flex: none; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: ' + c[0] + '; color: ' + c[1],
@@ -5230,6 +5393,7 @@ class Component extends DCLogic {
       rows.push(t.car ? { k: 'Rental car', v: t.car, sub: 'Pick-up ' + D.lab[t.s] + ' · return ' + D.lab[t.e] } : { k: 'Rental car', v: 'None booked', sub: '' });
       rows.push({ k: 'Flight back', v: t.legBack.flight + ' · ' + t.legBack.fromCity + ' (' + t.legBack.from + ') to ' + t.legBack.toCity + ' (' + t.legBack.to + ')', sub: both(t.e, t.legBack) });
       rows.push({ k: 'Booking reference (record locator)', v: t.pnr, sub: t.airline });
+      rows.push({ k: 'Contact', v: t.phone, sub: t.email });
       var bc = al ? (SEVC[al.sev] || SEVC.Low) : null;
       v = { label: 'Itinerary for ' + t.name, eyebrow: 'Traveler itinerary', title: t.name, sub: t.dept + ' · ' + t.sub,
         hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
@@ -6229,6 +6393,17 @@ class Component extends DCLogic {
       var f = R();
       TW.push((0.3 + f * f * 3) * (dep === 0 ? 1.5 : 1));
     }
+    // Whether the automatic alerts reach each traveler, and their contact details. This uses its own random stream
+    // (seed 156), so nothing else in the sample data moves. 'ok' = contacted, 'fail' = the alert could not be delivered,
+    // 'out' = the traveler opted out of automatic alerts. Phone numbers are 555-01xx, which are reserved for fiction.
+    var RC = this.rng(156), seenMail = {}, AREA = ['212', '312', '415', '617', '214', '404', '305', '206', '303', '713'];
+    TR.forEach(function (tr, k) {
+      var c = RC(), mail = tr.name.toLowerCase().replace(/[^a-z ]/g, '').replace(/ +/g, '.');
+      seenMail[mail] = (seenMail[mail] || 0) + 1;
+      tr.contact = c < 0.07 ? 'out' : c < 0.16 ? 'fail' : 'ok';
+      tr.email = mail + (seenMail[mail] > 1 ? seenMail[mail] : '') + '@acme.example';
+      tr.phone = '+1 (' + AREA[k % 10] + ') 555-01' + ('0' + (k * 7) % 100).slice(-2);
+    });
     var twTot = 0; TW.forEach(function (w) { twTot += w; });
     var pickTraveler = function () { var x = R() * twTot; for (var k = 0; k < 1500; k++) { x -= TW[k]; if (x < 0) return k; } return 1499; };
 
@@ -6389,7 +6564,7 @@ class Component extends DCLogic {
         else m = bestAlert(lat, lng, P[1], T, T);
       }
       x.lat = lat; x.lng = lng; x.atHome = atHome;
-      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub;
+      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub; x.contact = tr.contact; x.email = tr.email; x.phone = tr.phone;
       x.city = P[0]; x.country = P[1]; x.region = P[2];
       x.place = P[0] === P[1] ? P[0] : P[0] + ', ' + P[1];
       x.detail = detail; x.status = st; x.today = x.s <= T && x.e >= T; x.away = x.today && !atHome;
@@ -6931,6 +7106,17 @@ class Component extends DCLogic {
       var f = R();
       TW.push((0.3 + f * f * 3) * (dep === 0 ? 1.5 : 1));
     }
+    // Whether the automatic alerts reach each traveler, and their contact details. This uses its own random stream
+    // (seed 156), so nothing else in the sample data moves. 'ok' = contacted, 'fail' = the alert could not be delivered,
+    // 'out' = the traveler opted out of automatic alerts. Phone numbers are 555-01xx, which are reserved for fiction.
+    var RC = this.rng(156), seenMail = {}, AREA = ['212', '312', '415', '617', '214', '404', '305', '206', '303', '713'];
+    TR.forEach(function (tr, k) {
+      var c = RC(), mail = tr.name.toLowerCase().replace(/[^a-z ]/g, '').replace(/ +/g, '.');
+      seenMail[mail] = (seenMail[mail] || 0) + 1;
+      tr.contact = c < 0.07 ? 'out' : c < 0.16 ? 'fail' : 'ok';
+      tr.email = mail + (seenMail[mail] > 1 ? seenMail[mail] : '') + '@acme.example';
+      tr.phone = '+1 (' + AREA[k % 10] + ') 555-01' + ('0' + (k * 7) % 100).slice(-2);
+    });
     var twTot = 0; TW.forEach(function (w) { twTot += w; });
     var pickTraveler = function () { var x = R() * twTot; for (var k = 0; k < 1500; k++) { x -= TW[k]; if (x < 0) return k; } return 1499; };
 
@@ -7091,7 +7277,7 @@ class Component extends DCLogic {
         else m = bestAlert(lat, lng, P[1], T, T);
       }
       x.lat = lat; x.lng = lng; x.atHome = atHome;
-      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub;
+      x.name = tr.name; x.dept = tr.dept; x.vip = tr.vip; x.sub = tr.sub; x.contact = tr.contact; x.email = tr.email; x.phone = tr.phone;
       x.city = P[0]; x.country = P[1]; x.region = P[2];
       x.place = P[0] === P[1] ? P[0] : P[0] + ', ' + P[1];
       x.detail = detail; x.status = st; x.today = x.s <= T && x.e >= T; x.away = x.today && !atHome;
@@ -7196,7 +7382,20 @@ class Component extends DCLogic {
     return S[a.id % 2] + (a.rank >= 4 ? ' Avoid non-essential travel to the area until the alert ends.' : '');
   }
 
-  // ----- The popup: a traveler's full itinerary, or an alert's details. Its markup is pop_block.html.
+  // ----- "Contacted": did the automatic alert reach this traveler? One symbol each, used on Alerts and in the popup.
+  // kind is the traveler's 'ok', 'fail' or 'out'. The Legend screen shows the same three symbols (it has its own copy of the markup).
+  contactMark(kind) {
+    var M = {
+      ok: { label: 'Contacted', icon: 'M5 12.5l4.5 4.5L19 7.5', css: 'background: #1E7B4B; color: #FFFFFF; border: 2px solid #1E7B4B' },
+      fail: { label: 'Not contacted', icon: 'M6.5 6.5l11 11M17.5 6.5l-11 11', css: 'background: #8F1D1D; color: #FFFFFF; border: 2px solid #8F1D1D' },
+      out: { label: 'Opted out', icon: 'M6.5 12h11', css: 'background: #FFFFFF; color: #556072; border: 2px solid #6B7588' }
+    }[kind] || null;
+    if (!M) return null;
+    return { kind: kind, label: M.label, icon: M.icon, style: 'flex: none; box-sizing: border-box; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; ' + M.css };
+  }
+
+  // ----- The popup: a traveler's full itinerary, an alert's details, or a traveler's contact details. Its markup is pop_block.html.
+  // also: { trip: <trip id>, contact: true, alert: <alert id> } for the contact details of a traveler the alert did not reach
   // what = { trip: <trip id> } for an itinerary, { trip: <trip id>, alert: <alert id> } for an alert
   dlgOpen(e, what) {
     var el = e && (e.currentTarget || e.target), y = 60;
@@ -7239,7 +7438,17 @@ class Component extends DCLogic {
     var SEVC = { Extreme: ['#8F1D1D', '#FFFFFF'], High: ['#B23C0A', '#FFFFFF'], Medium: ['#F2C46B', '#14213D'], Moderate: ['#FBE3B5', '#6B4500'], Low: ['#E3ECF8', '#1F5FAD'] };
     var box = 'position: absolute; z-index: 21; top: ' + Math.round(d.y) + 'px; left: 50%; transform: translateX(-50%); width: 560px; max-width: calc(100% - 32px); box-sizing: border-box; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; box-shadow: 0 18px 50px rgba(20, 33, 61, 0.30); outline: none; display: flex; flex-direction: column';
     var a = d.alert !== undefined ? D.alerts[d.alert] : null, v;
-    if (a) {
+    if (d.contact) {
+      var out2 = t.contact === 'out', mark = this.contactMark(t.contact) || this.contactMark('ok');
+      v = { label: 'Contact details for ' + t.name, eyebrow: 'Contact details', title: t.name, sub: t.dept + ' · ' + t.sub,
+        hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
+        hasBanner: t.contact !== 'ok', bannerHead: mark.label,
+        banner: out2 ? 'This traveler chose not to receive automatic alerts' + (a ? ', so the alert for ' + a.title + ' was not sent.' : '.') + ' You can still reach them yourself.' : 'The automatic alert' + (a ? ' for ' + a.title : '') + ' could not be delivered. Please reach this traveler yourself.',
+        bannerStyle: 'margin: 0 24px 4px; padding: 10px 12px; border-radius: 8px; border-left: 5px solid ' + (out2 ? '#6B7588' : '#8F1D1D') + '; background: ' + (out2 ? '#F3F5F9' : '#FDF1F1') + '; font-size: 14px; line-height: 1.4; color: #14213D',
+        hasText: false, text: '',
+        rows: [{ k: 'Mobile phone', v: t.phone, sub: '' }, { k: 'Email', v: t.email, sub: '' }, { k: 'This trip', v: t.place + ' · ' + t.dates, sub: t.detail }],
+        hasLink: false, linkLabel: '' };
+    } else if (a) {
       var ended = a.e < D.today, c = SEVC[a.sev] || SEVC.Low;
       v = { label: 'Alert details: ' + a.title, eyebrow: 'Alert details', title: a.title, sub: a.type + ' · ' + (a.cw ? a.country + ' (country-wide)' : a.cityName + ', ' + a.country),
         hasChip: true, chip: a.sev, chipStyle: 'flex: none; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: ' + c[0] + '; color: ' + c[1],
@@ -7259,6 +7468,7 @@ class Component extends DCLogic {
       rows.push(t.car ? { k: 'Rental car', v: t.car, sub: 'Pick-up ' + D.lab[t.s] + ' · return ' + D.lab[t.e] } : { k: 'Rental car', v: 'None booked', sub: '' });
       rows.push({ k: 'Flight back', v: t.legBack.flight + ' · ' + t.legBack.fromCity + ' (' + t.legBack.from + ') to ' + t.legBack.toCity + ' (' + t.legBack.to + ')', sub: both(t.e, t.legBack) });
       rows.push({ k: 'Booking reference (record locator)', v: t.pnr, sub: t.airline });
+      rows.push({ k: 'Contact', v: t.phone, sub: t.email });
       var bc = al ? (SEVC[al.sev] || SEVC.Low) : null;
       v = { label: 'Itinerary for ' + t.name, eyebrow: 'Traveler itinerary', title: t.name, sub: t.dept + ' · ' + t.sub,
         hasChip: !!t.vip, chip: 'VIP', chipStyle: 'flex: none; padding: 2px 8px; border-radius: 4px; background: #14213D; color: #F2C46B; font-size: 12px; font-weight: 800; letter-spacing: 0.06em',
