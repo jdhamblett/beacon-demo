@@ -606,7 +606,7 @@ input[type=range]{accent-color:#1F5FAD}
 
         <div style="overflow-x: auto">
           <div style="min-width: 880px">
-            <div style="display: grid; grid-template-columns: 88px minmax(200px, 2fr) minmax(120px, 1fr) minmax(120px, 0.9fr) minmax(80px, 0.6fr) minmax(120px, 0.8fr); gap: 16px; padding: 0 24px; background: #F7F9FC; border-top: 1px solid #E1E6EE; border-bottom: 1px solid #E1E6EE">
+            <div style="display: grid; grid-template-columns: 88px minmax(200px, 2fr) minmax(120px, 1fr) minmax(120px, 0.9fr) minmax(80px, 0.6fr) minmax(150px, 0.8fr); gap: 16px; padding: 0 24px; background: #F7F9FC; border-top: 1px solid #E1E6EE; border-bottom: 1px solid #E1E6EE">
               <sc-for list="{{cols}}" as="c" hint-placeholder-count="6">
                 <button type="button" onClick="{{c.sort}}" aria-label="{{c.aria}}" style="{{c.style}}">{{c.label}}<span aria-hidden="true" style="{{c.arrowStyle}}">{{c.arrow}}</span></button>
               </sc-for>
@@ -614,7 +614,7 @@ input[type=range]{accent-color:#1F5FAD}
 
             <sc-for list="{{rows}}" as="r" hint-placeholder-count="10">
               <div style="border-bottom: 1px solid #EEF1F5">
-                <div style="display: grid; grid-template-columns: 88px minmax(200px, 2fr) minmax(120px, 1fr) minmax(120px, 0.9fr) minmax(80px, 0.6fr) minmax(120px, 0.8fr); gap: 16px; align-items: center; padding: 16px 24px">
+                <div style="display: grid; grid-template-columns: 88px minmax(200px, 2fr) minmax(120px, 1fr) minmax(120px, 0.9fr) minmax(80px, 0.6fr) minmax(150px, 0.8fr); gap: 16px; align-items: center; padding: 16px 24px">
                   <div><span style="{{r.chipStyle}}">{{r.sev}}</span></div>
                   <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; align-items: flex-start">
                     <button type="button" aria-expanded="{{r.openStr}}" onClick="{{r.toggle}}" style="padding: 0; border: 0; background: transparent; font-family: inherit; font-size: 15px; font-weight: 700; color: #14213D; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 8px">{{r.title}}<span aria-hidden="true" style="font-size: 12px; color: #1F5FAD">{{r.caret}}</span></button>
@@ -633,7 +633,7 @@ input[type=range]{accent-color:#1F5FAD}
                   </div>
                   <div>
                     <sc-if value="{{r.hasTrav}}" hint-placeholder-val="{{ true }}">
-                      <button type="button" onClick="{{r.open}}" style="min-height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid #1F5FAD; background: #FFFFFF; color: #1F5FAD; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; text-align: left">{{r.travText}}</button>
+                      <button type="button" onClick="{{r.open}}" style="width: 150px; max-width: 100%; box-sizing: border-box; min-height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid #1F5FAD; background: #EAF1FB; color: #1F5FAD; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px; text-align: left"><span style="white-space: nowrap">{{r.travText}}</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
                     </sc-if>
                     <sc-if value="{{r.noTrav}}" hint-placeholder-val="{{ false }}"><span style="font-size: 14px; color: #6B7588">None</span></sc-if>
                   </div>
@@ -4960,7 +4960,7 @@ class Component extends DCLogic {
       toggleAlerts: function (e) { self.setState({ showAlerts: !!e.target.checked }); },
       hasLocs: locs.length > 0, showLocs: !!s.showLocs, toggleLocs: function (e) { self.setState({ showLocs: !!e.target.checked }); },
       viewBox: f2(s.cx - w / 2) + ' ' + f2(s.cy - h / 2) + ' ' + f2(w) + ' ' + f2(h),
-      svgStyle: 'display: block; width: 100%; height: auto; aspect-ratio: 1000 / 668; touch-action: none; user-select: none; font-family: inherit; cursor: ' + (s.drawMode ? 'crosshair' : (s.drag ? 'grabbing' : 'grab')),
+      svgStyle: 'display: block; width: 100%; height: auto; aspect-ratio: 1000 / 668; touch-action: none; user-select: none; font-family: inherit; cursor: ' + (s.drawMode ? 'crosshair' : s.z > 1.001 ? (s.drag ? 'grabbing' : 'grab') : 'default'),   // at full view the map cannot move, so no hand
       countries: this.world().c.map(function (c) {
         var tint = shade[c[0]];
         return { d: c[1], style: 'fill: ' + (tint || '#FBFCFE') + '; fill-opacity: ' + (tint ? 0.32 : 1) + '; stroke: #6B7A93; stroke-width: 0.8px; vector-effect: non-scaling-stroke; stroke-linejoin: round', enter: function () { if (!self._drag && self.state.hover !== c[0]) self.setState({ hover: c[0] }); } };
