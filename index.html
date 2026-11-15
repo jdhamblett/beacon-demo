@@ -47,6 +47,7 @@ input[type=range]{accent-color:#1F5FAD}
       <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: #E9A23B">DUTY OF CARE</span>
       <h1 style="margin: 0; font-size: 60px; line-height: 1.05; font-weight: 800; letter-spacing: -0.02em">First to know.<br>First to act.</h1>
       <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #C9D3E6">See which travelers an event touches, reach them in minutes, and know who is safe.</p>
+      <div><button type="button" aria-haspopup="dialog" onClick="{{roadOpen}}" style="min-height: 48px; padding: 0 20px; border-radius: 8px; border: 1px solid #E9A23B; background: rgba(20, 33, 61, 0.6); color: #FFFFFF; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E9A23B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"></path><path d="M9 3v15"></path><path d="M15 6v15"></path></svg>See the roadmap · {{roadCount}} planned features</button></div>
     </div>
 
     <ul style="position: relative; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14px; color: #C9D3E6">
@@ -98,8 +99,52 @@ input[type=range]{accent-color:#1F5FAD}
         <p style="margin: 0; font-size: 13px; color: #556072">Need help? Contact your account manager.</p>
         <p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: #6B7588">PROTOTYPE · SAMPLE DATA · NO REAL SIGN-IN</p>
       </div>
+
+      <div aria-label="Reset the demo" role="group" style="display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border: 1px dashed #9AA7BC; border-radius: 10px; background: #F7F9FC">
+        <sc-if value="{{rsDone}}" hint-placeholder-val="{{ false }}">
+          <p role="status" style="margin: 0; padding: 8px 12px; border-radius: 8px; border: 1px solid #9CCFB4; background: #E8F5EE; color: #14603A; font-size: 14px; font-weight: 600; line-height: 1.45">The demo has been reset. Everything is back to the start.</p>
+        </sc-if>
+        <sc-if value="{{rsIdle}}" hint-placeholder-val="{{ true }}">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px">
+            <button type="button" onClick="{{rsAsk}}" ref="{{rsRef}}" style="min-height: 44px; padding: 0 16px; border-radius: 8px; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer; border: 1px solid #B9C3D3; background: #FFFFFF; color: #14213D; display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>Reset the demo</button>
+            <span style="flex: 1 1 160px; font-size: 13px; line-height: 1.4; color: #556072">Starts the demo fresh. Clears everything added or changed in this browser.</span>
+          </div>
+        </sc-if>
+        <sc-if value="{{rsAsking}}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 0; font-size: 14px; line-height: 1.45; font-weight: 600; color: #14213D">Reset the demo? This clears added trips, check-ins, chats, reviewed bookings and saved settings in this browser.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px">
+            <button type="button" onClick="{{rsDo}}" ref="{{rsYesRef}}" style="min-height: 44px; padding: 0 16px; border-radius: 8px; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer; border: 0; background: #B42318; color: #FFFFFF">Yes, reset</button>
+            <button type="button" onClick="{{rsCancel}}" style="min-height: 44px; padding: 0 16px; border-radius: 8px; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer; border: 1px solid #B9C3D3; background: #FFFFFF; color: #14213D">Cancel</button>
+          </div>
+        </sc-if>
+      </div>
     </form>
   </section>
+
+  <sc-if value="{{roadShown}}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{roadClose}}" style="position: fixed; z-index: 50; inset: 0; background: rgba(20, 33, 61, 0.55)"></div>
+    <div role="dialog" aria-modal="true" aria-label="Roadmap" tabindex="-1" ref="{{roadRef}}" onKeyDown="{{roadKey}}" style="position: fixed; z-index: 51; top: 24px; left: 50%; transform: translateX(-50%); width: 980px; max-width: calc(100vw - 32px); max-height: calc(100vh - 48px); box-sizing: border-box; display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 14px; box-shadow: 0 18px 50px rgba(20, 33, 61, 0.35); outline: none; color: #14213D">
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 22px 26px 16px; border-bottom: 1px solid #E1E6EE">
+        <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+          <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.16em; color: #B26A00">PLANNED · NOT IN THIS DEMO</span>
+          <h2 style="margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.01em">The Beacon roadmap</h2>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A4558">{{roadCount}} features planned for Beacon, in priority order. None of them is built or shown in this demo.</p>
+        </div>
+        <button type="button" aria-label="Close" onClick="{{roadClose}}" style="flex: none; width: 44px; height: 44px; margin: -8px -10px 0 0; border: 0; border-radius: 8px; background: transparent; color: #3A4558; font-size: 26px; line-height: 1; font-family: inherit; cursor: pointer">×</button>
+      </div>
+      <ol aria-label="Planned features" style="flex: 1 1 auto; min-height: 0; overflow-y: auto; list-style: none; margin: 0; padding: 20px 26px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px">
+        <sc-for list="{{road}}" as="r" hint-placeholder-count="6">
+          <li style="display: flex; gap: 14px; padding: 14px 16px; border: 1px solid #E1E6EE; border-radius: 12px; background: #F7F9FC">
+            <span aria-hidden="true" style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: #14213D; color: #F2C46B; font-size: 14px; font-weight: 800; display: flex; align-items: center; justify-content: center">{{r.n}}</span>
+            <span style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+              <span style="font-size: 16px; font-weight: 800; color: #14213D">{{r.title}}</span>
+              <span style="font-size: 14px; line-height: 1.5; color: #3A4558">{{r.text}}</span>
+            </span>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </sc-if>
 
 </div>
 </template>
@@ -230,7 +275,7 @@ input[type=range]{accent-color:#1F5FAD}
 
       <a href="Travelers.dc.html" onClick="{{goRisk}}" style="background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 12px; padding: 18px; text-decoration: none; color: #14213D; display: flex; flex-direction: column; gap: 10px; flex: 1 1 200px; max-width: 300px; box-sizing: border-box">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px">
-          <span style="font-size: 14px; font-weight: 700; color: #3A4558">Travelers near Extreme, High, or Medium alerts</span>
+          <span style="font-size: 14px; font-weight: 700; color: #3A4558">Travelers near Major Alerts</span>
           <span style="width: 32px; height: 32px; border-radius: 50%; background: #FCE9DF; display: flex; align-items: center; justify-content: center; flex: none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B23C0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"></path><path d="M12 7v4M12 14h.01"></path></svg></span>
         </div>
         <span style="font-size: 34px; font-weight: 800; line-height: 1; color: #B23C0A">{{nearRisk}}</span>
@@ -244,7 +289,7 @@ input[type=range]{accent-color:#1F5FAD}
 
       <a href="Alerts.dc.html" style="background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 12px; padding: 18px; text-decoration: none; color: #14213D; display: flex; flex-direction: column; gap: 10px; flex: 1 1 200px; max-width: 300px; box-sizing: border-box">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px">
-          <span style="font-size: 14px; font-weight: 700; color: #3A4558">Alerts</span>
+          <span style="font-size: 14px; font-weight: 700; color: #3A4558">Active Alerts</span>
           <span style="width: 32px; height: 32px; border-radius: 50%; background: #FDF1DC; display: flex; align-items: center; justify-content: center; flex: none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8A5A0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg></span>
         </div>
         <span style="font-size: 34px; font-weight: 800; line-height: 1">{{openAlerts}}</span>
@@ -258,7 +303,7 @@ input[type=range]{accent-color:#1F5FAD}
 
       <a href="Messages.dc.html" style="background: #FFFFFF; border: 1px solid #E1E6EE; border-radius: 12px; padding: 18px; text-decoration: none; color: #14213D; display: flex; flex-direction: column; gap: 10px; flex: 1 1 200px; max-width: 300px; box-sizing: border-box">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px">
-          <span style="font-size: 14px; font-weight: 700; color: #3A4558">Active communications</span>
+          <span style="font-size: 14px; font-weight: 700; color: #3A4558">Open Comms</span>
           <span style="width: 32px; height: 32px; border-radius: 50%; background: #E3ECF8; display: flex; align-items: center; justify-content: center; flex: none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F5FAD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>
         </div>
         <span style="{{commNumStyle}}">{{commTotal}}</span>
@@ -4165,8 +4210,59 @@ window.BEACON_DCLogic = class DCLogic {
 BEACON_SCREENS['Main'] = (function (DCLogic) {
 
 class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { road: false, reset: 'idle' }; }
+  // The roadmap shown on this screen. Titles and wording are written for the people watching a demo. Keep it in step with
+  // docs/ROADMAP.md (the working list, which has the history and Jonathan's own words).
+  roadList() {
+    return [
+      ["Account manager view", "One screen for an account manager to watch every client company at once: who is at risk at each, with one click into any of them."],
+      ["Trips found in company email", "Beacon watches company mailboxes, spots a booking made outside the agency, and adds the trip by itself. Nobody has to enter or forward anything."],
+      ["Smarter check-ins", "A check-in leaves out travelers who opted out or cannot be reached, and lists them as \"needs a phone call\", so nobody is wrongly counted as asked."],
+      ["Hand-off to medical and security help", "One button passes a traveler who needs help to an assistance partner, with their details and location."],
+      ["Roles, privacy and an audit trail", "Control who can see which travelers and which details, with a record of who did what."],
+      ["A traveler app", "A simple phone view where a traveler can press \"I need help\", share where they are, and add a trip they booked themselves."],
+      ["Automatic check-ins", "Set a rule once, such as \"when an Extreme alert starts, ask everyone there if they are safe\", and Beacon sends it day or night."],
+      ["AI reading of trip confirmations", "AI reads any airline, hotel or booking-site confirmation, in any layout, when a trip is added. The manager still checks it before saving."],
+      ["Readiness report", "A list of travelers Beacon could not reach today: no mobile number, opted out, or alerts that failed. Fix the gaps before an incident, not during one."],
+      ["Instant risk warning on new trips", "The moment a trip is added, Beacon says whether the traveler is heading into an active alert, with a one-click check-in."],
+      ["Briefs at booking", "Each traveler gets the Pre-Travel Brief for their destination when the trip is booked, and Beacon records that they opened it."],
+      ["Read receipts and voice calls", "See which messages were delivered and read, and have Beacon place an automated call when texts and emails get no reply."],
+      ["Off-channel booking count", "See how many trips were booked outside the agency, and by whom, so the blind spot can be closed."],
+      ["Ask Beacon", "Ask a question in plain words, such as \"who is in Mexico next week?\", and get the answer."],
+      ["Drills", "Run a practice incident, send check-ins marked as a drill, and time how long it takes to account for everyone."],
+      ["Duplicate trip warning", "Beacon warns before the same trip is added twice."],
+      ["Edit added trips", "Change a trip that was added by hand, see who added it and when, and get a warning when its dates clash with another trip."],
+      ["Any destination", "Add trips to any city in the world, with several cities in one trip and every traveler named in one confirmation."]
+    ];
+  }
+  // Clears everything Beacon keeps in this browser, so the next demo starts as new: saved settings, added trips, check-ins and chats,
+  // reviewed bookings, the bell, the map's place. The in-memory copies go too, so no reload is needed.
+  resetDemo() {
+    [window.localStorage, window.sessionStorage].forEach(function (st) {
+      try { var keys = []; for (var i = 0; i < st.length; i++) { var k = st.key(i); if (k && k.indexOf('beacon.') === 0) keys.push(k); } keys.forEach(function (k) { st.removeItem(k); }); } catch (e) {}
+    });
+    try { Object.keys(window).forEach(function (k) { if (k.indexOf('__beacon') === 0) { try { delete window[k]; } catch (e) { window[k] = undefined; } } }); } catch (e) {}
+  }
   renderVals() {
-    return { demo: function () { try { window.localStorage.setItem('beacon.demo', '1'); } catch (e) {} } };
+    var self = this, s = this.state || {}, list = this.roadList(), st = s.reset || 'idle';
+    var close = function (e) {
+      var back = self._roadFrom, kb = !e || e.detail === 0 || e.type === 'keydown';
+      self._roadFrom = null; self.setState({ road: false });
+      if (back && kb) setTimeout(function () { try { back.focus(); } catch (x) {} }, 0);
+    };
+    return {
+      demo: function () { try { window.localStorage.setItem('beacon.demo', '1'); } catch (e) {} },
+      roadCount: list.length, road: list.map(function (r, i) { return { n: i + 1, title: r[0], text: r[1] }; }),
+      roadShown: !!s.road, roadOpen: function (e) { self._roadFrom = e && e.currentTarget ? e.currentTarget : null; self._roadNew = true; self.setState({ road: true }); },
+      roadClose: close, roadKey: function (e) { if (e.key === 'Escape') { e.stopPropagation(); close(e); } },
+      roadRef: function (el) { if (el && self._roadNew) { self._roadNew = false; try { el.focus(); } catch (x) {} } },
+      rsIdle: st !== 'ask', rsAsking: st === 'ask', rsDone: st === 'done',
+      rsAsk: function (e) { self._rsKb = !!e && e.detail === 0; self.setState({ reset: 'ask' }); },
+      rsCancel: function () { self._rsBack = true; self.setState({ reset: 'idle' }); },
+      rsDo: function () { self.resetDemo(); self._rsBack = true; self.setState({ reset: 'done' }); },
+      rsYesRef: function (el) { if (el && self._rsKb) { self._rsKb = false; try { el.focus(); } catch (x) {} } },
+      rsRef: function (el) { if (el && self._rsBack) { self._rsBack = false; try { el.focus(); } catch (x) {} } }
+    };
   }
 }
 
